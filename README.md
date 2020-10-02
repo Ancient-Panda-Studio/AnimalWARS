@@ -33,6 +33,7 @@ Este proyecto es un trabajo de final de ciclo para la escuela **SANT MARC** en B
 **Ruben Ventura**
 
  - [x] Animador
+ - [x] Rigger
  - [x] Team Leader
  - [x] Programador
 
