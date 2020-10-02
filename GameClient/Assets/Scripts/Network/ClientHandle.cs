@@ -1,0 +1,106 @@
+﻿using System.Net;
+using Network;
+using UnityEngine;
+
+public class ClientHandle : MonoBehaviour
+{
+    public UIManager uiManager;
+
+    public static void Welcome(Packet _packet)
+    {
+        var _msg = _packet.ReadString();
+        var _myId = _packet.ReadInt();
+
+        Debug.Log($"Message from server: {_msg}");
+        Client.instance.myId = _myId;
+        UIManager.instance.offline.SetActive(false);
+        UIManager.instance.online.SetActive(true);
+        ClientSend.WelcomeReceived();
+        Client.instance.udp.Connect(((IPEndPoint) Client.instance.tcp.socket.Client.LocalEndPoint).Port);
+    }
+
+    public static void SpawnPlayer(Packet _packet)
+    {
+        var _id = _packet.ReadInt();
+        var _username = _packet.ReadString();
+        var _position = _packet.ReadVector3();
+        var _rotation = _packet.ReadQuaternion();
+
+        GameManager.Instance.SpawnPlayer(_id, _username, _position, _rotation);
+    }
+
+    public static void InvitationReceived(Packet _packet)
+    {
+        var _id = _packet.ReadInt();
+        var _username = _packet.ReadString();
+        var _who = _packet.ReadString();
+
+        //TODO Pop Invite UI
+
+        UIManager.instance.GetInvite(_id, _username , _who);
+    }
+
+    public static void HandleLogin(Packet _packet)
+    {
+        var _id = _packet.ReadInt();
+        var _allowed = _packet.ReadBool();
+        var _error = _packet.ReadString();
+        if (_allowed)
+        {
+            UIManager.instance.AllowLogin();
+            HandleAsync.instance.Routine(HandleAsync.instance.GetUserBasicData());
+            HandleAsync.instance.Routine(HandleAsync.instance.GetAllSkins());
+            HandleAsync.instance.Routine(HandleAsync.instance.GetFriends());
+        }
+        else
+        {
+            UIManager.instance.ForbidLogin(_error);
+            Constants.Username = null;
+            PlayerVariables.UserName = null;
+        }
+    }
+
+
+    public static void PlayerPosition(Packet _packet)
+    {
+        var _id = _packet.ReadInt();
+        var _position = _packet.ReadVector3();
+        GameManager.Players[_id].transform.position = _position;
+    }
+
+    public static void PlayerRotation(Packet _packet)
+    {
+        var _id = _packet.ReadInt();
+        var _rotation = _packet.ReadQuaternion();
+
+        GameManager.Players[_id].transform.rotation = _rotation;
+    }
+
+    public static void PlayerDisconnected(Packet _packet)
+    {
+        var _id = _packet.ReadInt();
+//        Destroy(GameManager.Players[_id].gameObject);
+        GameManager.Players.Remove(_id);
+    }
+
+    public static void InvitationResponse(Packet _packet)
+    {
+        var from = _packet.ReadInt();
+        var x = _packet.ReadBool();
+        var _name = _packet.ReadString();
+        switch (x)
+        {
+            case true:
+                //Invitation Accepted
+                UIManager.instance.CreateGroup(from, _name);
+
+                Debug.Log("Invitation you sent to " + from + " has been accepted");
+                break;
+            case false:
+
+                //Invitation Declined
+                Debug.Log("Invitation you sent to " + from + " has been declined");
+                break;
+        }
+    }
+}
