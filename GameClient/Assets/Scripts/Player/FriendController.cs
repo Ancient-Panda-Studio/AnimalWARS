@@ -1,14 +1,12 @@
 ﻿using Network;
 using TMPro;
 using UnityEngine;
-using UnityEngine.Serialization;
-
 namespace Player
 {
     public class FriendController : MonoBehaviour
     {
         [HideInInspector] public bool connectionState;
-        [HideInInspector] public string name;
+        [HideInInspector] public new string name;
         [HideInInspector] public int playerID;
 
         public TMP_Text connectionText;

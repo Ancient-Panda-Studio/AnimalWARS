@@ -2,9 +2,8 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Audio;
-using UnityEngine.Serialization;
 using UnityEngine.UI;
-
+//TODO  REMAKE WHOLE SCRIPT...
 namespace Player
 {
     public class Settings : MonoBehaviour
@@ -18,26 +17,25 @@ namespace Player
 
         #region currentStates
 
-        private bool isFullscreen = true;
-        private int currentRefreshRate;
-        private int currentWidth;
-        private int currentHeight;
-        private float currentSfxVolume;
-        private float currentAmbienceVolume;
-        private float currentMusicVolume;
-        private float currentMainVolume;
-        private int currentGraphics;
+        private bool _isFullscreen = true;
+        private int _currentRefreshRate;
+        private int _currentWidth;
+        private int _currentHeight;
+        private float _currentSfxVolume;
+        private float _currentAmbienceVolume;
+        private float _currentMusicVolume;
+        private float _currentMainVolume;
+        private int _currentGraphics;
 
         #endregion
 
         #region defaultStates
 
-        private bool defaultScreenMode = true;
-        private int DefaultRefreshRate;
-        private int DefaultWidth;
-        private int DefaultHeight;
+        private bool _defaultScreenMode = true;
+        private int _defaultRefreshRate;
+        private int _defaultWidth;
+        private int _defaultHeight;
         private const float DefaultVolume = 1;
-        private const int DefaultGraphics = 1;
 
         #endregion
 
@@ -51,28 +49,28 @@ namespace Player
 
             if (PlayerPrefs.HasKey("resolutionWidth"))
             {
-                currentWidth = PlayerPrefs.GetInt("resolutionWidth");
-                DefaultWidth = PlayerPrefs.GetInt("Default Resolution WIDTH (DO NOT CHANGE THIS)");
+                _currentWidth = PlayerPrefs.GetInt("resolutionWidth");
+                _defaultWidth = PlayerPrefs.GetInt("Default Resolution WIDTH (DO NOT CHANGE THIS)");
             }
             else
             {
-                currentWidth = Display.displays[0].systemWidth;
-                DefaultWidth = currentWidth;
-                WriteData(0, "resolutionWidth", currentWidth, 0f, null);
-                WriteData(0, "Default ResolutionWIDTH (DO NOT CHANGE THIS)", currentWidth, 0f, null);
+                _currentWidth = Display.displays[0].systemWidth;
+                _defaultWidth = _currentWidth;
+                WriteData(0, "resolutionWidth", _currentWidth, 0f, null);
+                WriteData(0, "Default ResolutionWIDTH (DO NOT CHANGE THIS)", _currentWidth, 0f, null);
             }
 
             if (PlayerPrefs.HasKey("resolutionHeight"))
             {
-                currentHeight = PlayerPrefs.GetInt("resolutionHeight");
-                DefaultWidth = PlayerPrefs.GetInt("Default Resolution Height (DO NOT CHANGE THIS)");
+                _currentHeight = PlayerPrefs.GetInt("resolutionHeight");
+                _defaultWidth = PlayerPrefs.GetInt("Default Resolution Height (DO NOT CHANGE THIS)");
             }
             else
             {
-                currentHeight = Display.displays[0].systemHeight;
-                DefaultHeight = currentHeight;
-                WriteData(0, "resolutionHeight", currentHeight, 0f, null);
-                WriteData(0, "Default Resolution Height (DO NOT CHANGE THIS)", currentHeight, 0f, null);
+                _currentHeight = Display.displays[0].systemHeight;
+                _defaultHeight = _currentHeight;
+                WriteData(0, "resolutionHeight", _currentHeight, 0f, null);
+                WriteData(0, "Default Resolution Height (DO NOT CHANGE THIS)", _currentHeight, 0f, null);
             }
 
             #endregion
@@ -106,12 +104,12 @@ namespace Player
 
             if (PlayerPrefs.HasKey("refreshRate"))
             {
-                currentRefreshRate = PlayerPrefs.GetInt("refreshRate");
-                DefaultRefreshRate = PlayerPrefs.GetInt("DefaultRefreshRate");
+                _currentRefreshRate = PlayerPrefs.GetInt("refreshRate");
+                _defaultRefreshRate = PlayerPrefs.GetInt("DefaultRefreshRate");
             }
             else
             {
-                currentRefreshRate = Screen.currentResolution.refreshRate;
+                _currentRefreshRate = Screen.currentResolution.refreshRate;
                 WriteData(0, "refreshRate", Screen.currentResolution.refreshRate, 0f, null);
                 WriteData(0, "DefaultRefreshRate", Screen.currentResolution.refreshRate, 0f, null);
             }
@@ -124,18 +122,18 @@ namespace Player
 
             if (PlayerPrefs.HasKey("screenMode"))
             {
-                isFullscreen = IntToBool(PlayerPrefs.GetInt("screenMode"));
-                defaultScreenMode = IntToBool(PlayerPrefs.GetInt("DefaultScreenMode"));
+                _isFullscreen = IntToBool(PlayerPrefs.GetInt("screenMode"));
+                _defaultScreenMode = IntToBool(PlayerPrefs.GetInt("DefaultScreenMode"));
             }
             else
             {
-                isFullscreen = true;
-                defaultScreenMode = true;
-                WriteData(0, "screenMode", BoolToInt(isFullscreen), 0f, null);
-                WriteData(0, "DefaultScreenMode", BoolToInt(defaultScreenMode), 0f, null);
+                _isFullscreen = true;
+                _defaultScreenMode = true;
+                WriteData(0, "screenMode", BoolToInt(_isFullscreen), 0f, null);
+                WriteData(0, "DefaultScreenMode", BoolToInt(_defaultScreenMode), 0f, null);
             }
 
-            SetFullScreen(BoolToInt(isFullscreen));
+            SetFullScreen(BoolToInt(_isFullscreen));
             SetScreenData();
 
             #endregion
@@ -191,13 +189,13 @@ namespace Player
 
             #endregion
 
-            SetDropDowns(currentWidth + "x" + currentHeight, currentRefreshRate + "hz",
-                isFullscreen ? "FullScreen" : "Windowed");
+            SetDropDowns(_currentWidth + "x" + _currentHeight, _currentRefreshRate + "hz",
+                _isFullscreen ? "FullScreen" : "Windowed");
         }
 
         private void SetScreenData()
         {
-            switch (currentRefreshRate)
+            switch (_currentRefreshRate)
             {
                 case 48:
                     SetRefreshRate(0, 0);
@@ -213,7 +211,7 @@ namespace Player
                     break;
             }
 
-            switch (currentHeight)
+            switch (_currentHeight)
             {
                 case 480:
                     SetScreenResolution(0, 0, 0);
@@ -235,7 +233,6 @@ namespace Player
                     break;
             }
         }
-
         private static bool IntToBool(int val)
         {
             return val == 1;
@@ -269,6 +266,27 @@ namespace Player
 
         #region SetSettings
 
+        public void FallBackToDefault()
+        {
+            currentBinds.forward = KeyCode.W;
+            currentBinds.ability = KeyCode.Q;
+            currentBinds.interact = KeyCode.E;
+            currentBinds.jump = KeyCode.Space;
+            
+            SetRefreshRate(4,_defaultRefreshRate);
+            mainMixer.SetFloat("MasterVolume", 1);
+            mainVolumeSlider.value = 1;
+            ambienceMixer.audioMixer.SetFloat("AmbienceVolume", 1);
+            ambienceVolumeSlider.value = 1;
+            sfxMixer.audioMixer.SetFloat("SFXVolume", 1);
+            sfxVolumeSlider.value = 1;
+            musicMixer.audioMixer.SetFloat("MusicVolume", 1);
+            musicVolumeSlider.value = 1;
+            WriteData(2, "masterVolume", 0, 1, null);
+            WriteData(2, "sfxVolume", 0, 1, null);
+            WriteData(2, "ambienceVolume", 0, 1, null);
+            WriteData(2, "musicVolume", 0, 1, null);
+        }
         private void SetKeyBinds(int i, KeyCode keyCode) //Allows the player to change the currentBindings
         {
             switch (i)
@@ -298,49 +316,49 @@ namespace Player
             switch (i)
             {
                 case 0:
-                    Screen.SetResolution(640, 480, isFullscreen, currentRefreshRate);
-                    currentWidth = 640;
-                    currentHeight = 480;
-                    WriteData(0, "resolutionWidth", currentWidth, 0f, null);
-                    WriteData(0, "resolutionHeight", currentHeight, 0f, null);
+                    Screen.SetResolution(640, 480, _isFullscreen, _currentRefreshRate);
+                    _currentWidth = 640;
+                    _currentHeight = 480;
+                    WriteData(0, "resolutionWidth", _currentWidth, 0f, null);
+                    WriteData(0, "resolutionHeight", _currentHeight, 0f, null);
                     break;
                 case 1:
-                    Screen.SetResolution(800, 600, isFullscreen, currentRefreshRate);
-                    currentWidth = 800;
-                    currentHeight = 600;
-                    WriteData(0, "resolutionWidth", currentWidth, 0f, null);
-                    WriteData(0, "resolutionHeight", currentHeight, 0f, null);
+                    Screen.SetResolution(800, 600, _isFullscreen, _currentRefreshRate);
+                    _currentWidth = 800;
+                    _currentHeight = 600;
+                    WriteData(0, "resolutionWidth", _currentWidth, 0f, null);
+                    WriteData(0, "resolutionHeight", _currentHeight, 0f, null);
                     break;
                 case 2:
-                    Screen.SetResolution(1024, 768, isFullscreen, currentRefreshRate);
-                    currentWidth = 1024;
-                    currentHeight = 768;
-                    WriteData(0, "resolutionWidth", currentWidth, 0f, null);
-                    WriteData(0, "resolutionHeight", currentHeight, 0f, null);
+                    Screen.SetResolution(1024, 768, _isFullscreen, _currentRefreshRate);
+                    _currentWidth = 1024;
+                    _currentHeight = 768;
+                    WriteData(0, "resolutionWidth", _currentWidth, 0f, null);
+                    WriteData(0, "resolutionHeight", _currentHeight, 0f, null);
                     break;
                 case 3:
-                    Screen.SetResolution(1280, 720, isFullscreen, currentRefreshRate);
-                    currentWidth = 1280;
-                    currentHeight = 720;
-                    WriteData(0, "resolutionWidth", currentWidth, 0f, null);
-                    WriteData(0, "resolutionHeight", currentHeight, 0f, null);
+                    Screen.SetResolution(1280, 720, _isFullscreen, _currentRefreshRate);
+                    _currentWidth = 1280;
+                    _currentHeight = 720;
+                    WriteData(0, "resolutionWidth", _currentWidth, 0f, null);
+                    WriteData(0, "resolutionHeight", _currentHeight, 0f, null);
                     break;
                 case 4:
-                    Screen.SetResolution(1920, 1080, isFullscreen, currentRefreshRate);
-                    currentWidth = 1920;
-                    currentHeight = 1080;
-                    WriteData(0, "resolutionWidth", currentWidth, 0f, null);
-                    WriteData(0, "resolutionHeight", currentHeight, 0f, null);
+                    Screen.SetResolution(1920, 1080, _isFullscreen, _currentRefreshRate);
+                    _currentWidth = 1920;
+                    _currentHeight = 1080;
+                    WriteData(0, "resolutionWidth", _currentWidth, 0f, null);
+                    WriteData(0, "resolutionHeight", _currentHeight, 0f, null);
                     break;
                 case 5:
-                    Screen.SetResolution(2560, 1440, true, currentRefreshRate);
-                    currentWidth = 2560;
-                    currentHeight = 1440;
-                    WriteData(0, "resolutionWidth", currentWidth, 0f, null);
-                    WriteData(0, "resolutionHeight", currentHeight, 0f, null);
+                    Screen.SetResolution(2560, 1440, true, _currentRefreshRate);
+                    _currentWidth = 2560;
+                    _currentHeight = 1440;
+                    WriteData(0, "resolutionWidth", _currentWidth, 0f, null);
+                    WriteData(0, "resolutionHeight", _currentHeight, 0f, null);
                     break;
                 case 6: //Custom
-                    Screen.SetResolution(width, height, isFullscreen, currentRefreshRate);
+                    Screen.SetResolution(width, height, _isFullscreen, _currentRefreshRate);
                     break;
             }
         } //Allows the player to change resolution
@@ -350,20 +368,24 @@ namespace Player
             switch (i)
             {
                 case 0:
-                    Screen.SetResolution(currentWidth, currentHeight, isFullscreen, 48);
-                    currentRefreshRate = 48;
+                    Screen.SetResolution(_currentWidth, _currentHeight, _isFullscreen, 48);
+                    _currentRefreshRate = 48;
                     break;
                 case 1:
-                    Screen.SetResolution(currentWidth, currentHeight, isFullscreen, 60);
-                    currentRefreshRate = 60;
+                    Screen.SetResolution(_currentWidth, _currentHeight, _isFullscreen, 60);
+                    _currentRefreshRate = 60;
                     break;
                 case 2:
-                    Screen.SetResolution(currentWidth, currentHeight, isFullscreen, 100);
-                    currentRefreshRate = 100;
+                    Screen.SetResolution(_currentWidth, _currentHeight, _isFullscreen, 100);
+                    _currentRefreshRate = 100;
                     break;
-                case 3: //Custom
-                    Screen.SetResolution(currentWidth, currentHeight, isFullscreen, 144);
-                    currentRefreshRate = 144;
+                case 3: 
+                    Screen.SetResolution(_currentWidth, _currentHeight, _isFullscreen, 144);
+                    _currentRefreshRate = 144;
+                    break;
+                case 4: //Custom
+                    Screen.SetResolution(_currentWidth, _currentHeight, _isFullscreen, custom);
+                    _currentRefreshRate = custom;
                     break;
             }
         } //Allows the player to set a screen refresh rate
@@ -374,29 +396,19 @@ namespace Player
             {
                 case 0:
                     Screen.fullScreen = true;
-                    isFullscreen = true;
+                    _isFullscreen = true;
                     break;
                 case 1:
                     Screen.fullScreen = false;
-                    isFullscreen = false;
+                    _isFullscreen = false;
                     break;
             }
         } //Switches between FullScreen and Windowed mode
 
-        private void SetSoundMixersVolumes(int i, int desiredVolume)
+        private void FallBackSounds(int i, int desiredVolume)
         {
-            switch (i)
-            {
-                case 0: //Music
-                    break;
-                case 1: //SFX
-                    break;
-                case 2: //Ambient
-                    break;
-                case 3: //General
-                    break;
-            }
-        } //Allows the player to change volumes
+            
+        } 
 
         private void SetGraphicSettings(int i) //Allows the player to switch between pre established graphic modes
         {
@@ -487,43 +499,48 @@ namespace Player
 
         public void SetSfxVolume(bool x)
         {
-            if (x)
+
+            switch (x)
             {
-                sfxMixer.audioMixer.SetFloat("SFXVolume", PlayerPrefs.GetFloat("sfxVolume"));
-                sfxVolumeSlider.value = PlayerPrefs.GetFloat("sfxVolume");
-            }
-            else
-            {
-                sfxMixer.audioMixer.SetFloat("SFXVolume", sfxVolumeSlider.value);
-                WriteData(2, "sfxVolume", 0, sfxVolumeSlider.value, null);
+                case true:
+                    sfxMixer.audioMixer.SetFloat("SFXVolume", PlayerPrefs.GetFloat("sfxVolume"));
+                    sfxVolumeSlider.value = PlayerPrefs.GetFloat("sfxVolume");
+                    break;
+                case false:
+                    sfxMixer.audioMixer.SetFloat("SFXVolume", sfxVolumeSlider.value);
+                    WriteData(2, "sfxVolume", 0, sfxVolumeSlider.value, null);
+                    break;
             }
         }
 
         public void SetAmbienceVolume(bool x)
         {
-            if (x)
+            switch (x)
             {
-                ambienceMixer.audioMixer.SetFloat("AmbienceVolume", PlayerPrefs.GetFloat("ambienceVolume"));
-                ambienceVolumeSlider.value = PlayerPrefs.GetFloat("ambienceVolume");
-            }
-            else
-            {
-                ambienceMixer.audioMixer.SetFloat("AmbienceVolume", ambienceVolumeSlider.value);
-                WriteData(2, "ambienceVolume", 0, ambienceVolumeSlider.value, null);
+                case true:
+                    ambienceMixer.audioMixer.SetFloat("AmbienceVolume", PlayerPrefs.GetFloat("ambienceVolume"));
+                    ambienceVolumeSlider.value = PlayerPrefs.GetFloat("ambienceVolume");
+                    break;
+                case  false:
+                    ambienceMixer.audioMixer.SetFloat("AmbienceVolume", ambienceVolumeSlider.value);
+                    WriteData(2, "ambienceVolume", 0, ambienceVolumeSlider.value, null);
+                    break;
+                    ;
             }
         }
 
         public void SetMusicVolume(bool x)
         {
-            if (x)
+            switch (x)
             {
-                musicMixer.audioMixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat("musicVolume"));
-                musicVolumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
-            }
-            else
-            {
-                musicMixer.audioMixer.SetFloat("MusicVolume", musicVolumeSlider.value);
-                WriteData(2, "musicVolume", 0, musicVolumeSlider.value, null);
+                    case true:
+                        musicMixer.audioMixer.SetFloat("MusicVolume", PlayerPrefs.GetFloat("musicVolume"));
+                        musicVolumeSlider.value = PlayerPrefs.GetFloat("musicVolume");
+                        break;
+                    case false:
+                        musicMixer.audioMixer.SetFloat("MusicVolume", musicVolumeSlider.value);
+                        WriteData(2, "musicVolume", 0, musicVolumeSlider.value, null);
+                        break;
             }
         }
 

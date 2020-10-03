@@ -22,7 +22,7 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void SpawnPlayer(int id, string username, Vector3 position, Quaternion rotation)
+    public void SpawnPlayer(int id, string username, Vector3 position, Quaternion rotation) 
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
