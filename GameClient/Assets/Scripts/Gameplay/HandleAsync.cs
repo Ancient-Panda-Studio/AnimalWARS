@@ -8,22 +8,22 @@ using UnityEngine.Networking;
 
 public class HandleAsync : MonoBehaviour
 {
-    public static HandleAsync instance;
-    private bool imageRetrieved;
-    private bool isDone;
-    private new string name;
-    private bool ownsNothing;
-    private string price;
-    private List<int> tempFriendIDList = new List<int>();
-    private List<string> tempFriendList = new List<string>();
+    public static HandleAsync Instance;
+    private bool _imageRetrieved;
+    private bool _isDone;
+    private new string _name;
+    private bool _ownsNothing;
+    private string _price;
+    private List<int> _tempFriendIDList = new List<int>();
+    private List<string> _tempFriendList = new List<string>();
 
     private void Awake()
     {
-        if (instance == null)
+        if (Instance == null)
         {
-            instance = this;
+            Instance = this;
         }
-        else if (instance != this)
+        else if (Instance != this)
         {
             Debug.Log("Instance already exists, destroying object!");
             Destroy(this);
@@ -79,7 +79,7 @@ public class HandleAsync : MonoBehaviour
                     new Vector2(0.5f, 0.5f));
                 Skins.PopulateSkinImage(sprite);
                 Debug.Log("I'm here");
-                imageRetrieved = true;
+                _imageRetrieved = true;
             }
         }
     }
@@ -94,7 +94,7 @@ public class HandleAsync : MonoBehaviour
         {
             //GetData
             Debug.Log(www.text);
-            ownsNothing = true;
+            _ownsNothing = true;
             StartCoroutine(GenerateSkinsToShow());
         }
         else
@@ -110,20 +110,20 @@ public class HandleAsync : MonoBehaviour
     private IEnumerator GenerateSkinsToShow()
     {
         var AllSkinsIntList = new List<int>();
-        if (!ownsNothing)
+        if (!_ownsNothing)
         {
             var OwnedSkinsIntList = PlayerVariables.OwnedSkinsJson.Select(t => int.Parse(t.ToString())).ToList();
-
+            
             AllSkinsIntList.AddRange(PlayerVariables.AllSkinsJson.Select(t => int.Parse(t.ToString())));
             var SkinsToGetInfo = AllSkinsIntList.Except(OwnedSkinsIntList).ToList();
             foreach (var t in SkinsToGetInfo)
             {
-                isDone = false;
+                _isDone = false;
                 StartCoroutine(PopulateSkins(t.ToString()));
                 StartCoroutine(CreateSprites(t.ToString()));
-                yield return new WaitUntil(() => isDone = true);
-                yield return new WaitUntil(() => imageRetrieved = true);
-                Skins.PopulateSkinScroller(name, price);
+                yield return new WaitUntil(() => _isDone = true);
+                yield return new WaitUntil(() => _imageRetrieved = true);
+                Skins.PopulateSkinScroller(_name, _price);
             }
         }
         else
@@ -132,13 +132,13 @@ public class HandleAsync : MonoBehaviour
             var SkinsToGetInfo = AllSkinsIntList;
             foreach (var t in SkinsToGetInfo)
             {
-                isDone = false;
-                imageRetrieved = false;
+                _isDone = false;
+                _imageRetrieved = false;
                 StartCoroutine(PopulateSkins(t.ToString()));
                 StartCoroutine(CreateSprites(t.ToString()));
-                yield return new WaitUntil(() => isDone = true);
-                yield return new WaitUntil(() => imageRetrieved = true);
-                Skins.PopulateSkinScroller(name, price);
+                yield return new WaitUntil(() => _isDone = true);
+                yield return new WaitUntil(() => _imageRetrieved = true);
+                Skins.PopulateSkinScroller(_name, _price);
             }
         }
 
@@ -154,9 +154,9 @@ public class HandleAsync : MonoBehaviour
         if (www.text[0] == '0')
         {
             //GetData
-            name = www.text.Split('\t')[1];
-            price = www.text.Split('\t')[2];
-            isDone = true;
+            _name = www.text.Split('\t')[1];
+            _price = www.text.Split('\t')[2];
+            _isDone = true;
         }
         else
         {
@@ -198,7 +198,7 @@ public class HandleAsync : MonoBehaviour
                 Debug.Log(www.downloadHandler.text);
                 var jsonArrayStr = www.downloadHandler.text;
                 var jsonArray = JSON.Parse(jsonArrayStr) as JSONArray;
-                if (jsonArray.Count <= 0)
+                if (www.downloadHandler.text == "0")
                 {
                     //No Friends
                     //TODO Show ADD FRIEND BUTTON
@@ -206,6 +206,15 @@ public class HandleAsync : MonoBehaviour
                 }
                 else
                 {
+                    
+                    //TODO WE NEED SERVER ID AND DB ID 
+                    
+                    //GET SERVER ID WITH USER NAME
+                    
+                    if (jsonArray.IsNull)
+                    {
+                        yield return null;
+                    }
                     for (var i = 0; i < jsonArray.Count; i++)
                     {
                         var isDone = false;
@@ -222,16 +231,16 @@ public class HandleAsync : MonoBehaviour
                             friendUser = jsonArray[i].AsObject["usertwo"];
                             friendID = jsonArray[i].AsObject["idtwo"];
                         }
-
-                        tempFriendList.Add(friendUser);
-                        tempFriendIDList.Add(friendID);
+                        GameManager.Instance.FriendsList.Add(friendID,friendUser);
+                        _tempFriendList.Add(friendUser);
+                        _tempFriendIDList.Add(friendID);
                         Debug.Log(i + " user: " + friendUser + " friendid: " + friendID);
                     }
 
                     Debug.Log("I finished the loop");
-                    UIManager.instance.CreateFriends(tempFriendList, tempFriendIDList);
-                    tempFriendList = null;
-                    tempFriendIDList = null;
+                    UIManager.Instance.CreateFriends(_tempFriendList, _tempFriendIDList);
+                    _tempFriendList = null;
+                    _tempFriendIDList = null;
                 }
 
                

@@ -78,9 +78,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 65
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
       Script: {instanceID: 0}
     - Class: 95
       Script: {instanceID: 0}
@@ -147,15 +153,15 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14612}
     - Class: 114
-      Script: {instanceID: 14634}
+      Script: {instanceID: 14636}
     - Class: 114
-      Script: {instanceID: 14638}
+      Script: {instanceID: 14640}
     - Class: 114
-      Script: {instanceID: 14664}
+      Script: {instanceID: 14666}
     - Class: 114
-      Script: {instanceID: 14690}
+      Script: {instanceID: 14692}
     - Class: 114
-      Script: {instanceID: 14730}
+      Script: {instanceID: 14732}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -928,4 +934,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/Kedalen/Desktop/Builds/0.1/GameClient.exe
+  playerPath: C:/Users/Kedalen/GitHub/AnimalWARS/Builds/GameClient.exe

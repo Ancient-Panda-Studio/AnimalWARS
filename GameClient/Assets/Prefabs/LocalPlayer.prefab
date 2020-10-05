@@ -80,10 +80,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   binds:
     forward: 119
+    backwards: 115
+    left: 97
+    right: 100
     jump: 32
     interact: 101
     ability: 113
-  _cam: {fileID: 314879399764376584}
+  rotateSpeed: 0.1
+  rotation: 0.1
 --- !u!114 &4651679043833911348
 MonoBehaviour:
   m_ObjectHideFlags: 0

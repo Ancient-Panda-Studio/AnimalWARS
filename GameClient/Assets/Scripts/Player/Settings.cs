@@ -43,6 +43,7 @@ namespace Player
 
         private void ReadData()
         {
+            
             //Sets Resolution to last set to player and if none was selected to default
 
             #region ResolutionHandle

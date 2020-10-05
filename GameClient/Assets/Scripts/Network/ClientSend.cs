@@ -23,12 +23,12 @@ namespace Network
             using (var _packet = new Packet((int) ClientPackets.sendLoginInfo))
             {
                 _packet.Write(Client.instance.myId);
-                _packet.Write(UIManager.instance.usernameField.text);
-                _packet.Write(UIManager.instance.passwordField.text);
+                _packet.Write(UIManager.Instance.usernameField.text);
+                _packet.Write(UIManager.Instance.passwordField.text);
                 SendTcpData(_packet);
             }
 
-            PlayerVariables.UserName = UIManager.instance.usernameField.text;
+            PlayerVariables.UserName = UIManager.Instance.usernameField.text;
         }
 
         public static void WelcomeReceived()
@@ -52,13 +52,13 @@ namespace Network
             }
         }
 
-        public static void SendInviteResponse(bool x, string _name, int sendTO) //After Pressing Decline or Accept
+        public static void SendInviteResponse(bool x, string whoSent) //After Pressing Decline or Accept
         {
             using (var _packet = new Packet((int) ClientPackets.inviteAnswer))
             {
                 _packet.Write(x);
-                _packet.Write(sendTO);
-                _packet.Write(_name);
+                _packet.Write(whoSent);
+                _packet.Write(Constants.Username);
                 SendTcpData(_packet);
             }
         }

@@ -6,6 +6,6 @@ namespace Player
     [Serializable]
     public class Bindings
     {
-        public KeyCode forward, jump, interact, ability;
+        public KeyCode forward, backwards, left, right, jump, interact, ability;
     }
 }

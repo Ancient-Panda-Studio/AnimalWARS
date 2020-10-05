@@ -13,8 +13,8 @@ public class ClientHandle : MonoBehaviour
 
         Debug.Log($"Message from server: {_msg}");
         Client.instance.myId = _myId;
-        UIManager.instance.offline.SetActive(false);
-        UIManager.instance.online.SetActive(true);
+        UIManager.Instance.offline.SetActive(false);
+        UIManager.Instance.online.SetActive(true);
         ClientSend.WelcomeReceived();
         Client.instance.udp.Connect(((IPEndPoint) Client.instance.tcp.socket.Client.LocalEndPoint).Port);
     }
@@ -37,7 +37,7 @@ public class ClientHandle : MonoBehaviour
 
         //TODO Pop Invite UI
 
-        UIManager.instance.GetInvite(_id, _username , _who);
+        UIManager.Instance.GetInvite(_id, _username);
     }
 
     public static void HandleLogin(Packet _packet)
@@ -47,14 +47,14 @@ public class ClientHandle : MonoBehaviour
         var _error = _packet.ReadString();
         if (_allowed)
         {
-            UIManager.instance.AllowLogin();
-            HandleAsync.instance.Routine(HandleAsync.instance.GetUserBasicData());
-            HandleAsync.instance.Routine(HandleAsync.instance.GetAllSkins());
-            HandleAsync.instance.Routine(HandleAsync.instance.GetFriends());
+            UIManager.Instance.AllowLogin();
+            HandleAsync.Instance.Routine(HandleAsync.Instance.GetUserBasicData());
+            HandleAsync.Instance.Routine(HandleAsync.Instance.GetAllSkins());
+            HandleAsync.Instance.Routine(HandleAsync.Instance.GetFriends());
         }
         else
         {
-            UIManager.instance.ForbidLogin(_error);
+            UIManager.Instance.ForbidLogin(_error);
             Constants.Username = null;
             PlayerVariables.UserName = null;
         }
@@ -92,9 +92,9 @@ public class ClientHandle : MonoBehaviour
         {
             case true:
                 //Invitation Accepted
-                UIManager.instance.CreateGroup(from, _name);
+                UIManager.Instance.CreateGroup(from, _name);
 
-                Debug.Log("Invitation you sent to " + from + " has been accepted");
+                    Debug.Log("Invitation you sent to " + from + " has been accepted");
                 break;
             case false:
 

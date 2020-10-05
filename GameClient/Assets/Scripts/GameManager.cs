@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static readonly Dictionary<int, PlayerManager> Players = new Dictionary<int, PlayerManager>();
     public GameObject localPlayerPrefab; //Model the client player will use
     public GameObject playerPrefab; //Model the client player will see other clients using
+    public Dictionary<int,string> FriendsList = new Dictionary<int, string>();
 
     private void Awake()
     {

@@ -26,11 +26,13 @@
     <explicitExcludes>
       <Path>.idea</Path>
       <Path>.vs</Path>
+      <Path>BackupUnusedAssets</Path>
       <Path>Build</Path>
       <Path>Build1.app</Path>
       <Path>Library</Path>
       <Path>Library-Old</Path>
       <Path>Logs</Path>
+      <Path>Temp</Path>
       <Path>obj</Path>
     </explicitExcludes>
   </component>
