@@ -31,7 +31,41 @@ namespace Player
 
   public List<int> resolutionHeight;
   public List<int> resolutionWidth;
-  private Dictionary<string, int> optionsID;
+  private Dictionary<string, int> _optionsDictionary = new Dictionary<string, int>();
+  public Text forwardKeyBindText;
+  public Text backwardsKeyBindText;
+  public Text leftKeyBindText;
+  public Text rightKeyBindText;
+  public Text jumpKeyBindText;
+  public Text abilityKeyBindText;
+  public Text interactKeyBindText;
+
+
+  public TabButton overallHigh;
+  public TabButton overallMid;
+  public TabButton overallLow;
+  
+  
+  public TabButton textureHigh;
+  public TabButton textureMid;
+  public TabButton textureLow;
+
+  
+  public TabButton shadowHigh;
+  public TabButton shadowMid;
+  public TabButton shadowLow;
+
+  
+  public TabButton aaHigh;
+  public TabButton aaMid;
+  public TabButton aaLow;
+  
+  
+  public TabButton scModeHigh;
+  public TabButton scModeMid;
+  public TabButton scModeLow;
+
+  
   public void Start()
   {
    PopulateResolutionDropDown();
@@ -40,35 +74,45 @@ namespace Player
   private void PopulateResolutionDropDown()
   {
    resDropdown.ClearOptions();
-   Resolution[] resolutions = Screen.resolutions;
+   var resolutions = Screen.resolutions;
+   Debug.Log(resolutions.Length);
    for (int i = 0; i < resolutions.Length; i++)
    {
-    optionsToAdd.Add( resolutions[i].width + "x" + resolutions[i].height);
-    resolutionHeight[i] = resolutions[i].height;
-    resolutionWidth[i] = resolutions[i].width;
-    optionsID.Add(optionsToAdd[i],i);
-
+    Debug.Log(i);
+    optionsToAdd.Add(resolutions[i].width + "x" + resolutions[i].height);
+    resolutionHeight.Add(resolutions[i].height);
+    resolutionWidth.Add(resolutions[i].width);
+    _optionsDictionary.Add(optionsToAdd[i], i);
    }
+
    resDropdown.AddOptions(optionsToAdd);
   }
   
-   // Print the resolutions
+  // Print the resolutions
   public void SetResolution(string modifier)
   {
-   if (optionsID.Count != 0)
+   if (_optionsDictionary.Count != 0)
    {
     Application.Quit();
    }
    else
    {
-    Screen.SetResolution(resolutionWidth[optionsID[modifier]], resolutionHeight[optionsID[modifier]], Screen.fullScreenMode);
-    XMLDataManager.Instance.Entry.UpdateXML(9,0,0,optionsToAdd[optionsID[modifier]]);
-
-    
+    Screen.SetResolution(resolutionWidth[_optionsDictionary[modifier]], resolutionHeight[_optionsDictionary[modifier]],
+     Screen.fullScreenMode);
+    XMLDataManager.Instance.Entry.UpdateXML(9, 0, 0, optionsToAdd[_optionsDictionary[modifier]]);
    }
+  }
+  public void OnDropDownChanged()
+  {
+   var value = resDropdown.value;
+   Screen.SetResolution(resolutionWidth[value], resolutionHeight[value], Screen.fullScreenMode);
+   Debug.Log(optionsToAdd[value]);
+   XMLDataManager.Instance.Entry.UpdateXML(9,0,0,optionsToAdd[value]);
   }
   public void SetOverall(int preset)
   {
+   Debug.Log("Here");
+   
    switch (preset)
    {
     case 0:
@@ -91,6 +135,8 @@ namespace Player
      
      break;
    }
+   XMLDataManager.Instance.Entry.UpdateXML(4,preset,0,null);
+
   }
 
   public void SetTextureDetail(int qualityValue)
@@ -127,10 +173,10 @@ namespace Player
 
   }
 
-  public void SetScreenMode(int mode)
-  {
-   switch (mode)
+   public void SetScreenMode(int mode)
    {
+    switch (mode)
+    {
     case 0:
      Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
      XMLDataManager.Instance.Entry.UpdateXML(5,0,0,null);
@@ -184,6 +230,10 @@ namespace Player
      currentBind.interact = keyCode;
      XMLDataManager.Instance.Entry.UpdateXML(14,(int)keyCode,0,null);
      break;
+    case 6: //Jump
+     currentBind.jump = keyCode;
+     XMLDataManager.Instance.Entry.UpdateXML(16,(int)keyCode,0,null);
+     break;
    }
   }
 
@@ -220,6 +270,10 @@ namespace Player
     case 5: //Interact
      keyBindShow.text = currentBind.interact.ToString();
      whatKeyAmISetting.text = "Interact";
+     break;
+    case 6: //Jump
+     keyBindShow.text = currentBind.jump.ToString();
+     whatKeyAmISetting.text = "Jump";
      break;
    }
 
@@ -267,7 +321,7 @@ namespace Player
   public void SetAmbientVolumeNoXml()
   {
    musicMixer.audioMixer.SetFloat("AmbienceVolume", ambientVolumeSlider.value);
-   XMLDataManager.Instance.Entry.UpdateXML(2,0,ambientVolumeSlider.value,null);
+   XMLDataManager.Instance.Entry.UpdateXML(3,0,ambientVolumeSlider.value,null);
 
   }
 

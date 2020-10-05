@@ -1453,17 +1453,17 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Skins.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/TabButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/Login/Login.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Externals/SimpleJSON.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Settings.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Bindings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/XMLDataManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Skins.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Externals/SimpleJSON.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Bindings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/Login/Login.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/TabButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Settings.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -1505,9 +1505,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Bindings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Settings.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/TabButton.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/TabGroup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/XMLDataManager.cs" />
       </list>
@@ -1614,6 +1614,7 @@
       <workItem from="1601765298427" duration="221000" />
       <workItem from="1601765530563" duration="1281000" />
       <workItem from="1601817902829" duration="32031000" />
+      <workItem from="1601904016019" duration="8064000" />
     </task>
     <servers />
   </component>
@@ -1676,10 +1677,12 @@
     <state x="507" y="-980" key="SettingsEditor/0.23.1920.1057/0.-1080.1920.1080@0.-1080.1920.1080" timestamp="1601065766378" />
     <state x="612" y="-886" key="SettingsEditor/0.23.1920.980/0.-1057.1920.1057@0.-1057.1920.1057" timestamp="1600952715295" />
     <state x="2532" y="175" width="1135" height="905" key="SettingsEditor/1920.0.1920.1080/0.27.1920.1053@1920.0.1920.1080" timestamp="1599854051375" />
-    <state x="164" y="510" width="989" height="1138" key="dock-window-1" timestamp="1601855776820">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="1912" y="-8" width="1481" height="1043" maximized="true" key="dock-window-1" timestamp="1601916081896">
+      <screen x="1920" y="0" width="1920" height="1040" />
     </state>
     <state x="131" y="0" width="1391" height="1047" key="dock-window-1/0.0.1920.1040/-1920.2.1920.1040@-1920.2.1920.1040" timestamp="1599750993917" />
+    <state x="159" y="0" width="1481" height="1043" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1601915130795" />
+    <state x="1912" y="-8" width="1481" height="1043" maximized="true" key="dock-window-1/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601916081896" />
     <state x="213" y="0" width="989" height="1138" maximized="true" key="dock-window-1/0.0.1920.1050/-1080.-310.1080.1890@-1080.-310.1080.1890" timestamp="1601855474027" />
     <state x="164" y="510" width="989" height="1138" key="dock-window-1/0.0.1920.1050/-1080.-310.1080.1890@0.0.1920.1050" timestamp="1601855776820" />
     <state x="2259" y="27" width="1470" height="1037" key="dock-window-1/1920.0.1920.1080/0.27.1920.1053@0.27.1920.1053" timestamp="1600003448390" />

@@ -11,7 +11,7 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     public static UIManager Instance;
-    [Header("Gameobjects")]
+    [Header("GAME OBJECTS")]
     public GameObject startMenu;
     public GameObject loginMenu;
     public GameObject offline;
@@ -27,18 +27,20 @@ public class UIManager : MonoBehaviour
     public GameObject interfaceSettingsUI;
     public GameObject bindsSettingsUI;
     public GameObject accountSettingsUI;
+    public GameObject resetToDefaultUi;
+    public GameObject resetButton;
     
-    [Header("Transforms")]
+    [Header("TRANSFORMS")]
     public Transform friendList;
-    [Header("Buttons")]
+    [Header("BUTTONS")]
     public Button loginButton;
     public Button addFriend;
-    [Header("InputFields")]
+    [Header("INPUT FIELDS")]
 
     public InputField usernameField;
     public InputField friendInput;
     public InputField passwordField;
-    [Header("Texts")]
+    [Header("TEXTS")]
     public Text errorText;
     public TMP_Text friendText;
     private int _beforeSettings;
@@ -57,15 +59,19 @@ public class UIManager : MonoBehaviour
             Destroy(this);
         }
     }
-
-    public void Update()
+    public void ToggleResetToDefaultUi()
     {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            XMLDataManager.Instance.Entry.DocumentHandler(false);
-        }
+        resetToDefaultUi.SetActive(!resetToDefaultUi.activeSelf);
+        resetButton.GetComponent<Button>().interactable = false;
     }
 
+    public void ResetSettings()
+    {
+        XMLDataManager.Instance.Entry.GenerateNewFile();
+        resetToDefaultUi.SetActive(false);
+        resetButton.GetComponent<Button>().interactable = true;
+
+    }
     public void ToggleVideoSettings(bool x)
     {
         videoSettingsUI.SetActive(x);
@@ -111,6 +117,10 @@ public class UIManager : MonoBehaviour
             _beforeSettings = 2;
         }
 
+        if (resetToDefaultUi.activeSelf)
+        {
+            resetToDefaultUi.SetActive(false);
+        }
         settingsMenu.SetActive(!settingsMenu.activeSelf);
         if (!settingsMenu.activeSelf) return;
         switch (_beforeSettings)

@@ -56,7 +56,7 @@ public class TabGroup : MonoBehaviour
        //     TabButton.DeSelect();
         }
         selectedTab = button;
-        //TabButton.ONTabSelected.Invoke();
+        button.Select();
         ResetTabs();
         button.background.sprite = tabSelected;
         if (isOption) return;
