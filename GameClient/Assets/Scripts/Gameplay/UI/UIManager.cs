@@ -70,6 +70,8 @@ public class UIManager : MonoBehaviour
         XMLDataManager.Instance.Entry.GenerateNewFile();
         resetToDefaultUi.SetActive(false);
         resetButton.GetComponent<Button>().interactable = true;
+        XMLDataManager.Instance.Entry.DocumentHandler();
+        XMLDataManager.Instance.Entry.ResetDropDown();
 
     }
     public void ToggleVideoSettings(bool x)
@@ -153,7 +155,7 @@ public class UIManager : MonoBehaviour
         for (var i = 0; i < x.Count; i++)
         {
             Debug.Log(x.Count);
-            var friend = Instantiate(Resources.Load("Prefabs/FriendTemplate") as GameObject, friendList, true);
+            var friend = Instantiate(Resources.Load("Prefabs/FriendTemplate") as GameObject, friendList, false);
             var y = friend.GetComponent<FriendController>();
             y.name = x[i];
             y.playerID = f[i];

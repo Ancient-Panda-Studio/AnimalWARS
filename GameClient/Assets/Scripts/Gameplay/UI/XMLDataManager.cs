@@ -6,12 +6,13 @@ using  System.Xml.Serialization;
 using System.IO;
 using System.Linq;
 using System.Xml.Linq;
+using Player;
 using UnityEngine.UI;
 
 public class XMLDataManager : MonoBehaviour
 {
     public static XMLDataManager Instance;
-
+    public GameObject x;
     private void Awake()
     {
         if (Instance == null)
@@ -23,13 +24,18 @@ public class XMLDataManager : MonoBehaviour
             Debug.Log("Instance already exists, destroying object!");
             Destroy(this);
         }
-        if (!File.Exists(@"C:\Users\oriol\Documents\AnimalWars\Settings\Settings.xml"))
+        if (!File.Exists(Constants.filePath))
         { 
             Entry.GenerateNewFile(); 
             return;
         }
-        Entry._foundDocument = XDocument.Load(@"C:\Users\oriol\Documents\AnimalWars\Settings\Settings.xml");
-        Entry.DocumentHandler();
+        else
+        {
+            Entry._foundDocument = XDocument.Load(Constants.filePath);
+            Entry.DocumentHandler();
+        }
+
+        Entry.x = x;
     }
 
     public DataEntry Entry;
@@ -38,10 +44,16 @@ public class XMLDataManager : MonoBehaviour
 [System.Serializable]
     public class DataEntry
     {
-        public Player.ConfigurationManager manager;
+        public ConfigurationManager manager;
         public XDocument _foundDocument;
-
-        
+        public int DropDownValue;
+        public string DesiredResolution;
+        public GameObject x;
+        public void ResetDropDown()
+        {
+            DropDownValue = 0;
+            manager.resDropdown.value = 0;
+        }
         public void UpdateXML(int modified,int intValue, float floatValue, string stringValue)
         {
             switch (modified)
@@ -63,28 +75,93 @@ public class XMLDataManager : MonoBehaviour
                     var ambientElement = _foundDocument.Descendants("Settings").Elements("AmbientVolume").FirstOrDefault();
                     ambientElement?.SetValue(floatValue);
                     break;
-                
-                case 4:
-                    Debug.Log("Updating Overall");
-                    var overallElement = _foundDocument.Descendants("Settings").Elements("Overall").FirstOrDefault();
-                    overallElement?.SetValue(intValue);
-                    break;
-                
                 case 5:
                     var textureElement = _foundDocument.Descendants("Settings").Elements("TextureDetail").FirstOrDefault();
                     textureElement?.SetValue(intValue);
+                    switch (intValue)
+                    {
+                        case 0:
+                            manager.textureHigh.isDefault = true;
+                            manager.textureMid.isDefault = false;
+                            manager.textureLow.isDefault = false;
+                            break;
+                        case 1:
+                            manager.textureMid.isDefault = true;
+                            manager.textureHigh.isDefault = false;
+                            manager.textureLow.isDefault = false;
+                            break;
+                        case 2:
+                            manager.textureLow.isDefault = true;
+                            manager.textureHigh.isDefault = false;
+                            manager.textureMid.isDefault = false;
+                            break;
+                    }
                     break;
                 case 6:
                     var shadowElement = _foundDocument.Descendants("Settings").Elements("ShadowDetail").FirstOrDefault();
                     shadowElement?.SetValue(intValue);
+                    switch (intValue)
+                    {
+                        case 0:
+                            manager.shadowHigh.isDefault = true;
+                            manager.shadowLow.isDefault = false;
+                            manager.shadowMid.isDefault = false;
+                            break;
+                        case 1:
+                            manager.shadowMid.isDefault = true;
+                            manager.shadowHigh.isDefault = false;
+                            manager.shadowLow.isDefault = false;
+                            break;
+                        case 2:
+                            manager.shadowLow.isDefault = true;
+                            manager.shadowHigh.isDefault = false;
+                            manager.shadowMid.isDefault = false;
+                            break;
+                    }
                     break;
                 case 7:
                     var aaElement = _foundDocument.Descendants("Settings").Elements("AntiAliasing").FirstOrDefault();
                     aaElement?.SetValue(intValue);
+                    switch (intValue)
+                    {
+                        case 0:
+                            manager.aaHigh.isDefault = true;
+                            manager.aaMid.isDefault = false;
+                            manager.aaLow.isDefault = false;
+                            break;
+                        case 1:
+                            manager.aaMid.isDefault = true;
+                            manager.aaLow.isDefault = false;
+                            manager.aaHigh.isDefault = false;
+                            break;
+                        case 2:
+                            manager.aaLow.isDefault = true;
+                            manager.aaHigh.isDefault = false;
+                            manager.aaMid.isDefault = false;
+                            break;
+                    }
                     break;
                 case 8:
                     var screenModeElement = _foundDocument.Descendants("Settings").Elements("ScreenMode").FirstOrDefault();
                     screenModeElement?.SetValue(intValue);
+                    switch (intValue)
+                    {
+                        case 0: //FullScreen
+                            manager.scModeHigh.isDefault = true;
+                            manager.scModeLow.isDefault = false;
+                            manager.scModeMid.isDefault = false;
+                            break;
+                        case 1: //Borderless Window
+                            manager.scModeMid.isDefault = true;
+                            manager.scModeHigh.isDefault = false;
+                            manager.scModeLow.isDefault = false;
+                            break;
+                        case 2: //FullScreen
+                            manager.scModeLow.isDefault = true;
+                            manager.scModeMid.isDefault = false;
+                            manager.scModeHigh.isDefault = false;
+                            break;
+                    }
                     break;
                 case 9:
                     var resolutionElement = _foundDocument.Descendants("Settings").Elements("ScreenResolution").FirstOrDefault();
@@ -118,13 +195,16 @@ public class XMLDataManager : MonoBehaviour
                     var jumpElement = _foundDocument.Descendants("Settings").Elements("Jump").FirstOrDefault();
                     jumpElement?.SetValue(intValue);
                     break;
+                case 17:
+                    var dropElement = _foundDocument.Descendants("Settings").Elements("ResDropDownValue").FirstOrDefault();
+                    dropElement?.SetValue(intValue);
+                    break;
             }
-            _foundDocument.Save(@"C:\Users\oriol\Documents\AnimalWars\Settings\Settings.xml");
-
+            _foundDocument.Save(Constants.filePath);
         }
         public void DocumentHandler()
         { 
-                if (!File.Exists(@"C:\Users\oriol\Documents\AnimalWars\Settings\Settings.xml"))
+                if (!File.Exists(Constants.filePath))
                 {
                     GenerateNewFile();
                     return;
@@ -135,7 +215,6 @@ public class XMLDataManager : MonoBehaviour
                 var readMusicVolume = (float) _foundDocument.Descendants("MusicVolume").FirstOrDefault();
                 var readSfxVolume = (float) _foundDocument.Descendants("SfxVolume").FirstOrDefault();
                 var readAmbientVolume = (float) _foundDocument.Descendants("AmbientVolume").FirstOrDefault();
-                var readOverall = (int) _foundDocument.Descendants("Overall").FirstOrDefault();
                 var readTextureDetail = (int) _foundDocument.Descendants("TextureDetail").FirstOrDefault();
                 var readShadowDetail = (int) _foundDocument.Descendants("ShadowDetail").FirstOrDefault();
                 var readAntiAliasing = (int) _foundDocument.Descendants("AntiAliasing").FirstOrDefault();
@@ -148,7 +227,8 @@ public class XMLDataManager : MonoBehaviour
                 var readInteractKey = (int) _foundDocument.Descendants("Interact").FirstOrDefault();
                 var readAbilityKey = (int) _foundDocument.Descendants("Ability").FirstOrDefault();
                 var readJumpKey = (int) _foundDocument.Descendants("Jump").FirstOrDefault();
-                
+                var readDropValue = (int) _foundDocument.Descendants("ResDropDownValue").FirstOrDefault();
+                DropDownValue = readDropValue;
                 //Apply Data
                 manager.SetMasterVolumeXml(readMasterVolume);
                 manager.SetAmbientVolumeXml(readAmbientVolume);
@@ -162,8 +242,6 @@ public class XMLDataManager : MonoBehaviour
                 manager.SetKeyBinds(5,(KeyCode)readInteractKey);
                 manager.SetKeyBinds(4,(KeyCode)readAbilityKey);
                 manager.SetKeyBinds(6,(KeyCode)readJumpKey);
-
-
                 manager.forwardKeyBindText.text = ((KeyCode) readForwardKey).ToString();
                 manager.backwardsKeyBindText.text = ((KeyCode) readBackwardKey).ToString();
                 manager.leftKeyBindText.text = ((KeyCode) readLeftKey).ToString();
@@ -171,97 +249,99 @@ public class XMLDataManager : MonoBehaviour
                 manager.abilityKeyBindText.text = ((KeyCode) readAbilityKey).ToString();
                 manager.interactKeyBindText.text = ((KeyCode) readInteractKey).ToString();
                 manager.jumpKeyBindText.text = ((KeyCode) readJumpKey).ToString();
-
                 manager.masterVolumeSlider.value = readMasterVolume;
                 manager.ambientVolumeSlider.value = readAmbientVolume;
                 manager.musicVolumeSlider.value = readMusicVolume;
                 manager.sfxVolumeSlider.value = readSfxVolume;
-
-
-
                 switch (readScreenMode)
-                {
-                    case 0:
-                        manager.scModeHigh.isDefault = true;
-                        break;
-                    case 1:
-                        manager.scModeMid.isDefault = true;
-
-                        break;
-                    case 2:
-                        manager.scModeLow.isDefault = true;
-
-                        break;
-                }
-                
+                    {
+                        case 0: //FullScreen
+                            manager.scModeHigh.isDefault = true;
+                            manager.scModeLow.isDefault = false;
+                            manager.scModeMid.isDefault = false;
+                            break;
+                        case 1: //Borderless Window
+                            manager.scModeMid.isDefault = true;
+                            manager.scModeHigh.isDefault = false;
+                            manager.scModeLow.isDefault = false;
+                            break;
+                        case 2: //FullScreen
+                            manager.scModeLow.isDefault = true;
+                            manager.scModeMid.isDefault = false;
+                            manager.scModeHigh.isDefault = false;
+                            break;
+                    }
                 switch (readShadowDetail)
-                {
-                    case 0:
-                        manager.shadowHigh.isDefault = true;
-                        break;
-                    case 1:
-                        manager.shadowMid.isDefault = true;
-                        break;
-                    case 2:
-                        manager.shadowLow.isDefault = true;
-                        break;
-                }
-
-                
+                    {
+                        case 0:
+                            manager.shadowHigh.isDefault = true;
+                            manager.shadowLow.isDefault = false;
+                            manager.shadowMid.isDefault = false;
+                            break;
+                        case 1:
+                            manager.shadowMid.isDefault = true;
+                            manager.shadowHigh.isDefault = false;
+                            manager.shadowLow.isDefault = false;
+                            break;
+                        case 2:
+                            manager.shadowLow.isDefault = true;
+                            manager.shadowHigh.isDefault = false;
+                            manager.shadowMid.isDefault = false;
+                            break;
+                    }
                 switch (readAntiAliasing)
-                {
-                    case 0:
-                        manager.aaHigh.isDefault = true;
-                        break;
-                    case 1:
-                        manager.aaMid.isDefault = true;
-                        break;
-                    case 2:
-                        manager.aaLow.isDefault = true;
-                        break;
-                }
-
-                
+                    {
+                        case 0:
+                            manager.aaHigh.isDefault = true;
+                            manager.aaMid.isDefault = false;
+                            manager.aaLow.isDefault = false;
+                            break;
+                        case 1:
+                            manager.aaMid.isDefault = true;
+                            manager.aaLow.isDefault = false;
+                            manager.aaHigh.isDefault = false;
+                            break;
+                        case 2:
+                            manager.aaLow.isDefault = true;
+                            manager.aaHigh.isDefault = false;
+                            manager.aaMid.isDefault = false;
+                            break;
+                    }
                 switch (readTextureDetail)
-                {
-                    case 0:
-                        manager.textureHigh.isDefault = true;
+                    {
+                        case 0:
+                            manager.textureHigh.isDefault = true;
+                            manager.textureMid.isDefault = false;
+                            manager.textureLow.isDefault = false;
+                            break;
+                        case 1:
+                            manager.textureMid.isDefault = true;
+                            manager.textureHigh.isDefault = false;
+                            manager.textureLow.isDefault = false;
+                            break;
+                        case 2:
+                            manager.textureLow.isDefault = true;
+                            manager.textureHigh.isDefault = false;
+                            manager.textureMid.isDefault = false;
+                            break;
+                    }
+                
 
-                        break;
-                    case 1:
-                        manager.textureMid.isDefault = true;
-
-                        break;
-                    case 2:
-                        manager.textureMid.isDefault = true;
-                        break;
-                }
-
-                if (readOverall != 3)
-                {
-                     manager.SetOverall(readOverall);
-                     manager.SetResolution(readScreenResolution);
-                     manager.SetScreenMode(readScreenMode);
-                     
-                     
-                     
-                }
-                else
-                {
-                    manager.SetShadowDetail(readShadowDetail);
-                    manager.SetAntiAliasing(readAntiAliasing);
-                    manager.SetTextureDetail(readTextureDetail);
-                    manager.SetResolution(readScreenResolution);
-                    manager.SetScreenMode(readScreenMode);
-                }
+                manager.SetScreenMode(readScreenMode);
+                manager.SetShadowDetail(readShadowDetail);
+                manager.SetAntiAliasing(readAntiAliasing);
+                manager.SetTextureDetail(readTextureDetail);
+                DesiredResolution = readScreenResolution;
+                manager.SetScreenMode(readScreenMode);
+            
         }
 
         public void GenerateNewFile()
         {
             //First start or document deleted create new document with default values
-            if (File.Exists(@"C:\Users\oriol\Documents\AnimalWars\Settings\Settings.xml"))
+            if (File.Exists(Constants.filePath))
             {
-                File.Delete(@"C:\Users\oriol\Documents\AnimalWars\Settings\Settings.xml");
+                File.Delete(Constants.filePath);
             }
             var document = new XDocument(
                 new XElement("Settings",
@@ -271,7 +351,6 @@ public class XMLDataManager : MonoBehaviour
                     new XElement("SfxVolume", 0),
                     new XElement("AmbientVolume", 0),
                     new XComment("Graphics"),
-                    new XElement("Overall", 0),
                     new XElement("TextureDetail", 2),
                     new XElement("ShadowDetail", 0),
                     new XElement("AntiAliasing", 0),
@@ -284,11 +363,13 @@ public class XMLDataManager : MonoBehaviour
                     new XElement("Left", (int) KeyCode.A),
                     new XElement("Ability", (int) KeyCode.Q),
                     new XElement("Interact", (int) KeyCode.E),
-                    new XElement("Jump", (int) KeyCode.Space)
+                    new XElement("Jump", (int) KeyCode.Space),
+                    new XElement("ResDropDownValue", 0)
                 )
             );
-            document.Save(@"C:\Users\oriol\Documents\AnimalWars\Settings\Settings.xml");
+            document.Save(Constants.filePath);
             _foundDocument = document;
+            DocumentHandler();
         }
     }
     

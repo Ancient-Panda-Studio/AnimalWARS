@@ -27,6 +27,7 @@ namespace Player
   public Text whatKeyAmISetting;
   public Dropdown resDropdown;
 
+  public GameObject videoTrack;
   public List<string> optionsToAdd;
 
   public List<int> resolutionHeight;
@@ -40,12 +41,6 @@ namespace Player
   public Text abilityKeyBindText;
   public Text interactKeyBindText;
 
-
-  public TabButton overallHigh;
-  public TabButton overallMid;
-  public TabButton overallLow;
-  
-  
   public TabButton textureHigh;
   public TabButton textureMid;
   public TabButton textureLow;
@@ -65,33 +60,56 @@ namespace Player
   public TabButton scModeMid;
   public TabButton scModeLow;
 
-  
+  public TabGroup[] TabGroups;
+
+  private Resolution[] _resolutions;
   public void Start()
   {
    PopulateResolutionDropDown();
   }
 
+  public void ReEvaluateTabs()
+  {
+   foreach (var tabG in TabGroups)
+   {
+    tabG.ReEvaluateTabs();
+   }
+  }
   private void PopulateResolutionDropDown()
   {
+   _resolutions = Screen.resolutions;
    resDropdown.ClearOptions();
-   var resolutions = Screen.resolutions;
-   Debug.Log(resolutions.Length);
-   for (int i = 0; i < resolutions.Length; i++)
+   string[] preFormat = new string[_resolutions.Length];
+   for (int i = 0; i < _resolutions.Length; i++)
    {
-    Debug.Log(i);
-    optionsToAdd.Add(resolutions[i].width + "x" + resolutions[i].height);
-    resolutionHeight.Add(resolutions[i].height);
-    resolutionWidth.Add(resolutions[i].width);
-    _optionsDictionary.Add(optionsToAdd[i], i);
+    string option = _resolutions[i].width + "x" + _resolutions[i].height;
+    preFormat[i] = option;
    }
-
+   string[] formated = preFormat.Distinct().ToArray();
+   foreach (var str in formated)
+   {
+    optionsToAdd.Add(str);
+   }
+   for (int i = 0; i < formated.Length; i++)
+   {
+    _optionsDictionary.Add(formated[i], i);
+    string[] splitedString = formated[i].Split('x');
+    int width = int.Parse(splitedString[0]);
+    int height = int.Parse(splitedString[1]);
+    resolutionWidth.Add(width);
+    resolutionHeight.Add(height);
+   }
    resDropdown.AddOptions(optionsToAdd);
+   int x = _optionsDictionary["1920x1080"];
+   Debug.Log(x);
+   resDropdown.value = XMLDataManager.Instance.Entry.DropDownValue;
+   SetResolution(XMLDataManager.Instance.Entry.DesiredResolution);
   }
   
   // Print the resolutions
   public void SetResolution(string modifier)
   {
-   if (_optionsDictionary.Count != 0)
+   if (_optionsDictionary.Count == 0)
    {
     Application.Quit();
    }
@@ -108,37 +126,9 @@ namespace Player
    Screen.SetResolution(resolutionWidth[value], resolutionHeight[value], Screen.fullScreenMode);
    Debug.Log(optionsToAdd[value]);
    XMLDataManager.Instance.Entry.UpdateXML(9,0,0,optionsToAdd[value]);
+   XMLDataManager.Instance.Entry.UpdateXML(17, resDropdown.value,0,null);
   }
-  public void SetOverall(int preset)
-  {
-   Debug.Log("Here");
-   
-   switch (preset)
-   {
-    case 0:
-     SetTextureDetail(2);
-     SetShadowDetail(0);
-     SetAntiAliasing(0);
-
-     break;
-    case 1:
-     SetTextureDetail(1);
-     SetShadowDetail(1);
-     SetAntiAliasing(1);
-
-     
-     break;
-    case 2:
-     SetTextureDetail(0);
-     SetShadowDetail(2);
-     SetAntiAliasing(2);
-     
-     break;
-   }
-   XMLDataManager.Instance.Entry.UpdateXML(4,preset,0,null);
-
-  }
-
+  
   public void SetTextureDetail(int qualityValue)
   {
    QualitySettings.masterTextureLimit = qualityValue;
@@ -179,17 +169,17 @@ namespace Player
     {
     case 0:
      Screen.fullScreenMode = FullScreenMode.FullScreenWindow;
-     XMLDataManager.Instance.Entry.UpdateXML(5,0,0,null);
+     XMLDataManager.Instance.Entry.UpdateXML(8,0,0,null);
 
      break;
     case 1:
      Screen.fullScreenMode = FullScreenMode.MaximizedWindow;
-     XMLDataManager.Instance.Entry.UpdateXML(5,1,0,null);
+     XMLDataManager.Instance.Entry.UpdateXML(8,1,0,null);
 
      break;
     case 2:
      Screen.fullScreenMode = FullScreenMode.Windowed;
-     XMLDataManager.Instance.Entry.UpdateXML(5,2,0,null);
+     XMLDataManager.Instance.Entry.UpdateXML(8,2,0,null);
 
      break;
    }
@@ -202,37 +192,266 @@ namespace Player
    switch (whatKey)
    {
     case 0: //Forward
+     if (currentBind.backwards == keyCode)
+     {
+      currentBind.backwards = KeyCode.None;
+      backwardsKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(11, (int)KeyCode.None,0,null);
+     } else if (currentBind.left == keyCode)
+     {
+      currentBind.left = KeyCode.None;
+      leftKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(12,(int)KeyCode.None,0,null);
+     } else if (currentBind.right == keyCode)
+     {
+      currentBind.right = KeyCode.None;
+      rightKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(13,(int)KeyCode.None,0,null);
+     } else if (currentBind.interact == keyCode)
+     {
+      currentBind.interact = KeyCode.None;
+      interactKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(14,(int)KeyCode.None,0,null);
+     } else if (currentBind.ability == keyCode)
+     {
+      currentBind.ability = KeyCode.None;
+      abilityKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(15,(int)KeyCode.None,0,null);
+      
+     } else if(currentBind.jump == keyCode)
+     {
+      currentBind.jump = KeyCode.None;
+      jumpKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(15,(int)KeyCode.None,0,null);
+     }
+     
+     
      currentBind.forward = keyCode;
+     forwardKeyBindText.text = keyCode.ToString();
      XMLDataManager.Instance.Entry.UpdateXML(10,(int)keyCode,0,null);
 
      break;
     case 1: //Backward
+     if (currentBind.forward == keyCode)
+     {
+      currentBind.forward = KeyCode.None;
+      forwardKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(10, (int)KeyCode.None,0,null);
+     } else if (currentBind.left == keyCode)
+     {
+      currentBind.left = KeyCode.None;
+      leftKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(12,(int)KeyCode.None,0,null);
+     } else if (currentBind.right == keyCode)
+     {
+      currentBind.right = KeyCode.None;
+      rightKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(13,(int)KeyCode.None,0,null);
+     } else if (currentBind.interact == keyCode)
+     {
+      currentBind.interact = KeyCode.None;
+      interactKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(14,(int)KeyCode.None,0,null);
+     } else if (currentBind.ability == keyCode)
+     {
+      currentBind.ability = KeyCode.None;
+      abilityKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(15,(int)KeyCode.None,0,null);
+      
+     } else if(currentBind.jump == keyCode)
+     {
+      currentBind.jump = KeyCode.None;
+      jumpKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(15,(int)KeyCode.None,0,null);
+     }
      currentBind.backwards = keyCode;
      XMLDataManager.Instance.Entry.UpdateXML(11,(int)keyCode,0,null);
-
+     backwardsKeyBindText.text = keyCode.ToString();
      break;
     case 2: //Left
+     if (currentBind.backwards == keyCode)
+     {
+      currentBind.backwards = KeyCode.None;
+      backwardsKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(11, (int)KeyCode.None,0,null);
+     } else if (currentBind.forward == keyCode)
+     {
+      currentBind.forward = KeyCode.None;
+      forwardKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(10,(int)KeyCode.None,0,null);
+     } else if (currentBind.right == keyCode)
+     {
+      currentBind.right = KeyCode.None;
+      rightKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(13,(int)KeyCode.None,0,null);
+     } else if (currentBind.interact == keyCode)
+     {
+      currentBind.interact = KeyCode.None;
+      interactKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(14,(int)KeyCode.None,0,null);
+     } else if (currentBind.ability == keyCode)
+     {
+      currentBind.ability = KeyCode.None;
+      abilityKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(15,(int)KeyCode.None,0,null);
+      
+     } else if(currentBind.jump == keyCode)
+     {
+      currentBind.jump = KeyCode.None;
+      jumpKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(15,(int)KeyCode.None,0,null);
+     }
      currentBind.left = keyCode;
      XMLDataManager.Instance.Entry.UpdateXML(12,(int)keyCode,0,null);
-
+     leftKeyBindText.text = keyCode.ToString();
      break;
     case 3: //Right
+     if (currentBind.backwards == keyCode)
+     {
+      currentBind.backwards = KeyCode.None;
+      backwardsKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(11, (int)KeyCode.None,0,null);
+     } else if (currentBind.left == keyCode)
+     {
+      currentBind.left = KeyCode.None;
+      leftKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(12,(int)KeyCode.None,0,null);
+     } else if (currentBind.forward == keyCode)
+     {
+      currentBind.forward = KeyCode.None;
+      forwardKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(10,(int)KeyCode.None,0,null);
+     } else if (currentBind.interact == keyCode)
+     {
+      currentBind.interact = KeyCode.None;
+      interactKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(14,(int)KeyCode.None,0,null);
+     } else if (currentBind.ability == keyCode)
+     {
+      currentBind.ability = KeyCode.None;
+      abilityKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(15,(int)KeyCode.None,0,null);
+      
+     } else if(currentBind.jump == keyCode)
+     {
+      currentBind.jump = KeyCode.None;
+      jumpKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(15,(int)KeyCode.None,0,null);
+     }
      currentBind.right = keyCode;
      XMLDataManager.Instance.Entry.UpdateXML(13,(int)keyCode,0,null);
-
+     rightKeyBindText.text = keyCode.ToString();
      break;
     case 4: //Ability
+     if (currentBind.backwards == keyCode)
+     {
+      currentBind.backwards = KeyCode.None;
+      backwardsKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(11, (int)KeyCode.None,0,null);
+     } else if (currentBind.left == keyCode)
+     {
+      currentBind.left = KeyCode.None;
+      leftKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(12,(int)KeyCode.None,0,null);
+     } else if (currentBind.right == keyCode)
+     {
+      currentBind.right = KeyCode.None;
+      rightKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(13,(int)KeyCode.None,0,null);
+     } else if (currentBind.interact == keyCode)
+     {
+      currentBind.interact = KeyCode.None;
+      interactKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(14,(int)KeyCode.None,0,null);
+     } else if (currentBind.forward == keyCode)
+     {
+      currentBind.forward = KeyCode.None;
+      forwardKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(10,(int)KeyCode.None,0,null);
+      
+     } else if(currentBind.jump == keyCode)
+     {
+      currentBind.jump = KeyCode.None;
+      jumpKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(15,(int)KeyCode.None,0,null);
+     }
      currentBind.ability = keyCode;
      XMLDataManager.Instance.Entry.UpdateXML(15,(int)keyCode,0,null);
-
+     abilityKeyBindText.text = keyCode.ToString();
      break;
     case 5: //Interact
+     if (currentBind.backwards == keyCode)
+     {
+      currentBind.backwards = KeyCode.None;
+      backwardsKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(11, (int)KeyCode.None,0,null);
+     } else if (currentBind.left == keyCode)
+     {
+      currentBind.left = KeyCode.None;
+      leftKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(12,(int)KeyCode.None,0,null);
+     } else if (currentBind.right == keyCode)
+     {
+      currentBind.right = KeyCode.None;
+      rightKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(13,(int)KeyCode.None,0,null);
+     } else if (currentBind.forward == keyCode)
+     {
+      currentBind.forward = KeyCode.None;
+      forwardKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(10,(int)KeyCode.None,0,null);
+     } else if (currentBind.ability == keyCode)
+     {
+      currentBind.ability = KeyCode.None;
+      abilityKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(15,(int)KeyCode.None,0,null);
+      
+     } else if(currentBind.jump == keyCode)
+     {
+      currentBind.jump = KeyCode.None;
+      jumpKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(15,(int)KeyCode.None,0,null);
+     }
      currentBind.interact = keyCode;
      XMLDataManager.Instance.Entry.UpdateXML(14,(int)keyCode,0,null);
+     interactKeyBindText.text = keyCode.ToString();
      break;
     case 6: //Jump
+     if (currentBind.backwards == keyCode)
+     {
+      currentBind.backwards = KeyCode.None;
+      backwardsKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(11, (int)KeyCode.None,0,null);
+     } else if (currentBind.left == keyCode)
+     {
+      currentBind.left = KeyCode.None;
+      leftKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(12,(int)KeyCode.None,0,null);
+     } else if (currentBind.right == keyCode)
+     {
+      currentBind.right = KeyCode.None;
+      rightKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(13,(int)KeyCode.None,0,null);
+     } else if (currentBind.interact == keyCode)
+     {
+      currentBind.interact = KeyCode.None;
+      interactKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(14,(int)KeyCode.None,0,null);
+     } else if (currentBind.ability == keyCode)
+     {
+      currentBind.ability = KeyCode.None;
+      abilityKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(15,(int)KeyCode.None,0,null);
+      
+     } else if(currentBind.forward == keyCode)
+     {
+      currentBind.forward = KeyCode.None;
+      forwardKeyBindText.text = "";
+      XMLDataManager.Instance.Entry.UpdateXML(10,(int)KeyCode.None,0,null);
+     }
      currentBind.jump = keyCode;
      XMLDataManager.Instance.Entry.UpdateXML(16,(int)keyCode,0,null);
+     jumpKeyBindText.text = keyCode.ToString();
      break;
    }
   }

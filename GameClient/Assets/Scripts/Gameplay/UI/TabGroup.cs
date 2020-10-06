@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,12 +21,14 @@ public class TabGroup : MonoBehaviour
             tabButtons = new List<TabButton>();
         }
         tabButtons.Add(button);
-        StartCoroutine(StartingTab());
+        StartingTab();
     }
-
-    IEnumerator StartingTab()
+    public void ReEvaluateTabs()
     {
-        yield return new WaitForSecondsRealtime(2f);
+        StartingTab();
+    }
+   public void StartingTab()
+    {
         foreach (var tab in tabButtons)
         {
             if (tab.isDefault)

@@ -299,7 +299,7 @@ GameObject:
   - component: {fileID: 4907069069698170495}
   - component: {fileID: 7550956230816528385}
   - component: {fileID: 7173045888866190515}
-  - component: {fileID: 8421339712729051911}
+  - component: {fileID: -3834944802951529940}
   m_Layer: 5
   m_Name: FriendTemplate
   m_TagString: Untagged
@@ -384,7 +384,7 @@ MonoBehaviour:
   playerID: 0
   connectionText: {fileID: 8988893555795449078}
   nameText: {fileID: 5712568416761812772}
---- !u!114 &8421339712729051911
+--- !u!114 &-3834944802951529940
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -397,8 +397,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_IgnoreLayout: 0
-  m_MinWidth: -1
-  m_MinHeight: -1
+  m_MinWidth: 100
+  m_MinHeight: 0
   m_PreferredWidth: -1
   m_PreferredHeight: -1
   m_FlexibleWidth: -1
