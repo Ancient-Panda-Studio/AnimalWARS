@@ -24,10 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5a2b59cc-4551-43fd-b846-75084bf9c95b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameClient/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameClient/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.GameClient/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameClient/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.GameClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.GameClient/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/FriendTemplate.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/FriendTemplate.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/TabGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/TabGroup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/UIManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/UIManager.cs" afterDir="false" />
@@ -157,6 +157,7 @@
       <change beforePath="$PROJECT_DIR$/Library/Artifacts/ed/edcb1e273a202771ce6c69cd22054e51" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Artifacts/f8/f86051de6da0e603eaa0f3c1b9f9e494" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/Artifacts/fc/fcf289c1476990eba30c28dc94fcad56" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/LastBuild.buildreport" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastBuild.buildreport" afterDir="false" />
@@ -194,14 +195,20 @@
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Settings.Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Settings.Editor.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Settings.Editor.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Unity.Settings.Editor.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/980a77-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/980a77-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/27d34b-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/27d34b-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UnityGameServer/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/../UnityGameServer/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UnityGameServer/Library/Artifacts/03/03b3b135836be71cbd7b689fe59fd893" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UnityGameServer/Library/Artifacts/0f/0f088beb38ccb9ea223f0fef2a132334" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UnityGameServer/Library/Artifacts/65/650af530e4434a239425913a507f5bab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UnityGameServer/Library/Artifacts/ef/efc2ad94985fcdf0f48c68b60e88941c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UnityGameServer/Library/Artifacts/f1/f172c311567bfb873f709a4d6efa6322" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UnityGameServer/Library/Artifacts/ff/fff677e88a21ca712788a028b9405c94" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../UnityGameServer/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/../UnityGameServer/Library/SourceAssetDB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../UnityGameServer/Library/StateCache/Hierarchy/46b431-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/../UnityGameServer/Library/StateCache/Hierarchy/46b431-mainStage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../UnityGameServer/Library/shadercompiler-UnityShaderCompiler.exe11.log" beforeDir="false" afterPath="$PROJECT_DIR$/../UnityGameServer/Library/shadercompiler-UnityShaderCompiler.exe11.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -375,7 +382,7 @@
       <workItem from="1601765530563" duration="1281000" />
       <workItem from="1601817902829" duration="32031000" />
       <workItem from="1601904016019" duration="8064000" />
-      <workItem from="1601928327886" duration="12778000" />
+      <workItem from="1601928327886" duration="12828000" />
     </task>
     <servers />
   </component>
