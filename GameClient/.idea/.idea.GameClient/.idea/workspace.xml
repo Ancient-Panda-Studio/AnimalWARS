@@ -219,17 +219,16 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/EE47BE73-F7EF-409C-A5E5-CE4B121745B7/7b/3bcad7d4/KeyCode.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Skins.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/TabButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/Login/Login.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Externals/SimpleJSON.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Bindings.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/XMLDataManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Skins.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Externals/SimpleJSON.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Bindings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/Login/Login.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/TabButton.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -270,13 +269,13 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Settings.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/TabButton.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/Bindings.cs" />
         <option value="$PROJECT_DIR$/Assets/CallTabGroup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/TabGroup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/XMLDataManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" />
       </list>
     </option>
   </component>
@@ -383,6 +382,7 @@
       <workItem from="1601817902829" duration="32031000" />
       <workItem from="1601904016019" duration="8064000" />
       <workItem from="1601928327886" duration="12828000" />
+      <workItem from="1601996369806" duration="382000" />
     </task>
     <servers />
   </component>
