@@ -532,14 +532,14 @@ namespace Player
 
   public void SetSfxVolumeNoXml()
   {
-   musicMixer.audioMixer.SetFloat("SFXVolume", sfxVolumeSlider.value);
+   sfxMixer.audioMixer.SetFloat("SFXVolume", sfxVolumeSlider.value);
    XMLDataManager.Instance.Entry.UpdateXML(2,0,sfxVolumeSlider.value,null);
 
   }
 
   public void SetAmbientVolumeNoXml()
   {
-   musicMixer.audioMixer.SetFloat("AmbienceVolume", ambientVolumeSlider.value);
+   ambientMixer.audioMixer.SetFloat("AmbienceVolume", ambientVolumeSlider.value);
    XMLDataManager.Instance.Entry.UpdateXML(3,0,ambientVolumeSlider.value,null);
 
   }
@@ -556,12 +556,12 @@ namespace Player
 
   public void SetSfxVolumeXml(float value)
   {
-   musicMixer.audioMixer.SetFloat("SFXVolume", value);
+   sfxMixer.audioMixer.SetFloat("SFXVolume", value);
   }
 
   public void SetAmbientVolumeXml(float value)
   {
-   musicMixer.audioMixer.SetFloat("AmbienceVolume", value);
+   ambientMixer.audioMixer.SetFloat("AmbienceVolume", value);
   }
 
   #endregion

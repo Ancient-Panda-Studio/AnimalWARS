@@ -4,14 +4,15 @@ using UnityEngine;
 
 public class PlayerDataHolder
 {
-    private static int playerID;
-    private readonly string username;
+    private int playerID;
+    public string username;
     public bool inParty;
     public int partyID;
     
-    public  PlayerDataHolder(int _playerID)
+    public  PlayerDataHolder(int _playerID, string _username)
     {
         playerID = _playerID;
+        username = _username;
     }
     
     public void CallSpawn()

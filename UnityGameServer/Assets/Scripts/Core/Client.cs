@@ -267,7 +267,8 @@ public class Client
             ServerSend.LoginResult(_id,true, "pepelaugh",_user);
             Dictionaries.PlayersByName.Add(_user,id);
             Dictionaries.PlayersById.Add(id,_user);
-            Dictionaries.PlayerDataHolders.Add(id,new PlayerDataHolder(id));
+            Debug.Log(_user);
+            Dictionaries.PlayerDataHolders.Add(id,new PlayerDataHolder(id,_user));
         }
         else
         {

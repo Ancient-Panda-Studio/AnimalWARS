@@ -79,7 +79,9 @@ class ServerHandle
 
     public static void AddToMatchMaking(int _fromClient, Packet _packet)
     {
-        if (_packet.ReadBool()) //Player In Party
+        bool isClientInParty = _packet.ReadBool();
+        Debug.Log(Dictionaries.PlayerDataHolders[_fromClient].username);
+        if (isClientInParty) //Player In Party
         {
             var partyID = _packet.ReadInt();
             var partyMembers = Parties.GetParty(partyID);

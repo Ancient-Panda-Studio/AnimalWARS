@@ -78,11 +78,6 @@ namespace Network
             using (var _packet = new Packet((int) ClientPackets.startMatchMaking))
             {
                 _packet.Write(Constants.InParty);
-                if (Constants.InParty)
-                {
-                    _packet.Write(Constants.PartyID);
-                }
-
                 SendTcpData(_packet);
             }
         }
