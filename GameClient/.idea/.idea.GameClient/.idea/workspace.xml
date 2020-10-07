@@ -165,6 +165,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/FriendController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/UIManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/PartyMemberInfoHolder.cs" />
       </list>
     </option>
   </component>
@@ -273,7 +274,7 @@
       <workItem from="1601928327886" duration="12828000" />
       <workItem from="1601996369806" duration="976000" />
       <workItem from="1602025131633" duration="4102000" />
-      <workItem from="1602083773785" duration="2568000" />
+      <workItem from="1602083773785" duration="3008000" />
     </task>
     <servers />
   </component>
