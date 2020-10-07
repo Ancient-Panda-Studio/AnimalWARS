@@ -2989,9 +2989,9 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Server.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MatchMaking/Parties.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/ServerSend.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/ServerHandle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Client.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MatchMaking/PlayerDataHolder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/ServerHandle.cs" />
       </list>
     </option>
   </component>
@@ -3074,7 +3074,7 @@
       <workItem from="1601996749423" duration="691000" />
       <workItem from="1602018099798" duration="10470000" />
       <workItem from="1602084795348" duration="1318000" />
-      <workItem from="1602112094012" duration="1327000" />
+      <workItem from="1602112094012" duration="1775000" />
     </task>
     <servers />
   </component>
