@@ -93,12 +93,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MatchMaking/Parties.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MatchMaking/PlayerDataHolder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dictionaries.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../GameClient/Assets/Scripts/Network/ClientHandle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UpdateCall.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/50FE65A4-93A0-4952-84F1-E3562EFBE38D/ac/3920d9d1/Dictionary`2.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MatchMaking/Parties.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -113,7 +112,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Client.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ServerHandle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/ServerSend.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/ServerSend.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/HandleMatchMaking.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MatchMaking/PlayerConstructor.cs" />
@@ -128,6 +126,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Server.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MatchMaking/Parties.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/ServerHandle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/ServerSend.cs" />
       </list>
     </option>
   </component>
@@ -209,6 +208,7 @@
       <workItem from="1601820893676" duration="5663000" />
       <workItem from="1601996749423" duration="691000" />
       <workItem from="1602018099798" duration="10470000" />
+      <workItem from="1602084795348" duration="1318000" />
     </task>
     <servers />
   </component>

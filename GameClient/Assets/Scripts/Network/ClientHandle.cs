@@ -15,6 +15,7 @@ public class ClientHandle : MonoBehaviour
         Client.instance.myId = _myId;
         UIManager.Instance.offline.SetActive(false);
         UIManager.Instance.online.SetActive(true);
+        Constants.ServerID = _myId;
         ClientSend.WelcomeReceived();
         Client.instance.udp.Connect(((IPEndPoint) Client.instance.tcp.socket.Client.LocalEndPoint).Port);
     }

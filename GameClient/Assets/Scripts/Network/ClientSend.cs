@@ -82,9 +82,9 @@ namespace Network
                 {
                     _packet.Write(Constants.PartyID);
                 }
+
                 SendTcpData(_packet);
             }
-            
         }
         
         public static void RemoveMatchMaking()

@@ -119,7 +119,6 @@ public class Server
             {
                 clients.Add(i, new Client(i));
             }
-
             packetHandlers = new Dictionary<int, PacketHandler>()
             {
                 { (int)ClientPackets.welcomeReceived, ServerHandle.WelcomeReceived },
@@ -128,7 +127,7 @@ public class Server
                 {(int)ClientPackets.sendInviteClient, ServerHandle.SendInvitationServer},
                 {(int)ClientPackets.inviteAnswer, ServerHandle.SendInviteAnswer},
                 {(int)ClientPackets.startMatchMaking, ServerHandle.AddToMatchMaking},
-                {(int)ClientPackets.inviteAnswer, ServerHandle.RemoveFromMatchMaking},
+                {(int)ClientPackets.stopMatchMaking, ServerHandle.RemoveFromMatchMaking}
             };
             Debug.Log("Initialized packets.");
         }

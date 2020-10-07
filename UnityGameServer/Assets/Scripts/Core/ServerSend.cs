@@ -34,26 +34,7 @@ public class ServerSend
                 SendTCPDataToAll(_packet);
             }
         }
-        public static void LoginResult(int _playerId, bool _result, string _error,string _username)
-        {
-            using (Packet _packet = new Packet((int)ServerPackets.handleLoginInfo))
-            {
-                _packet.Write(_playerId);
-                _packet.Write(_result);
-                _packet.Write(_error);
 
-                if (!_result)
-                {
-                    var item = Dictionaries.PlayersByName.First(kvp => kvp.Value == _playerId);
-
-                    Dictionaries.PlayersByName.Remove(item.Key);
-                }
-                    
-                SendTCPData(_playerId,_packet);
-                // if(_result)
-                // Server.clients[_playerId].SendIntoGame(_username);    
-            }
-        }
         private static void SendTCPDataToAll(int _exceptClient, Packet _packet)
         {
             _packet.WriteLength();
@@ -97,7 +78,26 @@ public class ServerSend
                 SendTCPData(_toClient, _packet);
             }
         }
+        public static void LoginResult(int _playerId, bool _result, string _error,string _username)
+        {
+            using (Packet _packet = new Packet((int)ServerPackets.handleLoginInfo))
+            {
+                _packet.Write(_playerId);
+                _packet.Write(_result);
+                _packet.Write(_error);
 
+                if (!_result)
+                {
+                    var item = Dictionaries.PlayersByName.First(kvp => kvp.Value == _playerId);
+
+                    Dictionaries.PlayersByName.Remove(item.Key);
+                }
+                    
+                SendTCPData(_playerId,_packet);
+                // if(_result)
+                // Server.clients[_playerId].SendIntoGame(_username);    
+            }
+        }
         public static void SpawnPlayer(int _toClient, Player _player)
             {
                 using (Packet _packet = new Packet((int)ServerPackets.spawnPlayer))

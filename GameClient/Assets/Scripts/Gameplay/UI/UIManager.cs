@@ -29,6 +29,7 @@ public class UIManager : MonoBehaviour
     public GameObject accountSettingsUI;
     public GameObject resetToDefaultUi;
     public GameObject resetButton;
+    public GameObject partyUI;
     
     [Header("TRANSFORMS")]
     public Transform friendList;
@@ -44,7 +45,7 @@ public class UIManager : MonoBehaviour
     public Text errorText;
     public TMP_Text friendText;
     private int _beforeSettings;
-    private readonly Dictionary<int, string> _partyMembers = new Dictionary<int, string>();
+    public  Dictionary<int, string> PartyMembers = new Dictionary<int, string>();
 
     
     private void Awake()
@@ -209,19 +210,40 @@ public class UIManager : MonoBehaviour
     }
     public void CreateGroup(int _id, string _user)
     {
-        if (_partyMembers.Count >= 3) Debug.Log("Party is full");
-        if (_partyMembers.Count == 0)
+        if (PartyMembers.Count >= 3) Debug.Log("Party is full");
+        if (PartyMembers.Count == 0)
         {
             //NEW PARTY HAS BEEN CREATED
-
+            Constants.InParty = true;
             //Show Party UI
+            partyUI.SetActive(true);
             
-            
+            PartyMembers.Add(_id,_user);
+            GeneratePartyVisual(Constants.Username, Constants.ServerID);
+            PartyMembers.Add(Constants.ServerID,Constants.Username);
+            GeneratePartyVisual(_user, _id);
             
         }
         else
         {
-            _partyMembers.Add(_id, _user);
+            PartyMembers.Add(_id, _user);
+            GeneratePartyVisual(_user, _id);
+
         }
+    }
+
+    public void DisbandParty()
+    {
+        
+        partyUI.SetActive(false);
+        Constants.InParty = false;
+    }
+
+    public void GeneratePartyVisual(string _user, int _id)
+    {
+        var partyMember = Instantiate(Resources.Load("Prefabs/PartyMember") as GameObject, partyUI.transform, false);
+            var y = partyMember.GetComponent<PartyMemberInfoHolder>();
+            y.nameText.text = _user;
+            y.id = _id;
     }
 }

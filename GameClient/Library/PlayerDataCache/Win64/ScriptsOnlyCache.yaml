@@ -5,7 +5,9 @@ ScriptsOnlyBuild:
     - GameManager
     - HandleAsync
     - Login
+    - LookForGame
     - Network.ThreadManager
+    - PartyMemberInfoHolder
     - Player.ConfigurationManager
     - Player.FriendController
     - Player.PlayerController
@@ -102,83 +104,87 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11336}
     - Class: 114
-      Script: {instanceID: 11410}
+      Script: {instanceID: 11412}
     - Class: 114
-      Script: {instanceID: 11416}
+      Script: {instanceID: 11418}
     - Class: 114
-      Script: {instanceID: 11534}
+      Script: {instanceID: 11536}
     - Class: 114
-      Script: {instanceID: 11724}
+      Script: {instanceID: 11726}
     - Class: 114
-      Script: {instanceID: 11784}
+      Script: {instanceID: 11786}
     - Class: 114
-      Script: {instanceID: 11804}
+      Script: {instanceID: 11806}
     - Class: 114
-      Script: {instanceID: 11968}
+      Script: {instanceID: 11970}
     - Class: 114
-      Script: {instanceID: 11994}
+      Script: {instanceID: 11996}
     - Class: 114
-      Script: {instanceID: 12320}
+      Script: {instanceID: 12322}
     - Class: 114
-      Script: {instanceID: 12326}
+      Script: {instanceID: 12328}
     - Class: 114
-      Script: {instanceID: 12364}
+      Script: {instanceID: 12366}
     - Class: 114
-      Script: {instanceID: 12472}
+      Script: {instanceID: 12474}
     - Class: 114
-      Script: {instanceID: 12490}
+      Script: {instanceID: 12492}
     - Class: 114
-      Script: {instanceID: 12546}
+      Script: {instanceID: 12548}
     - Class: 114
-      Script: {instanceID: 12656}
+      Script: {instanceID: 12658}
     - Class: 114
-      Script: {instanceID: 12872}
+      Script: {instanceID: 12862}
     - Class: 114
-      Script: {instanceID: 13094}
+      Script: {instanceID: 12876}
     - Class: 114
-      Script: {instanceID: 13136}
+      Script: {instanceID: 13098}
     - Class: 114
-      Script: {instanceID: 13194}
+      Script: {instanceID: 13140}
     - Class: 114
-      Script: {instanceID: 13240}
+      Script: {instanceID: 13198}
     - Class: 114
-      Script: {instanceID: 13390}
+      Script: {instanceID: 13244}
     - Class: 114
-      Script: {instanceID: 13554}
+      Script: {instanceID: 13394}
     - Class: 114
-      Script: {instanceID: 13596}
+      Script: {instanceID: 13558}
     - Class: 114
-      Script: {instanceID: 13608}
+      Script: {instanceID: 13600}
     - Class: 114
-      Script: {instanceID: 13614}
+      Script: {instanceID: 13612}
     - Class: 114
-      Script: {instanceID: 13636}
+      Script: {instanceID: 13618}
     - Class: 114
-      Script: {instanceID: 13762}
+      Script: {instanceID: 13640}
     - Class: 114
-      Script: {instanceID: 13950}
+      Script: {instanceID: 13766}
     - Class: 114
-      Script: {instanceID: 14014}
+      Script: {instanceID: 13954}
     - Class: 114
-      Script: {instanceID: 14056}
+      Script: {instanceID: 14018}
     - Class: 114
-      Script: {instanceID: 14112}
+      Script: {instanceID: 14060}
     - Class: 114
-      Script: {instanceID: 14348}
+      Script: {instanceID: 14116}
     - Class: 114
-      Script: {instanceID: 14350}
+      Script: {instanceID: 14352}
     - Class: 114
-      Script: {instanceID: 14678}
+      Script: {instanceID: 14354}
     - Class: 114
-      Script: {instanceID: 14702}
+      Script: {instanceID: 14682}
     - Class: 114
-      Script: {instanceID: 14728}
+      Script: {instanceID: 14706}
     - Class: 114
-      Script: {instanceID: 14754}
+      Script: {instanceID: 14732}
     - Class: 114
-      Script: {instanceID: 14796}
+      Script: {instanceID: 14758}
     - Class: 114
-      Script: {instanceID: 17924}
+      Script: {instanceID: 14800}
+    - Class: 114
+      Script: {instanceID: 17950}
+    - Class: 114
+      Script: {instanceID: 18642}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -560,6 +566,12 @@ ScriptsOnlyBuild:
     className: TMP_Asset
   - hash:
       serializedVersion: 2
+      Hash: a151cfc68370e320510a818afc0bc4e8
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: LookForGame
+  - hash:
+      serializedVersion: 2
       Hash: d4020bafcd3ccbb5601a6e6c8ac78be0
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -620,7 +632,7 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: 3b51db6d6e52653123acbac02b0ce5fe
+      Hash: edc302ba4842b8309ff29cfe133b849a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIManager
@@ -966,6 +978,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 8364621ef345b3d24da53001c0323675
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PartyMemberInfoHolder
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity

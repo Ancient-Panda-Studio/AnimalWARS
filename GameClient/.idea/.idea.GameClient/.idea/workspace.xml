@@ -96,22 +96,23 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/ClientHandle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/TabGroup.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Skins.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/ThreadManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Externals/SimpleJSON.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Skins.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/ClientHandle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/TabButton.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/ThreadManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/Login/Login.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Externals/SimpleJSON.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/FriendController.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Bindings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/TabGroup.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/XMLDataManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../UnityGameServer/Assets/Scripts/Core/Server.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Bindings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/FriendController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/Login/Login.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -140,7 +141,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/SkinScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerVariables.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Login/Login.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Player/FriendController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/HandleAsync.cs" />
@@ -156,9 +156,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Packet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Client.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/LookForGame.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/ClientSend.cs" />
+        <option value="$PROJECT_DIR$/Assets/PartyMemberInfoHolder.cs" />
+        <option value="$PROJECT_DIR$/../UnityGameServer/Assets/Scripts/Core/Server.cs" />
+        <option value="$PROJECT_DIR$/../../UnityProjects/sqlconnect/getfriends.php" />
+        <option value="$PROJECT_DIR$/../../../../../../xampp/htdocs/sqlconnect/getfriends.php" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/ClientHandle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Player/FriendController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/UIManager.cs" />
       </list>
     </option>
@@ -268,6 +273,7 @@
       <workItem from="1601928327886" duration="12828000" />
       <workItem from="1601996369806" duration="976000" />
       <workItem from="1602025131633" duration="4102000" />
+      <workItem from="1602083773785" duration="2568000" />
     </task>
     <servers />
   </component>
@@ -354,10 +360,11 @@
     </state>
     <state x="-109" y="-8" width="1096" height="1040" maximized="true" key="dock-window-3/0.0.1920.1050/-1080.-310.1080.1890@-1080.-310.1080.1890" timestamp="1601929622746" />
     <state x="546" y="462" width="1096" height="1040" key="dock-window-3/0.0.1920.1050/-1080.-310.1080.1890@0.0.1920.1050" timestamp="1601947939022" />
-    <state x="800" y="156" width="1120" height="809" key="find.popup" timestamp="1601948837726">
-      <screen x="0" y="0" width="1920" height="1050" />
+    <state x="800" y="155" width="1120" height="802" key="find.popup" timestamp="1602085931159">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-630" y="-30" width="630" height="1448" key="find.popup/0.0.1920.1040/-1080.-310.1080.1880@-1080.-310.1080.1880" timestamp="1601460489424" />
+    <state x="800" y="155" width="1120" height="802" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602085931159" />
     <state x="2814" y="155" width="726" height="801" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601396057546" />
     <state x="800" y="156" width="1120" height="809" key="find.popup/0.0.1920.1050/-1080.-310.1080.1890@0.0.1920.1050" timestamp="1601948837726" />
     <state x="616" y="243" key="run.anything.popup" timestamp="1601942227466">

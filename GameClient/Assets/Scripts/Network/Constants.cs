@@ -9,4 +9,5 @@
     public static int Score { get; set; }
     public static int InvitationID { get; set; }
     public static int PartyID { get; set; }
+    public static int ServerID { get; set; }
 }
