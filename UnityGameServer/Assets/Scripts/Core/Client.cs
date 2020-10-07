@@ -152,8 +152,8 @@ public class Client
         /// <summary>Closes and cleans up the TCP connection.</summary>
         public void Disconnect()
         {
-            var item = Dictionaries.playersByName.First(kvp => kvp.Value == id);
-            Dictionaries.playersByName.Remove(item.Key);
+            var item = Dictionaries.PlayersByName.First(kvp => kvp.Value == id);
+            Dictionaries.PlayersByName.Remove(item.Key);
             //Dictionaries.Parties.Remove(id);
             socket.Close();
             stream = null;
@@ -265,8 +265,9 @@ public class Client
         {
             //Allow Login
             ServerSend.LoginResult(_id,true, "pepelaugh",_user);
-            Dictionaries.playersByName.Add(_user,id);
-            Dictionaries.playersById.Add(id,_user);
+            Dictionaries.PlayersByName.Add(_user,id);
+            Dictionaries.PlayersById.Add(id,_user);
+            Dictionaries.PlayerDataHolders.Add(id,new PlayerDataHolder(id));
         }
         else
         {

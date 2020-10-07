@@ -93,8 +93,7 @@ public class ClientHandle : MonoBehaviour
             case true:
                 //Invitation Accepted
                 UIManager.Instance.CreateGroup(from, _name);
-
-                    Debug.Log("Invitation you sent to " + from + " has been accepted");
+                Debug.Log("Invitation you sent to " + from + " has been accepted");
                 break;
             case false:
 
@@ -102,5 +101,9 @@ public class ClientHandle : MonoBehaviour
                 Debug.Log("Invitation you sent to " + from + " has been declined");
                 break;
         }
+    }
+    public static void MatchFound(Packet _packet)
+    {
+        throw new System.NotImplementedException();
     }
 }

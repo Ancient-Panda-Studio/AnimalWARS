@@ -24,14 +24,14 @@ public class XMLDataManager : MonoBehaviour
             Debug.Log("Instance already exists, destroying object!");
             Destroy(this);
         }
-        if (!File.Exists(Constants.filePath))
+        if (!File.Exists(Constants.FilePath))
         { 
             Entry.GenerateNewFile(); 
             return;
         }
         else
         {
-            Entry._foundDocument = XDocument.Load(Constants.filePath);
+            Entry._foundDocument = XDocument.Load(Constants.FilePath);
             Entry.DocumentHandler();
         }
 
@@ -200,11 +200,11 @@ public class XMLDataManager : MonoBehaviour
                     dropElement?.SetValue(intValue);
                     break;
             }
-            _foundDocument.Save(Constants.filePath);
+            _foundDocument.Save(Constants.FilePath);
         }
         public void DocumentHandler()
         { 
-                if (!File.Exists(Constants.filePath))
+                if (!File.Exists(Constants.FilePath))
                 {
                     GenerateNewFile();
                     return;
@@ -339,9 +339,9 @@ public class XMLDataManager : MonoBehaviour
         public void GenerateNewFile()
         {
             //First start or document deleted create new document with default values
-            if (File.Exists(Constants.filePath))
+            if (File.Exists(Constants.FilePath))
             {
-                File.Delete(Constants.filePath);
+                File.Delete(Constants.FilePath);
             }
             var document = new XDocument(
                 new XElement("Settings",
@@ -367,7 +367,7 @@ public class XMLDataManager : MonoBehaviour
                     new XElement("ResDropDownValue", 0)
                 )
             );
-            document.Save(Constants.filePath);
+            document.Save(Constants.FilePath);
             _foundDocument = document;
             DocumentHandler();
         }

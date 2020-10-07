@@ -13,7 +13,8 @@ public enum ServerPackets
     playerDisconnected,
     handleLoginInfo,
     sendInviteServer,
-    sendInviteAnswer
+    sendInviteAnswer,
+    matchFound
 }
 
 /// <summary>Sent from client to server.</summary>
@@ -23,7 +24,9 @@ public enum ClientPackets
     playerMovement,
     sendLoginInfo,
     sendInviteClient,
-    inviteAnswer
+    inviteAnswer,
+    startMatchMaking,
+    stopMatchMaking
 }
 
 

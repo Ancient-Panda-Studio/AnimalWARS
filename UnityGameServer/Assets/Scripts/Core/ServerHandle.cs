@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System;
+using System.Collections.Generic;
 using System.Linq;
 
 
@@ -8,8 +9,9 @@ class ServerHandle
     public static void WelcomeReceived(int _fromClient, Packet _packet)
     {
         var clientIdCheck = _packet.ReadInt();
-        
-        Debug.Log($"{Server.clients[_fromClient].tcp.socket.Client.RemoteEndPoint} connected successfully and is now player {_fromClient}.");
+
+        Debug.Log(
+            $"{Server.clients[_fromClient].tcp.socket.Client.RemoteEndPoint} connected successfully and is now player {_fromClient}.");
     }
 
     public static void PlayerMovement(int fromClient, Packet _packet)
@@ -38,26 +40,62 @@ class ServerHandle
         var id = _packet.ReadInt();
         var username = _packet.ReadString(); //Who SENT THE INVITATION
         var toUserName = _packet.ReadString(); // Who is THE INVITE FOR
-        var sendToID = Dictionaries.playersByName[toUserName]; 
+        var sendToID = Dictionaries.PlayersByName[toUserName];
         Debug.Log("Sending invite from: " + username);
-        ServerSend.SendInvite(_fromClient,username,toUserName,sendToID);
+        ServerSend.SendInvite(_fromClient, username, toUserName, sendToID);
     }
 
-    public static void SendInviteAnswer(int _fromclient, Packet _packet)
+    public static void SendInviteAnswer(int _fromClient, Packet _packet)
     {
         var answer = _packet.ReadBool();
         var sendTO = _packet.ReadString();
         var whoSent = _packet.ReadString();
-        ServerSend.SendInviteAnswer(_fromclient, answer, whoSent, GetIdOf(sendTO));
+        ServerSend.SendInviteAnswer(_fromClient, answer, whoSent, GetIdOf(sendTO));
+        if (!answer) return;
+        var partyMembers = new List<int> {_fromClient, Dictionaries.PlayersByName[sendTO]};
+        var PartyLeader = Dictionaries.PlayerDataHolders[Dictionaries.PlayersByName[sendTO]];
+        if (PartyLeader.inParty)
+        {
+            //Player is already in party 
+            Parties.AddToExistingParty(PartyLeader.partyID, partyMembers[0]);
+        }
+        else
+        {
+          int partyId = Parties.AddParty(partyMembers);
+            PartyLeader.inParty = true;
+            PartyLeader.partyID = partyId;
+        }
     }
 
     private static int GetIdOf(string _username)
     {
-        return Dictionaries.playersByName[_username];
+        return Dictionaries.PlayersByName[_username];
     }
-    
-    private static string GetUserNameOf(int _fromclient)
+
+    private static string GetUserNameOf(int _fromClient)
     {
-        return Dictionaries.playersByName.FirstOrDefault(x => x.Value == _fromclient).Key;
+        return Dictionaries.PlayersByName.FirstOrDefault(x => x.Value == _fromClient).Key;
+    }
+
+    public static void AddToMatchMaking(int _fromClient, Packet _packet)
+    {
+        if (_packet.ReadBool()) //Player In Party
+        {
+            var partyID = _packet.ReadInt();
+            var partyMembers = Parties.GetParty(partyID);
+            foreach (var member in partyMembers)
+            {
+                HandleMatchMaking.AddToQueue(Dictionaries.PlayerDataHolders[member]);
+            }
+        }
+        else //Player Is NOT IN PARTY
+        {
+            HandleMatchMaking.AddToQueue(Dictionaries.PlayerDataHolders[_fromClient]);
+        }
+    }
+
+    public static void RemoveFromMatchMaking(int _fromClient, Packet _packet)
+    {
+        throw new NotImplementedException();
     }
 }

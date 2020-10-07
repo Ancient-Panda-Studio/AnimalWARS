@@ -9,6 +9,7 @@ public class NetworkManager : MonoBehaviour
     public GameObject playerPrefab;
     private void Awake()
     {
+        DontDestroyOnLoad(this);
         if (instance == null)
         {
             instance = this;

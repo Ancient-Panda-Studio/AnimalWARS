@@ -73,7 +73,26 @@ namespace Network
                 SendUdpData(_packet);
             }
         }
-
+        public static void AddMatchMaking()
+        {
+            using (var _packet = new Packet((int) ClientPackets.startMatchMaking))
+            {
+                _packet.Write(Constants.InParty);
+                if (Constants.InParty)
+                {
+                    _packet.Write(Constants.PartyID);
+                }
+                SendTcpData(_packet);
+            }
+            
+        }
+        
+        public static void RemoveMatchMaking()
+        {
+            Debug.Log("kekw");
+        }
         #endregion
+
+       
     }
 }

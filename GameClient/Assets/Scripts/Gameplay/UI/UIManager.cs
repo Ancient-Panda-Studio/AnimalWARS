@@ -209,12 +209,15 @@ public class UIManager : MonoBehaviour
     }
     public void CreateGroup(int _id, string _user)
     {
-        if (_partyMembers.Count > 5) Debug.Log("Party is full");
+        if (_partyMembers.Count >= 3) Debug.Log("Party is full");
         if (_partyMembers.Count == 0)
         {
             //NEW PARTY HAS BEEN CREATED
 
             //Show Party UI
+            
+            
+            
         }
         else
         {

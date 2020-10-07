@@ -97,7 +97,7 @@ public class Player : MonoBehaviour
         
         if (!jumping)
         {
-            velocity = (groundDirection.forward * inputNormalized.magnitude) * (moveSpeed * slopeMult) + fallDirection.up * yVelocity;
+            velocity = groundDirection.forward * (inputNormalized.magnitude * (moveSpeed * slopeMult)) + fallDirection.up * yVelocity;
         }
         else
             velocity = jumpDirection * jumpSpeed + Vector3.up * yVelocity;

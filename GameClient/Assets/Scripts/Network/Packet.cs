@@ -15,7 +15,8 @@ namespace Network
         playerDisconnected,
         handleLoginInfo,
         sendInviteServer,
-        sendInviteAnswer
+        sendInviteAnswer,
+        matchFound
     }
 
     /// <summary>Sent from client to server.</summary>
@@ -25,7 +26,9 @@ namespace Network
         playerMovement,
         sendLoginInfo,
         sendInviteClient,
-        inviteAnswer
+        inviteAnswer,
+        startMatchMaking,
+        stopMatchMaking
     }
 
     public sealed class Packet : IDisposable

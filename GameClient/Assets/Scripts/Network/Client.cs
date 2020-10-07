@@ -69,7 +69,8 @@ public class Client : MonoBehaviour
             {(int) ServerPackets.playerDisconnected, ClientHandle.PlayerDisconnected},
             {(int) ServerPackets.handleLoginInfo, ClientHandle.HandleLogin},
             {(int) ServerPackets.sendInviteServer, ClientHandle.InvitationReceived},
-            {(int) ServerPackets.sendInviteAnswer, ClientHandle.InvitationResponse}
+            {(int) ServerPackets.sendInviteAnswer, ClientHandle.InvitationResponse},
+            {(int) ServerPackets.matchFound, ClientHandle.MatchFound}
         };
         Debug.Log("Initialized packets.");
     }

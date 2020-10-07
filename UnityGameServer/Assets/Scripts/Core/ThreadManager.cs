@@ -10,11 +10,18 @@ class ThreadManager : MonoBehaviour
     private static readonly List<Action> executeCopiedOnMainThread = new List<Action>();
     private static bool actionToExecuteOnMainThread = false;
 
+    private void Awake()
+    {
+        DontDestroyOnLoad(this);    
+    }
+
     /// <summary>Sets an action to be executed on the main thread.</summary>
     /// <param name="_action">The action to be executed on the main thread.</param>
     private void FixedUpdate()
     {
+        HandleMatchMaking.CheckIfMatchMakingIsPossible();
         UpdateMain();
+
     }
     public static void ExecuteOnMainThread(Action _action)
     {

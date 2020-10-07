@@ -44,9 +44,9 @@ public class ServerSend
 
                 if (!_result)
                 {
-                    var item = Dictionaries.playersByName.First(kvp => kvp.Value == _playerId);
+                    var item = Dictionaries.PlayersByName.First(kvp => kvp.Value == _playerId);
 
-                    Dictionaries.playersByName.Remove(item.Key);
+                    Dictionaries.PlayersByName.Remove(item.Key);
                 }
                     
                 SendTCPData(_playerId,_packet);

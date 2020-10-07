@@ -15,7 +15,6 @@ public class Server
         public static Dictionary<int, Client> clients = new Dictionary<int, Client>();
         public delegate void PacketHandler(int _fromClient, Packet _packet);
         public static Dictionary<int, PacketHandler> packetHandlers;
-
         private static TcpListener tcpListener;
         private static UdpClient udpListener;
 
@@ -127,7 +126,9 @@ public class Server
                 { (int)ClientPackets.playerMovement, ServerHandle.PlayerMovement },
                 {(int)ClientPackets.sendLoginInfo, ServerHandle.LoginInformation},
                 {(int)ClientPackets.sendInviteClient, ServerHandle.SendInvitationServer},
-                {(int)ClientPackets.inviteAnswer, ServerHandle.SendInviteAnswer}
+                {(int)ClientPackets.inviteAnswer, ServerHandle.SendInviteAnswer},
+                {(int)ClientPackets.startMatchMaking, ServerHandle.AddToMatchMaking},
+                {(int)ClientPackets.inviteAnswer, ServerHandle.RemoveFromMatchMaking},
             };
             Debug.Log("Initialized packets.");
         }
