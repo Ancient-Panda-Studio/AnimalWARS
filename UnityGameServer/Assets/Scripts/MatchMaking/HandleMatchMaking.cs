@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using UnityEngine;
 
 public class HandleMatchMaking
 {
@@ -19,18 +20,26 @@ public class HandleMatchMaking
 
     public static void GenerateMatch(List <PlayerDataHolder> _playerDataHolders)
     {
-        foreach (var player in _playerDataHolders)
-        {
-            player.CallSpawn();
-        }
+        Debug.Log("USER1: " + _playerDataHolders[0].username + " USER2: " +_playerDataHolders[1].username + " USER3: " +_playerDataHolders[2].username +
+                  " USER4: " +_playerDataHolders[3].username + " USER5: " + _playerDataHolders[4].username + "USER6: " +_playerDataHolders[5].username);
+        
+        //TODO SELECT RANDOM MAP
+            //TRACK WHO WINS EACH MAP               
+            //3 MAPS = WIN
+        
+            
+        // foreach (var player in _playerDataHolders)
+        // {
+        //     player.CallSpawn();
+        // }
     }
     
     public static List<PlayerDataHolder> CheckIfMatchMakingIsPossible()
     {
-        if (_matchQueue.Count < 4) return null;
+        if (_matchQueue.Count < 6) return null;
         // ReSharper disable once CollectionNeverQueried.local
         var playersToAdd = new List<PlayerDataHolder>();
-        for (var i = 0; i < 4; i++)
+        for (var i = 0; i < 6; i++)
         {
             if (_matchQueue[i].inParty)
             {

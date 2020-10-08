@@ -5,10 +5,7 @@ using UnityEngine;
 public class Parties
 {
     private static readonly SortedDictionary<int, List<int>> CurrentParties;
-
-
-
-
+    
     public static int AddParty(List<int> _members)
     {
         if (CurrentParties.Count == 0)
@@ -23,7 +20,6 @@ public class Parties
             return x;
         }
     }
-
     public static void RemoveParty(int _partyID)
     {
         CurrentParties.Remove(_partyID);
@@ -32,11 +28,17 @@ public class Parties
     {
         return CurrentParties[_partyID];
     }
-
     public static void AddToExistingParty(int _partyLeaderPartyID, int _partyMember)
     {
         List<int> x = GetParty(_partyLeaderPartyID);
         x.Add(_partyMember);
+        CurrentParties[_partyLeaderPartyID] = x;
+
+    }
+    public static void RemoveFromExistingParty(int _partyLeaderPartyID, int _partyMember)
+    {
+        List<int> x = GetParty(_partyLeaderPartyID);
+        x.Remove(_partyMember);
         CurrentParties[_partyLeaderPartyID] = x;
 
     }

@@ -104,87 +104,87 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11336}
     - Class: 114
-      Script: {instanceID: 11412}
+      Script: {instanceID: 11338}
     - Class: 114
-      Script: {instanceID: 11418}
+      Script: {instanceID: 11362}
     - Class: 114
-      Script: {instanceID: 11536}
+      Script: {instanceID: 11368}
     - Class: 114
-      Script: {instanceID: 11726}
+      Script: {instanceID: 11486}
     - Class: 114
-      Script: {instanceID: 11786}
+      Script: {instanceID: 11676}
     - Class: 114
-      Script: {instanceID: 11806}
+      Script: {instanceID: 11736}
     - Class: 114
-      Script: {instanceID: 11970}
+      Script: {instanceID: 11756}
     - Class: 114
-      Script: {instanceID: 11996}
+      Script: {instanceID: 11920}
     - Class: 114
-      Script: {instanceID: 12322}
+      Script: {instanceID: 11946}
     - Class: 114
-      Script: {instanceID: 12328}
+      Script: {instanceID: 12272}
     - Class: 114
-      Script: {instanceID: 12366}
+      Script: {instanceID: 12278}
     - Class: 114
-      Script: {instanceID: 12474}
+      Script: {instanceID: 12316}
     - Class: 114
-      Script: {instanceID: 12492}
+      Script: {instanceID: 12324}
     - Class: 114
-      Script: {instanceID: 12548}
+      Script: {instanceID: 12426}
     - Class: 114
-      Script: {instanceID: 12658}
+      Script: {instanceID: 12444}
     - Class: 114
-      Script: {instanceID: 12862}
+      Script: {instanceID: 12500}
     - Class: 114
-      Script: {instanceID: 12876}
+      Script: {instanceID: 12610}
     - Class: 114
-      Script: {instanceID: 13098}
+      Script: {instanceID: 12814}
     - Class: 114
-      Script: {instanceID: 13140}
+      Script: {instanceID: 12828}
     - Class: 114
-      Script: {instanceID: 13198}
+      Script: {instanceID: 13050}
     - Class: 114
-      Script: {instanceID: 13244}
+      Script: {instanceID: 13092}
     - Class: 114
-      Script: {instanceID: 13394}
+      Script: {instanceID: 13150}
     - Class: 114
-      Script: {instanceID: 13558}
+      Script: {instanceID: 13344}
     - Class: 114
-      Script: {instanceID: 13600}
+      Script: {instanceID: 13508}
     - Class: 114
-      Script: {instanceID: 13612}
+      Script: {instanceID: 13550}
     - Class: 114
-      Script: {instanceID: 13618}
+      Script: {instanceID: 13562}
     - Class: 114
-      Script: {instanceID: 13640}
+      Script: {instanceID: 13568}
     - Class: 114
-      Script: {instanceID: 13766}
+      Script: {instanceID: 13590}
     - Class: 114
-      Script: {instanceID: 13954}
+      Script: {instanceID: 13716}
     - Class: 114
-      Script: {instanceID: 14018}
+      Script: {instanceID: 13904}
     - Class: 114
-      Script: {instanceID: 14060}
+      Script: {instanceID: 13968}
     - Class: 114
-      Script: {instanceID: 14116}
+      Script: {instanceID: 14010}
     - Class: 114
-      Script: {instanceID: 14352}
+      Script: {instanceID: 14066}
     - Class: 114
-      Script: {instanceID: 14354}
+      Script: {instanceID: 14302}
+    - Class: 114
+      Script: {instanceID: 14304}
+    - Class: 114
+      Script: {instanceID: 14632}
+    - Class: 114
+      Script: {instanceID: 14656}
     - Class: 114
       Script: {instanceID: 14682}
     - Class: 114
-      Script: {instanceID: 14706}
+      Script: {instanceID: 14708}
     - Class: 114
-      Script: {instanceID: 14732}
+      Script: {instanceID: 14750}
     - Class: 114
-      Script: {instanceID: 14758}
-    - Class: 114
-      Script: {instanceID: 14800}
-    - Class: 114
-      Script: {instanceID: 17950}
-    - Class: 114
-      Script: {instanceID: 18642}
+      Script: {instanceID: 17564}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -222,6 +222,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
+  - hash:
+      serializedVersion: 2
+      Hash: 5f1752ed2092162f016c19510c28a8b9
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: a393e1d85ad3d56e5c48c9a58cc2d806
@@ -494,6 +500,12 @@ ScriptsOnlyBuild:
     className: ConfigurationManager
   - hash:
       serializedVersion: 2
+      Hash: 8364621ef345b3d24da53001c0323675
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PartyMemberInfoHolder
+  - hash:
+      serializedVersion: 2
       Hash: 303ad70ce203ad874efe2965d0fbcff9
     assemblyName: Unity.Analytics.Tracker.dll
     namespaceName: UnityEngine.Analytics
@@ -654,12 +666,6 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
-  - hash:
-      serializedVersion: 2
-      Hash: 5f1752ed2092162f016c19510c28a8b9
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
   - hash:
       serializedVersion: 2
       Hash: f84d945e5e1ca985698660fc26e9657f
@@ -978,13 +984,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: 8364621ef345b3d24da53001c0323675
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: PartyMemberInfoHolder
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/oriol/Documents/GitHub/AnimalWARS/GameClient/Build/GameClient.exe
+  playerPath: C:/Users/Kedalen/Desktop/LetsTryThisOut/GameClient.exe

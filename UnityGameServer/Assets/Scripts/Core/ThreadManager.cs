@@ -19,7 +19,11 @@ class ThreadManager : MonoBehaviour
     /// <param name="_action">The action to be executed on the main thread.</param>
     private void FixedUpdate()
     {
-        HandleMatchMaking.CheckIfMatchMakingIsPossible();
+        List<PlayerDataHolder> mm = HandleMatchMaking.CheckIfMatchMakingIsPossible();
+        if (mm != null)
+        {
+            HandleMatchMaking.GenerateMatch(mm);
+        }
         UpdateMain();
 
     }

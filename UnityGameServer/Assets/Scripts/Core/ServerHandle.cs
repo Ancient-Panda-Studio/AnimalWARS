@@ -54,6 +54,7 @@ class ServerHandle
         if (!answer) return;
         var partyMembers = new List<int> {_fromClient, Dictionaries.PlayersByName[sendTO]};
         var PartyLeader = Dictionaries.PlayerDataHolders[Dictionaries.PlayersByName[sendTO]];
+        var PartyMember = Dictionaries.PlayerDataHolders[Dictionaries.PlayersByName[Dictionaries.PlayersById[_fromClient]]];
         if (PartyLeader.inParty)
         {
             //Player is already in party 
@@ -61,8 +62,10 @@ class ServerHandle
         }
         else
         {
-          int partyId = Parties.AddParty(partyMembers);
+            var partyId = Parties.AddParty(partyMembers);
+            PartyMember.inParty = true;
             PartyLeader.inParty = true;
+            PartyMember.partyID = partyId;
             PartyLeader.partyID = partyId;
         }
     }
