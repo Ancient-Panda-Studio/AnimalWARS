@@ -20,16 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a3d6dcf1-153c-41d1-a5ce-36cf9f0fefe9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../GameClient/.idea/.idea.GameClient/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/.idea/.idea.GameClient/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/Artifacts/34/3467298ecb423a2991d125b1a37fe34c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/Artifacts/70/7071dbc012330a66f8fa0ef9495ddf48" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/Artifacts/7b/7b11fe75a54236e9fc2b50b703a96273" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/Artifacts/a6/a6d0bcc1c6499edf0c0d2113203cfd3b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/Artifacts/ca/cab72a43937f97841e57016cb823cd15" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/Artifacts/cf/cf4387f69bafdbd03ba9096b737dc4b9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/Artifacts/fd/fd4b1d94948c6b8e7b5bfe32ef7ccab9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/EditorUserBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/EditorUserBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/Library/LastBuild.buildreport" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/LastBuild.buildreport" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/Unity.Analytics.DataPrivacy.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/Unity.Analytics.DataPrivacy.dll" afterDir="false" />
@@ -39,72 +30,12 @@
       <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/Unity.ProBuilder.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/Unity.ProBuilder.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/Unity.TextMeshPro.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/Unity.TextMeshPro.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/Unity.Timeline.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/Unity.Timeline.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.AIModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.AIModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.ARModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.ARModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.AccessibilityModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.AccessibilityModule.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.Advertisements.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.Advertisements.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.AndroidJNIModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.AndroidJNIModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.AnimationModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.AnimationModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.AssetBundleModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.AssetBundleModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.AudioModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.AudioModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.ClothModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.ClothModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.ClusterInputModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.ClusterInputModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.ClusterRendererModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.ClusterRendererModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.CoreModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.CoreModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.CrashReportingModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.CrashReportingModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.DSPGraphModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.DSPGraphModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.DirectorModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.DirectorModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.GameCenterModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.GameCenterModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.GridModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.GridModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.HotReloadModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.HotReloadModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.IMGUIModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.IMGUIModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.ImageConversionModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.ImageConversionModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.InputLegacyModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.InputLegacyModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.InputModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.InputModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.JSONSerializeModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.JSONSerializeModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.LocalizationModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.LocalizationModule.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.Monetization.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.Monetization.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.ParticleSystemModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.ParticleSystemModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.PerformanceReportingModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.PerformanceReportingModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.Physics2DModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.Physics2DModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.PhysicsModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.PhysicsModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.ProfilerModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.ProfilerModule.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.Purchasing.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.Purchasing.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.ScreenCaptureModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.ScreenCaptureModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.SharedInternalsModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.SharedInternalsModule.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.SpatialTracking.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.SpatialTracking.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.SpriteMaskModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.SpriteMaskModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.SpriteShapeModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.SpriteShapeModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.StreamingModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.StreamingModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.SubstanceModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.SubstanceModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.SubsystemsModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.SubsystemsModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.TLSModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.TLSModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.TerrainModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.TerrainModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.TerrainPhysicsModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.TerrainPhysicsModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.TextCoreModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.TextCoreModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.TextRenderingModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.TextRenderingModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.TilemapModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.TilemapModule.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UI.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UIElementsModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UIElementsModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UIModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UIModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UNETModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UNETModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UmbraModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UmbraModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UnityAnalyticsModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UnityAnalyticsModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UnityConnectModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UnityConnectModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UnityTestProtocolModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UnityTestProtocolModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UnityWebRequestModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UnityWebRequestModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.VFXModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.VFXModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.VRModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.VRModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.VehiclesModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.VehiclesModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.VideoModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.VideoModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.WindModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.WindModule.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.XR.LegacyInputHelpers.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.XR.LegacyInputHelpers.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.XRModule.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.XRModule.dll" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/UnityEngine.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/com.unity.multiplayer-hlapi.Runtime.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/Managed/com.unity.multiplayer-hlapi.Runtime.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/boot.config" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/boot.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/globalgamemanagers" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/PlayerDataCache/Win64/Data/globalgamemanagers" afterDir="false" />
@@ -117,33 +48,47 @@
       <change beforePath="$PROJECT_DIR$/../GameClient/Library/StateCache/Hierarchy/980a77-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/StateCache/Hierarchy/980a77-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/Library/StateCache/SceneView/27d34b-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/StateCache/SceneView/27d34b-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/Library/shadercompiler-UnityShaderCompiler.exe10.log" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/shadercompiler-UnityShaderCompiler.exe10.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/Library/shadercompiler-UnityShaderCompiler.exe11.log" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/shadercompiler-UnityShaderCompiler.exe11.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../GameClient/Library/shadercompiler-UnityShaderCompiler.exe8.log" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/shadercompiler-UnityShaderCompiler.exe8.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../GameClient/Library/shadercompiler-UnityShaderCompiler.exe9.log" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/Library/shadercompiler-UnityShaderCompiler.exe9.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../GameClient/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../GameClient/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGameServer/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGameServer/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGameServer/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGameServer/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.UnityGameServer/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.UnityGameServer/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assembly-CSharp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/Assembly-CSharp.csproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Client.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/ServerHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/ServerHandle.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/ThreadManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/ThreadManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Dictionaries.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Dictionaries.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchMaking/HandleMatchMaking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MatchMaking/HandleMatchMaking.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchMaking/Parties.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MatchMaking/Parties.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchMaking/PlayerDataHolder.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MatchMaking/PlayerDataHolder.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/25/25facfbcf9a1fe790837baaac4a71ea6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/26/26b299a44acde87aa6c0d317f27c3aa6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/44/44ca5c7ec536c4d5a97c37de0cf1ee37" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/48/485bae81ed5cb369f891da02b030a7d0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/6c/6c46fbb40729e4df0d7c21d75a16f9e4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/77/7712994b5c01935d8f8a1a28cf671b7a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/82/825168c85f7aca8fea13ba7e16b5db1b" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/89/8930c6eac7f2cf8f10169618d38670af" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e6/e6990b0f36378c2ac54249c3c930c3ab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f4/f471fbae1f7ebe8e31d5dc32a6e8db44" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/17/17854425492a41e8854fbcba1ea6f63a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/1d/1d4f27e49eabdf04567d9bc64724dabf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/22/22d32083094a434aabe4115ac846e5b0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/2c/2cdab347d4355df197e7af17e864b9db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/45/45052b1d0ec30ffb4807c6ad9d3ea03f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/63/639f34c20aaeddb16ec9d6be377a59fe" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/66/6652e73c785fa763ee3b853cad9f178e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/73/736a4e2fe823993532b6089b3ac67906" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/76/768e592262c66ebdd863983ee543d488" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/7f/7fa837acf68baae22b428d94ade8eaab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/82/82d66948259b9f66bbe63f2c142c3fb3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/9a/9a848aa0d04ed9fd947033051ba94749" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ab/ab96d910619e2df61e6dc46eb551ddcf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/ad/adc0a553eeafa4b7c799486685b4ec06" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/b1/b176b7f451b1e63db0d7d8f603279a89" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/c0/c04022a2caeae03e20bdaa93355195d3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d0/d001eff77daffa87039cd8574802514a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d3/d3bb1c779c5c495ee0bea67035c51104" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/d7/d750b7c973ac96c75d45c5cfe5f0536d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/df/dface35f918ee19c6f8597e95ab6f20f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e1/e1eef4b1877059b2b9a81b99cdcfb567" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e7/e70944b05aed43f2653057e92c3f057a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f2/f22f48600eae66a106abd82113a8db9e" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f2/f2d80ebfb9aa0b63dce1a1c935289e52" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f9/f948e24fa655fcde796329bf6b06657a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/46b431-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/46b431-mainStage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/e88e15-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/e88e15-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csprojAssemblyReference.cache" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,16 +124,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MatchMaking/PlayerConstructor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/NetworkManager.cs" />
         <option value="$PROJECT_DIR$/Assets/UpdateCall.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Dictionaries.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Packet.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Server.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/ServerSend.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MatchMaking/PlayerDataHolder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/ServerHandle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/ThreadManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Client.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MatchMaking/HandleMatchMaking.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MatchMaking/Parties.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Dictionaries.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MatchMaking/PlayerDataHolder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/ThreadManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MatchMaking/HandleMatchMaking.cs" />
       </list>
     </option>
   </component>
@@ -273,6 +218,7 @@
       <workItem from="1602084795348" duration="1318000" />
       <workItem from="1602112094012" duration="1775000" />
       <workItem from="1602188696492" duration="3927000" />
+      <workItem from="1602373056292" duration="6289000" />
     </task>
     <servers />
   </component>

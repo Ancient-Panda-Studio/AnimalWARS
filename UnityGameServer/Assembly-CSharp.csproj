@@ -69,6 +69,7 @@
      <Compile Include="Assets\Scripts\Dictionaries.cs" />
      <Compile Include="Assets\Scripts\HandleSQLRequests.cs" />
      <Compile Include="Assets\Scripts\MatchMaking\HandleMatchMaking.cs" />
+     <Compile Include="Assets\Scripts\MatchMaking\Match.cs" />
      <Compile Include="Assets\Scripts\MatchMaking\Parties.cs" />
      <Compile Include="Assets\Scripts\MatchMaking\PlayerDataHolder.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />

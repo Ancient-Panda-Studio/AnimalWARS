@@ -8,7 +8,8 @@ public class PlayerDataHolder
     public string username;
     public bool inParty;
     public int partyID;
-    
+    public int currentMatchId;
+
     public  PlayerDataHolder(int _playerID, string _username)
     {
         playerID = _playerID;

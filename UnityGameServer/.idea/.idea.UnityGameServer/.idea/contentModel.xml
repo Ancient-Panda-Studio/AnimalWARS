@@ -24,6 +24,7 @@
           <e p="HandleSQLRequests.cs" t="Include" />
           <e p="MatchMaking" t="Include">
             <e p="HandleMatchMaking.cs" t="Include" />
+            <e p="Match.cs" t="Include" />
             <e p="Parties.cs" t="Include" />
             <e p="PlayerDataHolder.cs" t="Include" />
           </e>
