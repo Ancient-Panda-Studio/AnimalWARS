@@ -107,4 +107,14 @@ public class ClientHandle : MonoBehaviour
     {
         throw new System.NotImplementedException();
     }
+
+    public static void MMState(Packet _packet)
+    {
+        LookForGame.SetFGButtons();
+    }
+
+    public static void InteractableButtons(Packet _packet)
+    {
+        LookForGame.SetInteract();
+    }
 }

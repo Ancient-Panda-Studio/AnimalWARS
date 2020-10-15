@@ -1,25 +1,38 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using Network;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LookForGame : MonoBehaviour
 {
-    public GameObject lfGameButton;
-    public GameObject stopLfGameButton;
-    
-    
+    private static GameObject lfGameButton;
+    private static GameObject stopLfGameButton;
+    public GameObject FindGame;
+    public GameObject StopGameFind;
+
+    private void Start()
+    {
+        lfGameButton = FindGame;
+        stopLfGameButton = StopGameFind;
+    }
     public void StartLfGame()
     {
         ClientSend.AddMatchMaking();
-        lfGameButton.SetActive(false);
-        stopLfGameButton.SetActive(true);
     }
-    
+    public static void SetFGButtons()
+    {
+        lfGameButton.SetActive(!lfGameButton.activeSelf);
+        stopLfGameButton.SetActive(!stopLfGameButton.activeSelf);
+    }
     public void RemoveFromLfGame()
     {
         ClientSend.RemoveMatchMaking();
-        lfGameButton.SetActive(true);
-        stopLfGameButton.SetActive(false);
+    }
+
+    public static void SetInteract()
+    {
+        lfGameButton.GetComponent<Button>().interactable = false;
     }
 }

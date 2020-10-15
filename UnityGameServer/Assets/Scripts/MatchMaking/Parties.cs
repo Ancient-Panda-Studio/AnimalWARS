@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Parties
 {
-    private static readonly SortedDictionary<int, List<int>> CurrentParties;
+    private static readonly SortedDictionary<int, List<int>> CurrentParties = new SortedDictionary<int, List<int>>();
     
     public static int AddParty(List<int> _members)
     {

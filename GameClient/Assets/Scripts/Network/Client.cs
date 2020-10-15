@@ -70,7 +70,9 @@ public class Client : MonoBehaviour
             {(int) ServerPackets.handleLoginInfo, ClientHandle.HandleLogin},
             {(int) ServerPackets.sendInviteServer, ClientHandle.InvitationReceived},
             {(int) ServerPackets.sendInviteAnswer, ClientHandle.InvitationResponse},
-            {(int) ServerPackets.matchFound, ClientHandle.MatchFound}
+            {(int) ServerPackets.matchFound, ClientHandle.MatchFound},
+            {(int) ServerPackets.mmOk, ClientHandle.MMState},
+            {(int) ServerPackets.removeLFButtons, ClientHandle.InteractableButtons}
         };
         Debug.Log("Initialized packets.");
     }

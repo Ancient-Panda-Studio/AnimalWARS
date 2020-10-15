@@ -84,7 +84,11 @@ namespace Network
         
         public static void RemoveMatchMaking()
         {
-            Debug.Log("kekw");
+             using (var _packet = new Packet((int) ClientPackets.stopMatchMaking))
+             {
+                 _packet.Write(Constants.InParty);
+                 SendTcpData(_packet);
+             }
         }
         #endregion
 

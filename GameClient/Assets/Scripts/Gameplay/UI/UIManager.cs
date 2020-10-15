@@ -190,6 +190,7 @@ public class UIManager : MonoBehaviour
         ClientSend.SendInviteResponse(x, Constants.Inviter);
         inviteUI.SetActive(false);
         Constants.Inviter = null;
+        Constants.InParty = x;
     }
 
     public void VerifyFriendInput()

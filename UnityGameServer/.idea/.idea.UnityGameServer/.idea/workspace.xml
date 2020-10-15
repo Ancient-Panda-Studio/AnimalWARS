@@ -153,11 +153,12 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MatchMaking/Shuffle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MatchMaking/Parties.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/MatchMaking/PlayerDataHolder.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dictionaries.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../GameClient/Assets/Scripts/Network/ClientHandle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/UpdateCall.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/MatchMaking/Parties.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -177,16 +178,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MatchMaking/PlayerConstructor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/NetworkManager.cs" />
         <option value="$PROJECT_DIR$/Assets/UpdateCall.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Packet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Server.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/ServerSend.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/ServerHandle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Client.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MatchMaking/Parties.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Dictionaries.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MatchMaking/PlayerDataHolder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/ThreadManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Server.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MatchMaking/Shuffle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/MatchMaking/HandleMatchMaking.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MatchMaking/Parties.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Packet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/ServerSend.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/ServerHandle.cs" />
       </list>
     </option>
   </component>
@@ -273,6 +275,7 @@
       <workItem from="1602188696492" duration="3927000" />
       <workItem from="1602373056292" duration="6289000" />
       <workItem from="1602564372610" duration="451000" />
+      <workItem from="1602774234642" duration="5551000" />
     </task>
     <servers />
   </component>

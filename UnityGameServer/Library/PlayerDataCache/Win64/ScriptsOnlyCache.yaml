@@ -46,11 +46,11 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 12022}
+      Script: {instanceID: 12030}
     - Class: 114
-      Script: {instanceID: 12412}
+      Script: {instanceID: 12420}
     - Class: 114
-      Script: {instanceID: 12434}
+      Script: {instanceID: 12442}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 143
@@ -106,6 +106,12 @@ ScriptsOnlyBuild:
     className: PlayerQuitHandler
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Match
+  - hash:
+      serializedVersion: 2
       Hash: c3d3430df9e3ea95e3e3d587961390fb
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
@@ -152,6 +158,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: TestResultRendererCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: UpdateCall
   - hash:
       serializedVersion: 2
       Hash: 234d407605354852c48e57df17c9a1c6
@@ -515,4 +527,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/Server.unity
-  playerPath: C:/Users/oriol/Desktop/Server/UnityGameServer.exe
+  playerPath: C:/Users/oriol/Desktop/ServerBuilds/UnityGameServer.exe

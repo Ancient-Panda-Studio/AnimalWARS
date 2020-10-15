@@ -57,6 +57,8 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
+    com.unity.multiplayer-hlapi.Runtime.dll:
+    - UnityEngine.Networking.NetworkCallbacks
   sceneClasses:
     Assets/Scenes/Main.unity:
     - Class: 1
@@ -104,85 +106,83 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11338}
     - Class: 114
-      Script: {instanceID: 11362}
+      Script: {instanceID: 11366}
     - Class: 114
-      Script: {instanceID: 11368}
+      Script: {instanceID: 11372}
     - Class: 114
-      Script: {instanceID: 11486}
+      Script: {instanceID: 11490}
     - Class: 114
-      Script: {instanceID: 11676}
+      Script: {instanceID: 11680}
     - Class: 114
-      Script: {instanceID: 11736}
+      Script: {instanceID: 11740}
     - Class: 114
-      Script: {instanceID: 11756}
+      Script: {instanceID: 11760}
     - Class: 114
-      Script: {instanceID: 11920}
+      Script: {instanceID: 11924}
     - Class: 114
-      Script: {instanceID: 11946}
+      Script: {instanceID: 11950}
     - Class: 114
-      Script: {instanceID: 12272}
+      Script: {instanceID: 12276}
     - Class: 114
-      Script: {instanceID: 12278}
+      Script: {instanceID: 12282}
     - Class: 114
-      Script: {instanceID: 12316}
+      Script: {instanceID: 12320}
     - Class: 114
-      Script: {instanceID: 12324}
+      Script: {instanceID: 12328}
     - Class: 114
-      Script: {instanceID: 12426}
+      Script: {instanceID: 12430}
     - Class: 114
-      Script: {instanceID: 12444}
+      Script: {instanceID: 12448}
     - Class: 114
-      Script: {instanceID: 12500}
+      Script: {instanceID: 12504}
     - Class: 114
-      Script: {instanceID: 12610}
+      Script: {instanceID: 12614}
     - Class: 114
-      Script: {instanceID: 12814}
+      Script: {instanceID: 12818}
     - Class: 114
-      Script: {instanceID: 12828}
+      Script: {instanceID: 12832}
     - Class: 114
-      Script: {instanceID: 13050}
+      Script: {instanceID: 13054}
     - Class: 114
-      Script: {instanceID: 13092}
+      Script: {instanceID: 13096}
     - Class: 114
-      Script: {instanceID: 13150}
+      Script: {instanceID: 13154}
     - Class: 114
-      Script: {instanceID: 13344}
+      Script: {instanceID: 13348}
     - Class: 114
-      Script: {instanceID: 13508}
+      Script: {instanceID: 13512}
     - Class: 114
-      Script: {instanceID: 13550}
+      Script: {instanceID: 13554}
     - Class: 114
-      Script: {instanceID: 13562}
+      Script: {instanceID: 13566}
     - Class: 114
-      Script: {instanceID: 13568}
+      Script: {instanceID: 13572}
     - Class: 114
-      Script: {instanceID: 13590}
+      Script: {instanceID: 13594}
     - Class: 114
-      Script: {instanceID: 13716}
+      Script: {instanceID: 13720}
     - Class: 114
-      Script: {instanceID: 13904}
+      Script: {instanceID: 13908}
     - Class: 114
-      Script: {instanceID: 13968}
+      Script: {instanceID: 13972}
     - Class: 114
-      Script: {instanceID: 14010}
+      Script: {instanceID: 14014}
     - Class: 114
-      Script: {instanceID: 14066}
+      Script: {instanceID: 14070}
     - Class: 114
-      Script: {instanceID: 14302}
+      Script: {instanceID: 14306}
     - Class: 114
-      Script: {instanceID: 14304}
+      Script: {instanceID: 14308}
     - Class: 114
-      Script: {instanceID: 14632}
+      Script: {instanceID: 14636}
     - Class: 114
-      Script: {instanceID: 14656}
+      Script: {instanceID: 14660}
     - Class: 114
-      Script: {instanceID: 14682}
+      Script: {instanceID: 14686}
     - Class: 114
-      Script: {instanceID: 14708}
+      Script: {instanceID: 14712}
     - Class: 114
-      Script: {instanceID: 14750}
-    - Class: 114
-      Script: {instanceID: 17564}
+      Script: {instanceID: 14754}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -576,7 +576,7 @@ ScriptsOnlyBuild:
     className: TMP_Asset
   - hash:
       serializedVersion: 2
-      Hash: a151cfc68370e320510a818afc0bc4e8
+      Hash: 02fea37b97edc06cd342a9ee5328b74e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: LookForGame
@@ -985,4 +985,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/Kedalen/Desktop/LetsTryThisOut/GameClient.exe
+  playerPath: C:/Users/oriol/Desktop/Builds/GameClient.exe

@@ -16,7 +16,9 @@ namespace Network
         handleLoginInfo,
         sendInviteServer,
         sendInviteAnswer,
-        matchFound
+        matchFound,
+        mmOk,
+        removeLFButtons
     }
 
     /// <summary>Sent from client to server.</summary>

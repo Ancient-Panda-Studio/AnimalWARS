@@ -158,19 +158,19 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/ClientHandle.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/Skins.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/ThreadManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/Login/Login.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/../UnityGameServer/Assets/Scripts/Core/Server.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Externals/SimpleJSON.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/FriendController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/ClientHandle.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../UnityGameServer/Assets/Scripts/Core/Server.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/Bindings.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/FriendController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/Login/Login.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Player/PlayerController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -210,20 +210,20 @@
         <option value="$PROJECT_DIR$/Assets/CallTabGroup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/TabGroup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/XMLDataManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Packet.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Client.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/LookForGame.cs" />
         <option value="$PROJECT_DIR$/Assets/PartyMemberInfoHolder.cs" />
         <option value="$PROJECT_DIR$/../UnityGameServer/Assets/Scripts/Core/Server.cs" />
         <option value="$PROJECT_DIR$/../../UnityProjects/sqlconnect/getfriends.php" />
         <option value="$PROJECT_DIR$/../../../../../../xampp/htdocs/sqlconnect/getfriends.php" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/ClientHandle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Player/FriendController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/PartyMemberInfoHolder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/ClientSend.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Packet.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/Client.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/LookForGame.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/ClientHandle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/UIManager.cs" />
       </list>
     </option>
   </component>
@@ -335,6 +335,7 @@
       <workItem from="1602083773785" duration="3008000" />
       <workItem from="1602111873483" duration="1991000" />
       <workItem from="1602188691715" duration="1811000" />
+      <workItem from="1602775243815" duration="3696000" />
     </task>
     <servers />
   </component>

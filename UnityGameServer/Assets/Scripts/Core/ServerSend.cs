@@ -153,7 +153,22 @@ public class ServerSend
             }
             
         }
+        public static void MatchMakingState(int _sendTO)
+        {
+            using (Packet _packet = new Packet((int)ServerPackets.mmOk))
+            {
+                SendTCPData(_sendTO,_packet);
+            }
+        }
+        public static void RemoveLFGButton(int _sendTO)
+        {
+            using (Packet _packet = new Packet((int)ServerPackets.removeLFButtons))
+            {
+                SendTCPData(_sendTO,_packet);
+            }
+        }
         #endregion
 
-      
+
+       
 }
