@@ -34,21 +34,20 @@ public class HandleAsync : MonoBehaviour
     {
         StartCoroutine(_routine);
     }
-
     public IEnumerator GetUserBasicData()
     {
         var form = new WWWForm();
-        form.AddField("user", PlayerVariables.UserName);
+        form.AddField("user", Constants.Username);
         var www = new WWW(Constants.WebServer + "basicdata.php", form);
         yield return www;
         if (www.text[0] == '0')
         {
             //GetData
-            PlayerVariables.Coins = int.Parse(www.text.Split('\t')[1]);
-            PlayerVariables.CurrentXP = int.Parse(www.text.Split('\t')[3]);
-            PlayerVariables.UserID = int.Parse(www.text.Split('\t')[4]);
-            Constants.ID = PlayerVariables.UserID;
-            Routine(GetUserOwnedSkins());
+            PlayerVariables.FreeCoins = int.Parse(www.text.Split('\t')[1]);
+            PlayerVariables.PaidCoins = int.Parse(www.text.Split('\t')[2]);
+            PlayerVariables.AccountLevel = int.Parse(www.text.Split('\t')[3]);
+            PlayerVariables.CurrentXp = int.Parse(www.text.Split('\t')[4]);
+            StartCoroutine(GetUserOwnedSkins());
         }
         else
         {
@@ -66,7 +65,6 @@ public class HandleAsync : MonoBehaviour
             if (www.isNetworkError || www.isHttpError)
             {
                 Debug.Log(www.error);
-                Debug.Log("I'm here");
             }
             else
             {
@@ -78,7 +76,6 @@ public class HandleAsync : MonoBehaviour
                 var sprite = Sprite.Create(texture, new Rect(0, 0, texture.width, texture.height),
                     new Vector2(0.5f, 0.5f));
                 Skins.PopulateSkinImage(sprite);
-                Debug.Log("I'm here");
                 _imageRetrieved = true;
             }
         }
@@ -182,6 +179,32 @@ public class HandleAsync : MonoBehaviour
         }
     }
 
+    public IEnumerator FindUsers(string txt)
+    {
+        
+        //FIRST DELETE ALL GAME OBJECTS IF THEY ARE UP
+        var form = new WWWForm();
+        form.AddField("user", txt);
+        using (var www = UnityWebRequest.Post(Constants.WebServer + "getusers.php", form))
+        {
+            yield return www.SendWebRequest();
+            if (www.isNetworkError || www.isHttpError)
+            {
+                Debug.Log(www.error);
+            }
+            else
+            {
+                //Call callbackfunction to pass result
+                if (www.downloadHandler.text == "0")
+                {
+                    FindPlayersSql.Instance.PopulateQuery(null);
+                    yield break;
+                }
+                var jsonArrayString = www.downloadHandler.text;
+                StartCoroutine(FindPlayersSql.Instance.PopulateQuery(jsonArrayString));
+            }
+        }
+    }
     public IEnumerator GetFriends()
     {
         var form = new WWWForm();
@@ -195,7 +218,6 @@ public class HandleAsync : MonoBehaviour
             }
             else
             {
-                Debug.Log(www.downloadHandler.text);
                 var jsonArrayStr = www.downloadHandler.text;
                 var jsonArray = JSON.Parse(jsonArrayStr) as JSONArray;
                 if (www.downloadHandler.text == "0")
@@ -234,10 +256,8 @@ public class HandleAsync : MonoBehaviour
                         GameManager.Instance.FriendsList.Add(friendID,friendUser);
                         _tempFriendList.Add(friendUser);
                         _tempFriendIDList.Add(friendID);
-                        Debug.Log(i + " user: " + friendUser + " friendid: " + friendID);
                     }
 
-                    Debug.Log("I finished the loop");
                     UIManager.Instance.CreateFriends(_tempFriendList, _tempFriendIDList);
                     _tempFriendList = null;
                     _tempFriendIDList = null;

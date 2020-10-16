@@ -152,15 +152,27 @@ public class Client
         /// <summary>Closes and cleans up the TCP connection.</summary>
         public void Disconnect()
         {
-            var item = Dictionaries.PlayersByName.First(kvp => kvp.Value == id);
-            Dictionaries.PlayersByName.Remove(item.Key);
-            //Dictionaries.Parties.Remove(id);
+           
+        
+                var item = Dictionaries.PlayersByName.FirstOrDefault(kvp => kvp.Value == id);
+
+                if (item.Key != null)
+                {
+                    Debug.Log("REMOVING USER FROM DICTIONARY");
+                    Dictionaries.PlayerDataHolders.Remove(id);
+                    Dictionaries.PlayersById.Remove(id);
+                    Dictionaries.PlayersByName.Remove(item.Key);
+                }
+
+                //Dictionaries.Parties.Remove(id);
             socket.Close();
             stream = null;
             receivedData = null;
             receiveBuffer = null;
             socket = null;
         }
+
+        
     }    
 
     public class UDP
@@ -264,32 +276,35 @@ public class Client
         if (www.text[0] == '0')
         {
             //Allow Login
-            ServerSend.LoginResult(_id,true, "pepelaugh",_user);
             Dictionaries.PlayersByName.Add(_user,id);
             Dictionaries.PlayersById.Add(id,_user);
+            ServerSend.LoginResult(_id,true, "pepelaugh",           int.Parse(www.text.Split('\t')[1]));
             Debug.Log(_user);
+            Debug.Log(www.text);
             Dictionaries.PlayerDataHolders.Add(id,new PlayerDataHolder(id,_user));
         }
         else
         {
-            ServerSend.LoginResult(_id,false, www.text,_user);
+            ServerSend.LoginResult(_id,false, www.text, -9);
             Debug.Log(www.text);
         }
         
     }
     /// <summary>Disconnects the client and stops all network traffic.</summary>
+    
     private void Disconnect()
     {
         Debug.Log($"{tcp.socket.Client.RemoteEndPoint} has disconnected.");
-
         ThreadManager.ExecuteOnMainThread(() =>
         {
-            UnityEngine.Object.Destroy(player.gameObject);
+            //UnityEngine.Object.Destroy(player.gameObject);
             player = null;
         });
-
         tcp.Disconnect();
         udp.Disconnect();
+        string user = Dictionaries.PlayersById[id];
+        Dictionaries.PlayersByName.Remove(Dictionaries.PlayersById[id]);
+        Dictionaries.PlayersById.Remove(Dictionaries.PlayersByName[user]);
         ServerSend.PlayerDisconnected(id);
     }
 }

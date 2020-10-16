@@ -7,6 +7,7 @@ public class Register : MonoBehaviour
 {
     public InputField usernameField;
     public InputField passwordField;
+    public InputField mailField;
     public Button submitButton;
     public Text errorText;
 
@@ -21,6 +22,7 @@ public class Register : MonoBehaviour
         var form = new WWWForm();
         form.AddField("user", usernameField.text);
         form.AddField("pass", passwordField.text);
+        form.AddField("email", mailField.text);
         var www = new WWW(Constants.WebServer + "register.php", form);
         yield return www;
         if (www.text == "0")
@@ -53,7 +55,21 @@ public class Register : MonoBehaviour
         }
         else
         {
-            submitButton.interactable = usernameField.text.Length >= 8 && passwordField.text.Length >= 8;
+            submitButton.interactable = usernameField.text.Length >= 8 && passwordField.text.Length >= 8 && IsValidEmail(mailField.text);
+        }
+    }
+
+    private bool IsValidEmail(string mail)
+    {
+        try
+        {
+            var addr = new System.Net.Mail.MailAddress(mail);
+            return addr.Address == mail;
+        }
+        catch
+        {
+            Debug.Log("Invalid Email");
+            return false;
         }
     }
 }

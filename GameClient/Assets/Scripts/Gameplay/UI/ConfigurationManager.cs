@@ -101,7 +101,6 @@ namespace Player
    }
    resDropdown.AddOptions(optionsToAdd);
    int x = _optionsDictionary["1920x1080"];
-   Debug.Log(x);
    resDropdown.value = XMLDataManager.Instance.Entry.DropDownValue;
    SetResolution(XMLDataManager.Instance.Entry.DesiredResolution);
   }

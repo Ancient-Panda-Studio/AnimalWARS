@@ -46,8 +46,11 @@ public class ClientHandle : MonoBehaviour
         var _id = _packet.ReadInt();
         var _allowed = _packet.ReadBool();
         var _error = _packet.ReadString();
+        var _dbId = _packet.ReadInt();
         if (_allowed)
         {
+            PlayerVariables.UserID = _dbId;
+            Constants.ID = _dbId;
             UIManager.Instance.AllowLogin();
             HandleAsync.Instance.Routine(HandleAsync.Instance.GetUserBasicData());
             HandleAsync.Instance.Routine(HandleAsync.Instance.GetAllSkins());

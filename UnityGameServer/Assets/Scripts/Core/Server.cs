@@ -11,7 +11,6 @@ public class Server
     {
         public static int MaxPlayers { get; private set; }
         public static int Port { get; private set; }
-        public static bool Loged { get; private set; }
         public static Dictionary<int, Client> clients = new Dictionary<int, Client>();
         public delegate void PacketHandler(int _fromClient, Packet _packet);
         public static Dictionary<int, PacketHandler> packetHandlers;
@@ -33,7 +32,7 @@ public class Server
 
             tcpListener = new TcpListener(IPAddress.Any, Port);
             tcpListener.Start();
-            tcpListener.BeginAcceptTcpClient(TCPConnectCallback, null);
+            tcpListener.BeginAcceptTcpClient(TcpConnectCallback, null);
 
             udpListener = new UdpClient(Port);
             udpListener.BeginReceive(UDPReceiveCallback, null);
@@ -41,20 +40,19 @@ public class Server
             Debug.Log($"Server started on port {Port}.");
         }
 
-        private static void TCPConnectCallback(IAsyncResult _result)
+        private static void TcpConnectCallback(IAsyncResult _result)
         {
             TcpClient _client = tcpListener.EndAcceptTcpClient(_result);
-            tcpListener.BeginAcceptTcpClient(TCPConnectCallback, null);
+            tcpListener.BeginAcceptTcpClient(TcpConnectCallback, null);
             Debug.Log($"Incoming connection from {_client.Client.RemoteEndPoint}...");
             for (int i = 1; i <= MaxPlayers; i++)
+            {
+                if (clients[i].tcp.socket == null)
                 {
-                    if (clients[i].tcp.socket == null)
-                    {
-                        clients[i].tcp.Connect(_client);
-                        return;
-                    }
+                    clients[i].tcp.Connect(_client);
+                    return;
                 }
-
+            }
             Debug.Log($"{_client.Client.RemoteEndPoint} failed to connect: Server full!");
         }
 

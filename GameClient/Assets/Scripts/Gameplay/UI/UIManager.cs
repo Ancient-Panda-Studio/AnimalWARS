@@ -148,7 +148,6 @@ public class UIManager : MonoBehaviour
     {
         Constants.Username = usernameField.text;
         ClientSend.SendLoginInfo();
-        Debug.Log(usernameField.text + "    ___" + passwordField.text);
     }
 
     public void CreateFriends(List<string> x, List<int> f)

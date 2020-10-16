@@ -78,21 +78,14 @@ public class ServerSend
                 SendTCPData(_toClient, _packet);
             }
         }
-        public static void LoginResult(int _playerId, bool _result, string _error,string _username)
+        public static void LoginResult(int _playerId, bool _result, string _error,int _dbID)
         {
             using (Packet _packet = new Packet((int)ServerPackets.handleLoginInfo))
             {
                 _packet.Write(_playerId);
                 _packet.Write(_result);
                 _packet.Write(_error);
-
-                if (!_result)
-                {
-                    var item = Dictionaries.PlayersByName.First(kvp => kvp.Value == _playerId);
-
-                    Dictionaries.PlayersByName.Remove(item.Key);
-                }
-                    
+                _packet.Write(_dbID);
                 SendTCPData(_playerId,_packet);
                 // if(_result)
                 // Server.clients[_playerId].SendIntoGame(_username);    

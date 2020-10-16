@@ -27,7 +27,6 @@ namespace Network
                 _packet.Write(UIManager.Instance.passwordField.text);
                 SendTcpData(_packet);
             }
-
             PlayerVariables.UserName = UIManager.Instance.usernameField.text;
         }
 
