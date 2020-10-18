@@ -21,6 +21,7 @@ class ThreadManager : MonoBehaviour
       
         UpdateMain();
         var mm = HandleMatchMaking.CheckIfMatchMakingIsPossible();
+      
         if (!HandleMatchMaking.Generating && mm != null)
         {
             HandleMatchMaking.GenerateMatch(mm);

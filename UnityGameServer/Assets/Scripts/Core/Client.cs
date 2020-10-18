@@ -67,7 +67,7 @@ public class Client
             }
             catch (Exception _ex)
             {
-                Debug.Log($"Error sending data to player {id} via TCP: {_ex}");
+                //Debug.Log($"Error sending data to player {id} via TCP: {_ex}");
             }
         }
 
@@ -91,6 +91,7 @@ public class Client
             }
             catch (Exception _ex)
             {
+                //
                 Debug.Log($"Error receiving TCP data: {_ex}");
                 Server.clients[id].Disconnect();
             }

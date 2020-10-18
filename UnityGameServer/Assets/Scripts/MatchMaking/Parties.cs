@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class Parties
 {
-    private static readonly SortedDictionary<int, List<int>> CurrentParties = new SortedDictionary<int, List<int>>();
+    private static readonly SortedDictionary<int, List<PlayerDataHolder>> CurrentParties = new SortedDictionary<int, List<PlayerDataHolder>>();
     
-    public static int AddParty(List<int> _members)
+    public static int AddParty(List<PlayerDataHolder> _members)
     {
         if (CurrentParties.Count == 0)
         {
@@ -24,20 +24,20 @@ public class Parties
     {
         CurrentParties.Remove(_partyID);
     }
-    public static List<int> GetParty(int _partyID)
+    public static List<PlayerDataHolder> GetParty(int _partyID)
     {
         return CurrentParties[_partyID];
     }
-    public static void AddToExistingParty(int _partyLeaderPartyID, int _partyMember)
+    public static void AddToExistingParty(int _partyLeaderPartyID, PlayerDataHolder _partyMember)
     {
-        List<int> x = GetParty(_partyLeaderPartyID);
+        List<PlayerDataHolder> x = GetParty(_partyLeaderPartyID);
         x.Add(_partyMember);
         CurrentParties[_partyLeaderPartyID] = x;
 
     }
-    public static void RemoveFromExistingParty(int _partyLeaderPartyID, int _partyMember)
+    public static void RemoveFromExistingParty(int _partyLeaderPartyID, PlayerDataHolder _partyMember)
     {
-        List<int> x = GetParty(_partyLeaderPartyID);
+        List<PlayerDataHolder> x = GetParty(_partyLeaderPartyID);
         x.Remove(_partyMember);
         CurrentParties[_partyLeaderPartyID] = x;
 

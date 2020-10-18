@@ -8284,7 +8284,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ip: 127.0.0.1
-  port: 26950
+  port: 27017
   myId: 0
 --- !u!4 &630787562
 Transform:
@@ -14733,7 +14733,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 9125241162475253122, guid: 2365c81e0b404f94dbc86735c95807d2,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 5024a199513b4594b81832a09a64fe69, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
