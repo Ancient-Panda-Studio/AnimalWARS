@@ -9,6 +9,7 @@
         <e p="Fantasy Forest Environment Free Sample" t="Include">
           <e p="StandardNoCulling.shader" t="Include" />
         </e>
+        <e p="Matches.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="Core" t="Include">
             <e p="Client.cs" t="Include" />

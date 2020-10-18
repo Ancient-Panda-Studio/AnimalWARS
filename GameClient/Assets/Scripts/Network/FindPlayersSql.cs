@@ -39,11 +39,6 @@ public class FindPlayersSql : MonoBehaviour
      
     }
 
-    private void Update()
-    {
-       Debug.Log(currentUserCards.Count);
-    }
-
     public void DestroyAll(bool t)
     {
         _destroyAllCards = t;
