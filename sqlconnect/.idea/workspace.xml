@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7e4f63f2-e250-43c8-9cd6-1597189e9d75" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="ProjectId" id="1j3W3f6SblL8a5AmUVlq9syQo8x" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7e4f63f2-e250-43c8-9cd6-1597189e9d75" name="Default Changelist" comment="" />
+      <created>1603033057721</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1603033057721</updated>
+      <workItem from="1603033058902" duration="1602000" />
+      <workItem from="1603094285935" duration="488000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1836" y="478" width="397" height="158" key="NewPhpFileDialog" timestamp="1603033140929">
+      <screen x="1080" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1836" y="478" width="397" height="158" key="NewPhpFileDialog/1080.0.1920.1080/0.27.1080.1893@1080.0.1920.1080" timestamp="1603033140929" />
+    <state x="2188" y="260" width="1920" height="563" key="dock-window-1" timestamp="1603094322449">
+      <screen x="1920" y="0" width="1920" height="1080" />
+    </state>
+    <state x="-68" y="0" width="1080" height="1009" maximized="true" key="dock-window-1/1080.0.1920.1080/0.27.1080.1893@1080.0.1920.1080" timestamp="1603034414686" />
+    <state x="2188" y="260" width="1920" height="563" key="dock-window-1/1920.0.1920.1080/0.32.1920.1048@1920.0.1920.1080" timestamp="1603094322449" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/register.php</url>
+          <line>29</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
