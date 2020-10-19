@@ -102,91 +102,91 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 11336}
     - Class: 114
-      Script: {instanceID: 11348}
+      Script: {instanceID: 11520}
     - Class: 114
-      Script: {instanceID: 11372}
+      Script: {instanceID: 11526}
     - Class: 114
-      Script: {instanceID: 11378}
+      Script: {instanceID: 11644}
     - Class: 114
-      Script: {instanceID: 11496}
+      Script: {instanceID: 11834}
     - Class: 114
-      Script: {instanceID: 11686}
+      Script: {instanceID: 11894}
     - Class: 114
-      Script: {instanceID: 11746}
+      Script: {instanceID: 11914}
     - Class: 114
-      Script: {instanceID: 11766}
+      Script: {instanceID: 12078}
     - Class: 114
-      Script: {instanceID: 11930}
+      Script: {instanceID: 12104}
     - Class: 114
-      Script: {instanceID: 11956}
+      Script: {instanceID: 12374}
     - Class: 114
-      Script: {instanceID: 12226}
-    - Class: 114
-      Script: {instanceID: 12284}
-    - Class: 114
-      Script: {instanceID: 12290}
-    - Class: 114
-      Script: {instanceID: 12328}
-    - Class: 114
-      Script: {instanceID: 12336}
+      Script: {instanceID: 12432}
     - Class: 114
       Script: {instanceID: 12438}
     - Class: 114
-      Script: {instanceID: 12456}
+      Script: {instanceID: 12476}
     - Class: 114
-      Script: {instanceID: 12512}
+      Script: {instanceID: 12484}
     - Class: 114
-      Script: {instanceID: 12622}
+      Script: {instanceID: 12586}
     - Class: 114
-      Script: {instanceID: 12826}
+      Script: {instanceID: 12604}
     - Class: 114
-      Script: {instanceID: 12840}
+      Script: {instanceID: 12660}
     - Class: 114
-      Script: {instanceID: 13062}
+      Script: {instanceID: 12770}
     - Class: 114
-      Script: {instanceID: 13104}
+      Script: {instanceID: 12974}
     - Class: 114
-      Script: {instanceID: 13162}
+      Script: {instanceID: 12988}
     - Class: 114
-      Script: {instanceID: 13358}
+      Script: {instanceID: 13210}
     - Class: 114
-      Script: {instanceID: 13522}
+      Script: {instanceID: 13252}
     - Class: 114
-      Script: {instanceID: 13564}
+      Script: {instanceID: 13310}
     - Class: 114
-      Script: {instanceID: 13576}
+      Script: {instanceID: 13356}
     - Class: 114
-      Script: {instanceID: 13582}
+      Script: {instanceID: 13506}
     - Class: 114
-      Script: {instanceID: 13604}
+      Script: {instanceID: 13670}
+    - Class: 114
+      Script: {instanceID: 13712}
+    - Class: 114
+      Script: {instanceID: 13724}
     - Class: 114
       Script: {instanceID: 13730}
     - Class: 114
-      Script: {instanceID: 13918}
+      Script: {instanceID: 13752}
     - Class: 114
-      Script: {instanceID: 13982}
+      Script: {instanceID: 13878}
     - Class: 114
-      Script: {instanceID: 14024}
+      Script: {instanceID: 14064}
     - Class: 114
-      Script: {instanceID: 14080}
+      Script: {instanceID: 14128}
     - Class: 114
-      Script: {instanceID: 14316}
+      Script: {instanceID: 14170}
     - Class: 114
-      Script: {instanceID: 14318}
+      Script: {instanceID: 14226}
     - Class: 114
-      Script: {instanceID: 14646}
+      Script: {instanceID: 14462}
     - Class: 114
-      Script: {instanceID: 14670}
+      Script: {instanceID: 14464}
     - Class: 114
-      Script: {instanceID: 14696}
+      Script: {instanceID: 14792}
     - Class: 114
-      Script: {instanceID: 14722}
+      Script: {instanceID: 14816}
     - Class: 114
-      Script: {instanceID: 14764}
+      Script: {instanceID: 14842}
     - Class: 114
-      Script: {instanceID: 14770}
+      Script: {instanceID: 14868}
+    - Class: 114
+      Script: {instanceID: 14910}
+    - Class: 114
+      Script: {instanceID: 14916}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -224,12 +224,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Text
-  - hash:
-      serializedVersion: 2
-      Hash: 5f1752ed2092162f016c19510c28a8b9
-    assemblyName: UnityEngine.UI.dll
-    namespaceName: UnityEngine.UI
-    className: Button
   - hash:
       serializedVersion: 2
       Hash: a393e1d85ad3d56e5c48c9a58cc2d806
@@ -442,7 +436,7 @@ ScriptsOnlyBuild:
     className: ClientHandle
   - hash:
       serializedVersion: 2
-      Hash: ef5c43f921427d03730f6ea4c848f07d
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RectMask2D
@@ -674,6 +668,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
     className: TextContainer
+  - hash:
+      serializedVersion: 2
+      Hash: 5f1752ed2092162f016c19510c28a8b9
+    assemblyName: UnityEngine.UI.dll
+    namespaceName: UnityEngine.UI
+    className: Button
   - hash:
       serializedVersion: 2
       Hash: f84d945e5e1ca985698660fc26e9657f
@@ -1001,4 +1001,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/oriol/Desktop/ClientBuilds/GameClient.exe
+  playerPath: C:/Users/oriol/Desktop/sadfsafsafd/GameClient.exe
