@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using JetBrains.Annotations;
 using UnityEngine;
+using Object = UnityEngine.Object;
 using Random = System.Random;
 
 public class HandleMatchMaking
@@ -74,12 +75,18 @@ public class HandleMatchMaking
         var mapOrder = new List<int>();
         mapOrder.AddRange(MapsArray);
         mapOrder.ShuffleList();
-        
         //AddMatchToDictionary
         var newMatch = new Match(team1, team2, mapOrder);
-        var matchId = newMatch.GetMatchId();
+        var matchId = Match.GetMatchId();
         Dictionaries.CurrentMatches.Add(matchId,newMatch);
         Debug.Log("A new match has been created: " + matchId + " is the match id");
+        var x = 50 * matchId;
+        var mapToInstantiate = GameObject.Instantiate(Resources.Load("Prefabs/MapsPrefabs/MapSpawnTest") as GameObject);
+        var temp = new Vector3(x,0,0);
+        mapToInstantiate.transform.position += temp;
+        mapToInstantiate.SetActive(false);
+        //Move Map
+        mapToInstantiate.SetActive(true);
         foreach (var player in holdersList)
         { 
             Debug.Log(player.username + " has been added to the new match");

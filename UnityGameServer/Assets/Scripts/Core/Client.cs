@@ -280,14 +280,11 @@ public class Client
             Dictionaries.PlayersByName.Add(_user,id);
             Dictionaries.PlayersById.Add(id,_user);
             ServerSend.LoginResult(_id,true, "pepelaugh",           int.Parse(www.text.Split('\t')[1]));
-            Debug.Log(_user);
-            Debug.Log(www.text);
             Dictionaries.PlayerDataHolders.Add(id,new PlayerDataHolder(id,_user));
         }
         else
         {
             ServerSend.LoginResult(_id,false, www.text, -9);
-            Debug.Log(www.text);
         }
         
     }

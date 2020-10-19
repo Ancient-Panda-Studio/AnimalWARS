@@ -32,7 +32,6 @@ class ServerHandle
         var id = _packet.ReadInt();
         var username = _packet.ReadString();
         var password = _packet.ReadString();
-        Debug.Log(username + "   " + password);
         Server.clients[_fromClient].RequestLogin(username, password, id);
     }
 

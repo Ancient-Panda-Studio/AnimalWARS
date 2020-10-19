@@ -16,6 +16,7 @@
           <e p="Core" t="Include">
             <e p="Client.cs" t="Include" />
             <e p="Constants.cs" t="Include" />
+            <e p="MatchManager.cs" t="Include" />
             <e p="NetworkManager.cs" t="Include" />
             <e p="Packet.cs" t="Include" />
             <e p="Server.cs" t="Include" />

@@ -13,7 +13,12 @@ class ThreadManager : MonoBehaviour
     {
         DontDestroyOnLoad(this);    
     }
-    
+
+    private void Start()
+    {
+        Maps.PopulateMapDictionary();
+    }
+
     /// <summary>Sets an action to be executed on the main thread.</summary>
     /// <param name="_action">The action to be executed on the main thread.</param>
     private void FixedUpdate()

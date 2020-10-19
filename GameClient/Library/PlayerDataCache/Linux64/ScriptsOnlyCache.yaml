@@ -28,6 +28,7 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
+    - Packages.Rider.Editor.RiderScriptEditorData
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
@@ -1002,4 +1003,4 @@ ScriptsOnlyBuild:
   platform: 24
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: /home/kedalen/Documents/ClientBuilds/AnimalWars.x86_64
+  playerPath: /home/kedalen/Documents/ClientBuild/AnimalWars.x86_64

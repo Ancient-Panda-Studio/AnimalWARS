@@ -63,6 +63,7 @@
      <Compile Include="Assets\Match.cs" />
      <Compile Include="Assets\Scripts\Core\Client.cs" />
      <Compile Include="Assets\Scripts\Core\Constants.cs" />
+     <Compile Include="Assets\Scripts\Core\MatchManager.cs" />
      <Compile Include="Assets\Scripts\Core\NetworkManager.cs" />
      <Compile Include="Assets\Scripts\Core\Packet.cs" />
      <Compile Include="Assets\Scripts\Core\Server.cs" />
