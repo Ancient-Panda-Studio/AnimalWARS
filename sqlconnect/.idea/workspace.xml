@@ -30,6 +30,7 @@
       <option name="presentableId" value="Default" />
       <updated>1603033057721</updated>
       <workItem from="1603033058902" duration="1602000" />
+      <workItem from="1603094285935" duration="488000" />
     </task>
     <servers />
   </component>
@@ -41,9 +42,21 @@
       <screen x="1080" y="0" width="1920" height="1080" />
     </state>
     <state x="1836" y="478" width="397" height="158" key="NewPhpFileDialog/1080.0.1920.1080/0.27.1080.1893@1080.0.1920.1080" timestamp="1603033140929" />
-    <state x="-68" y="0" width="1080" height="1009" maximized="true" key="dock-window-1" timestamp="1603034414686">
-      <screen x="0" y="27" width="1080" height="1893" />
+    <state x="2188" y="260" width="1920" height="563" key="dock-window-1" timestamp="1603094322449">
+      <screen x="1920" y="0" width="1920" height="1080" />
     </state>
     <state x="-68" y="0" width="1080" height="1009" maximized="true" key="dock-window-1/1080.0.1920.1080/0.27.1080.1893@1080.0.1920.1080" timestamp="1603034414686" />
+    <state x="2188" y="260" width="1920" height="563" key="dock-window-1/1920.0.1920.1080/0.32.1920.1048@1920.0.1920.1080" timestamp="1603094322449" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/register.php</url>
+          <line>29</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
