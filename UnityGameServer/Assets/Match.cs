@@ -9,7 +9,7 @@ public class Match
     private static List<Map> _mapOrder = new List<Map>();
     private static int _matchID;
     private static int _currentBindMapId;
-
+    private static LayerMask _visibleLayer;
     public Match(List<PlayerDataHolder> team1, List<PlayerDataHolder> team2, IEnumerable<int> mapOrder)
     {
         _team1 = team1;
