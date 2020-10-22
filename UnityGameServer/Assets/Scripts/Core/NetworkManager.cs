@@ -33,8 +33,8 @@ public class NetworkManager : MonoBehaviour
         Server.Stop();
     }
 
-    public GameObject InstantiatePlayer()
+    public GameObject InstantiatePlayer(Transform _newPosition)
     {
-        return Instantiate(playerPrefab, new Vector3(0,50, 0), Quaternion.identity);
+        return Instantiate(playerPrefab, _newPosition.position, Quaternion.identity);
     }
 }

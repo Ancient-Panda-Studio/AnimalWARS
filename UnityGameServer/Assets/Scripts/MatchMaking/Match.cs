@@ -31,9 +31,8 @@ public class Match
 
     public  IEnumerable<PlayerDataHolder> GetTeam2() { return _team2; }
 
-    public  IEnumerable<PlayerDataHolder> GetAllPlayers() { 
-        var allPLayers = _team1.Concat(_team2);
-        return allPLayers.ToList();
-    }
+    public  IEnumerable<PlayerDataHolder> GetAllPlayers() { var allPLayers = _team1.Concat(_team2); return allPLayers.ToList(); }
+
+    public int FindPlayerTeam(PlayerDataHolder _player) { return _team1.Contains(_player)?1:2; }
 }
 

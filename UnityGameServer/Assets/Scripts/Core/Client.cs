@@ -220,18 +220,32 @@ public class Client
     }
 
     /// <summary>Sends the client into the game and informs other clients of the new player.</summary>
-    /// <param name="_playerName">The username of the new player.</param>
-    /// <param name="match"></param>
-    /// <param name="caller"></param>
-    /// <param name="gameObject"></param>
-    public void SendIntoMatch(Match match, int caller)
+    /// <param name="_match"></param>
+    /// <param name="_caller"></param>
+    /// <param name="_newMapGameObject"></param>
+    public void SendIntoMatch(Match _match, PlayerDataHolder _caller, SpawnedMap _newMapGameObject)
     {
         //TODO Get Character + Skin player wants to use
-        var sendTo = Parser.ParseHolderToInt(match.GetAllPlayers());
-        var gameObject = NetworkManager.Instance.InstantiatePlayer();
-        Dictionaries.PlayerDataHolders[id].SetGameObject(gameObject);
-        ServerSend.SpawnPlayer(sendTo,caller,gameObject);
-        ServerSend.SpawnPlayer(sendTo,gameObject);
+        var sendTo = Parser.ParseHolderToInt(_match.GetAllPlayers());
+
+        GameObject newPlayer = null;
+        //GET SPAWN POINT
+        var team = _match.FindPlayerTeam(_caller);
+        var _spawns = new List<SpawnPoint>();
+        switch (team)
+        {
+            case 1:
+              _spawns =  _newMapGameObject.GetFreeSpawns(1);
+                break;
+            case 2:
+                _spawns =  _newMapGameObject.GetFreeSpawns(2);
+                break;
+        }
+        newPlayer = NetworkManager.Instance.InstantiatePlayer(_spawns[0].transform);
+
+        Dictionaries.PlayerDataHolders[id].SetGameObject(newPlayer);
+        ServerSend.SpawnPlayer(sendTo,_caller.GetPlayerId(),newPlayer);
+        ServerSend.SpawnPlayer(sendTo,newPlayer);
     }
     public void RequestLogin(string username, string password)
     {

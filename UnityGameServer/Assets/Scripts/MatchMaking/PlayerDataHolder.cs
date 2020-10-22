@@ -21,6 +21,6 @@ public class PlayerDataHolder
     public int GetPlayerId() { return playerID; }
     public void SetGameObject(GameObject obj) { playerGameObject = obj; }
     public static void SetInputsToPlayer(bool[] inputs,Quaternion rotation) { myPlayer.SetInput(inputs,rotation); }
-    public void CallSpawn() { Server.Clients[playerID].SendIntoMatch(Dictionaries.CurrentMatches[currentMatchId],playerID); }
+    public void CallSpawn(SpawnedMap newMapScripts) { Server.Clients[playerID].SendIntoMatch(Dictionaries.CurrentMatches[currentMatchId],this,newMapScripts); }
     public GameObject GetGameObject() { return playerGameObject; }
 }

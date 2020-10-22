@@ -68,6 +68,8 @@ public class HandleMatchMaking
         Debug.Log("A new match has been created: " + matchId + " is the match id");
         var x = 500 * matchId;
         var mapToInstantiate = Object.Instantiate(Resources.Load("Prefabs/MapsPrefabs/MapSpawnTest") as GameObject);
+        // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
+        var newMapScript = mapToInstantiate.GetComponentInChildren<SpawnedMap>();
         var temp = new Vector3(x,0,0);
         mapToInstantiate.transform.position += temp;
         mapToInstantiate.SetActive(false);
@@ -78,7 +80,7 @@ public class HandleMatchMaking
             Debug.Log(player.Username + " has been added to the new match");
             player.SetMatchId(matchId);
             //TODO LOBBY TO SELECT SKIN
-            player.CallSpawn();
+            player.CallSpawn(newMapScript);
         }
         Debug.Log("Match generation has ended Spawning Players...");
         Generating = false; //Finished Generating Match
