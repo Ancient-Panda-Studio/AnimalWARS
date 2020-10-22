@@ -1,8 +1,5 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Dictionaries
+﻿using System.Collections.Generic;
+public static class Dictionaries
 {
     public static readonly Dictionary<string, int> PlayersByName = new Dictionary<string, int>();
     public static readonly Dictionary<int, string> PlayersById = new Dictionary<int, string>();
@@ -10,4 +7,5 @@ public class Dictionaries
     public static readonly Dictionary<int, PlayerDataHolder> PlayerDataHolders = new Dictionary<int, PlayerDataHolder>();
     public static readonly Dictionary<int,Match> CurrentMatches = new Dictionary<int,Match>();
     public static readonly Dictionary<int,Map> Maps = new Dictionary<int,Map>();
+    public static readonly Dictionary<int,SpawnedMap> SpawnedMaps = new Dictionary<int,SpawnedMap>();
 }

@@ -16,7 +16,7 @@ class ThreadManager : MonoBehaviour
 
     private void Start()
     {
-        Maps.PopulateMapDictionary();
+        Parser.PopulateMapDictionary();
     }
 
     /// <summary>Sets an action to be executed on the main thread.</summary>

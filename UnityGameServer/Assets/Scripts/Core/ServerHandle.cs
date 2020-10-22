@@ -11,7 +11,7 @@ class ServerHandle
         var clientIdCheck = _packet.ReadInt();
 
         Debug.Log(
-            $"{Server.clients[_fromClient].tcp.socket.Client.RemoteEndPoint} connexion successful from : {_fromClient}.");
+            $"{Server.Clients[_fromClient].TcpInstance.Socket.Client.RemoteEndPoint} connexion successful from : {_fromClient}.");
     }
 
     public static void PlayerMovement(int fromClient, Packet _packet)
@@ -23,8 +23,7 @@ class ServerHandle
         }
 
         var rotation = _packet.ReadQuaternion();
-
-        Server.clients[fromClient].player.SetInput(inputs, rotation);
+        PlayerDataHolder.SetInputsToPlayer(inputs,rotation);
     }
 
     public static void LoginInformation(int _fromClient, Packet _packet)
@@ -32,7 +31,7 @@ class ServerHandle
         var id = _packet.ReadInt();
         var username = _packet.ReadString();
         var password = _packet.ReadString();
-        Server.clients[_fromClient].RequestLogin(username, password, id);
+        Server.Clients[_fromClient].RequestLogin(username, password);
     }
 
     public static void SendInvitationServer(int _fromClient, Packet _packet)
@@ -56,24 +55,24 @@ class ServerHandle
         var PartyLeader = Dictionaries.PlayerDataHolders[Dictionaries.PlayersByName[sendTO]];
         var PartyMember = Dictionaries.PlayerDataHolders[Dictionaries.PlayersByName[Dictionaries.PlayersById[_fromClient]]];
         int id = Dictionaries.PlayersByName[Dictionaries.PlayersById[_fromClient]];
-        if (PartyLeader.inParty)
+        if (PartyLeader.InParty)
         {
-            Debug.Log(PartyLeader.username + " has a new member on his party " + PartyMember.username);
+            Debug.Log(PartyLeader.Username + " has a new member on his party " + PartyMember.Username);
             //Player is already in party 
-            Parties.AddToExistingParty(PartyLeader.partyID, Dictionaries.PlayerDataHolders[id]);
-            ServerSend.RemoveLFGButton(id);
-            PartyMember.partyID = PartyLeader.partyID;
-            PartyMember.inParty = true;
+            Parties.AddToExistingParty(PartyLeader.PartyID, Dictionaries.PlayerDataHolders[id]);
+            ServerSend.RemoveLfgButton(id);
+            PartyMember.PartyID = PartyLeader.PartyID;
+            PartyMember.InParty = true;
         }
         else
         {
             var partyId = Parties.AddParty(partyMembers);
-            Debug.Log("A new party has been created with " + PartyLeader.username + " as it's leader and " + PartyMember.username + " as his first member" + partyId + " is the id for the new party" );
-            PartyMember.inParty = true;
-            PartyLeader.inParty = true;
-            PartyMember.partyID = partyId;
-            PartyLeader.partyID = partyId;
-            ServerSend.RemoveLFGButton(id);
+            Debug.Log("A new party has been created with " + PartyLeader.Username + " as it's leader and " + PartyMember.Username + " as his first member" + partyId + " is the id for the new party" );
+            PartyMember.InParty = true;
+            PartyLeader.InParty = true;
+            PartyMember.PartyID = partyId;
+            PartyLeader.PartyID = partyId;
+            ServerSend.RemoveLfgButton(id);
         }
     }
 
@@ -92,32 +91,34 @@ class ServerHandle
         bool isClientInParty = _packet.ReadBool();
         if (isClientInParty) //Player In Party
         {
-            var partyID = Dictionaries.PlayerDataHolders[_fromClient].partyID;
+            var partyID = Dictionaries.PlayerDataHolders[_fromClient].PartyID;
             var partyMembers = Parties.GetParty(partyID);
             foreach (var member in partyMembers)
             {
                 HandleMatchMaking.AddToQueue(member);
-                ServerSend.MatchMakingState(Dictionaries.PlayersByName[member.username]);
+                ServerSend.MatchMakingState(Dictionaries.PlayersByName[member.Username]);
             }
         }
         else //Player Is NOT IN PARTY
         {
             HandleMatchMaking.AddToQueue(Dictionaries.PlayerDataHolders[_fromClient]);
+            ServerSend.MatchMakingState(_fromClient);
+
         }
     }
 
     public static void RemoveFromMatchMaking(int _fromClient, Packet _packet)
     {  
         var isClientInParty = _packet.ReadBool();
-        Debug.Log(Dictionaries.PlayerDataHolders[_fromClient].username);
+        Debug.Log(Dictionaries.PlayerDataHolders[_fromClient].Username);
         if (isClientInParty) //Player In Party
         {
-            var partyID = Dictionaries.PlayerDataHolders[_fromClient].partyID;            
+            var partyID = Dictionaries.PlayerDataHolders[_fromClient].PartyID;            
             var partyMembers = Parties.GetParty(partyID);
             foreach (var member in partyMembers)
             {
                 HandleMatchMaking.RemoveFromQueue(member);
-                ServerSend.MatchMakingState(Dictionaries.PlayersByName[member.username]);
+                ServerSend.MatchMakingState(Dictionaries.PlayersByName[member.Username]);
             }
         }
         else //Player Is NOT IN PARTY

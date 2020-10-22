@@ -5,13 +5,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    public int id;
-    public string username;
     public CharacterController controller;
     public float gravity = -20f;
     public float moveSpeed = 5f;
     public float jumpSpeed = 9f;
     public float jumpHeight = 4f;
+    public PlayerDataHolder MyHolder;
 
     public Transform groundDirection;
     public Transform fallDirection;
@@ -40,11 +39,8 @@ public class Player : MonoBehaviour
         jumpSpeed *= Time.deltaTime;
     }
 
-    public void Initialize(int _id, string _username)
+    public void Initialize()
     {
-        id = _id;
-        username = _username;
-
         inputs = new bool[2];
     }
 
@@ -111,8 +107,9 @@ public class Player : MonoBehaviour
                 yVelocity = 0;
             }
 
-            ServerSend.PlayerPosition(this);
-            ServerSend.PlayerRotation(this);
+            
+            ServerSend.PlayerPosition(MyHolder, Parser.ParseHolderToInt(Dictionaries.CurrentMatches[MyHolder.GetMatchId()].GetAllPlayers()));
+            ServerSend.PlayerRotation(MyHolder, Parser.ParseHolderToInt(Dictionaries.CurrentMatches[MyHolder.GetMatchId()].GetAllPlayers()));
     }
 
     public void GroundDirection()

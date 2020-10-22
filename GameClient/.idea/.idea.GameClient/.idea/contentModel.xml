@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/extResources" t="IncludeRecursive" />
-    <e p="$USER_HOME$/.cache/JetBrains/Rider2020.2/resharper-host/local/Transient/Rider/v202/SolutionCaches/_GameClient.2037724862.00" t="ExcludeRecursive" />
-    <e p="$PROJECT_DIR$" t="IncludeRecursive">
+    <e p="C:\Users\kedalen\AppData\local\JetBrains\Rider2020.2\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\kedalen\AppData\local\JetBrains\Rider2020.2\resharper-host\local\Transient\Rider\v202\SolutionCaches\_GameClient.585991862.00" t="ExcludeRecursive" />
+    <e p="C:\Users\kedalen\Documents\AnimalWARS\GameClient" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -26,8 +26,8 @@
             <e p="HandleAsync.cs" t="Include" />
             <e p="PartyMemberInfoHolder.cs" t="Include" />
             <e p="PlayerVariables.cs" t="Include" />
-            <e p="SkinScript.cs" t="Include" />
             <e p="Skins.cs" t="Include" />
+            <e p="SkinScript.cs" t="Include" />
             <e p="UI" t="Include">
               <e p="ConfigurationManager.cs" t="Include" />
               <e p="LookForGame.cs" t="Include" />
@@ -82,9 +82,9 @@
         </e>
       </e>
       <e p="GameClient.sln" t="IncludeFlat" />
-      <e p="Temp/bin" t="ExcludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="packages" t="ExcludeRecursive" />
+      <e p="Temp\bin" t="ExcludeRecursive" />
     </e>
   </component>
 </project>

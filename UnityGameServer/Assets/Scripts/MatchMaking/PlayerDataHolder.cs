@@ -4,22 +4,23 @@ using UnityEngine;
 
 public class PlayerDataHolder
 {
-    private int playerID;
-    public string username;
-    public bool inParty;
-    public int partyID;
-    public int currentMatchId;
-
-    public  PlayerDataHolder(int _playerID, string _username)
+    private readonly int playerID;
+    public readonly string Username;
+    public bool InParty;
+    public int PartyID;
+    private int currentMatchId;
+    private GameObject playerGameObject;
+    private static Player myPlayer;
+    public  PlayerDataHolder(int id, string username)
     {
-        playerID = _playerID;
-        username = _username;
+        playerID = id;
+        Username = username;
     }
-    
-    public void CallSpawn()
-    {
-        Server.clients[playerID].SendIntoGame(Dictionaries.PlayersById[playerID]);
-    }
-
-    
+    public void SetMatchId(int matchId) { currentMatchId = matchId; } //WHEN PLAYER JOINS MATCH IT SETS THE MATCH ID TO THE PLAYER
+    public int GetMatchId() { return currentMatchId; }
+    public int GetPlayerId() { return playerID; }
+    public void SetGameObject(GameObject obj) { playerGameObject = obj; }
+    public static void SetInputsToPlayer(bool[] inputs,Quaternion rotation) { myPlayer.SetInput(inputs,rotation); }
+    public void CallSpawn() { Server.Clients[playerID].SendIntoMatch(Dictionaries.CurrentMatches[currentMatchId],playerID); }
+    public GameObject GetGameObject() { return playerGameObject; }
 }
