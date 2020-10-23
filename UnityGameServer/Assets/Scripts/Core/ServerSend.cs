@@ -16,21 +16,24 @@ public class ServerSend
             _packet.WriteLength();
             Server.Clients[_toClient].UdpInstance.SendData(_packet);
         }
-        private static void SendTcpDataToList(Packet packet, ICollection sendToList)
+        private static void SendTcpDataToList(Packet packet, List<int> sendToList)
         {
             packet.WriteLength();
             for (var i = 0; i <= sendToList.Count; i++)
             {
-                Server.Clients[i].TcpInstance.SendData(packet);
+                Server.Clients[sendToList[i]].TcpInstance.SendData(packet);
             }
         }
-        private static void SendTcpDataToListExcept(Packet packet, ICollection sendToList, int Except)
+        private static void SendTcpDataToListExcept(Packet packet, List<int> sendToList, int Except)
         {
             packet.WriteLength();
             for (var i = 0; i <= sendToList.Count; i++)
             {
-                if(i == Except) continue;
-                Server.Clients[i].TcpInstance.SendData(packet);
+                Debug.Log(i);
+                if (i != Except)
+                {
+                    Server.Clients[sendToList[i]].TcpInstance.SendData(packet);
+                }
             }
         }
         private static void SendTcpDataToAll(Packet _packet)
@@ -109,6 +112,7 @@ public class ServerSend
         }
         public static void SpawnPlayer(List<int> toClient, GameObject player)
         {
+            Debug.Log(toClient.Count);
             using (var packet = new Packet((int) ServerPackets.spawnPlayer))
             {
                 // packet.Write(Dictionaries.PlayerDataHolders[toClient].InParty);
@@ -120,6 +124,7 @@ public class ServerSend
         }
         public static void SpawnPlayer(List<int> toClient,int except, GameObject player)
         {
+            Debug.Log(toClient.Count);
             using (var packet = new Packet((int) ServerPackets.spawnPlayer))
             {
                 // packet.Write(Dictionaries.PlayerDataHolders[toClient].InParty);

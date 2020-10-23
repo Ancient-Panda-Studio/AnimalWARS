@@ -69,15 +69,15 @@
      <Compile Include="Assets\Scripts\Core\ThreadManager.cs" />
      <Compile Include="Assets\Scripts\Dictionaries.cs" />
      <Compile Include="Assets\Scripts\MatchMaking\HandleMatchMaking.cs" />
-     <Compile Include="Assets\Scripts\MatchMaking\Map.cs" />
-     <Compile Include="Assets\Scripts\MatchMaking\Match.cs" />
-     <Compile Include="Assets\Scripts\MatchMaking\Parser.cs" />
-     <Compile Include="Assets\Scripts\MatchMaking\Parties.cs" />
-     <Compile Include="Assets\Scripts\MatchMaking\PlayerDataHolder.cs" />
-     <Compile Include="Assets\Scripts\MatchMaking\Shuffle.cs" />
-     <Compile Include="Assets\Scripts\Player.cs" />
-     <Compile Include="Assets\Scripts\SpawnPoint.cs" />
-     <Compile Include="Assets\Scripts\SpawnedMap.cs" />
+     <Compile Include="Assets\Scripts\Matches\Map.cs" />
+     <Compile Include="Assets\Scripts\Matches\Match.cs" />
+     <Compile Include="Assets\Scripts\Matches\Parties.cs" />
+     <Compile Include="Assets\Scripts\Matches\Player.cs" />
+     <Compile Include="Assets\Scripts\Matches\PlayerDataHolder.cs" />
+     <Compile Include="Assets\Scripts\Matches\Shuffle.cs" />
+     <Compile Include="Assets\Scripts\Matches\SpawnPoint.cs" />
+     <Compile Include="Assets\Scripts\Matches\SpawnedMap.cs" />
+     <Compile Include="Assets\Scripts\Parser.cs" />
      <None Include="Assets\Fantasy Forest Environment Free Sample\StandardNoCulling.shader" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>C:/Users/oriol/Documents/GitHub/AnimalWARS/UnityGameServer/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

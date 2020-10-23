@@ -1557,7 +1557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0933f657a85484db17c230980a9d24d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _playerSpawnPoints:
+  playerSpawnPoints:
   - {fileID: 1169221734986804288}
   - {fileID: 4449777725524708580}
   - {fileID: 5779378648239284496}

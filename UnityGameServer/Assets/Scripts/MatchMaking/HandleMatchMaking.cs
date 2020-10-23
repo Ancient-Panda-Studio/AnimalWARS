@@ -47,8 +47,8 @@ public class HandleMatchMaking
             for (var i = 0; i < holdersList.Count; i++)
             {
                 if(team1.Contains(holdersList[i]) || team2.Contains(holdersList[i])) continue;
-                if (holdersList[i].InParty) {
-                    var partyMembers = Parties.GetParty(holdersList[i].PartyID);
+                if (holdersList[i].inParty) {
+                    var partyMembers = Parties.GetParty(holdersList[i].partyID);
                     var partyCount = partyMembers.Count;
                     if (team1.Count + partyCount <= 3) { team1.AddRange(partyMembers); }
                     else { team2.AddRange(partyMembers); }
@@ -70,6 +70,9 @@ public class HandleMatchMaking
         var mapToInstantiate = Object.Instantiate(Resources.Load("Prefabs/MapsPrefabs/MapSpawnTest") as GameObject);
         // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
         var newMapScript = mapToInstantiate.GetComponentInChildren<SpawnedMap>();
+        newMapScript.SetGameID(matchId);
+        Debug.Log(newMapScript.GetGameId());
+        Dictionaries.SpawnedMaps.Add(matchId, newMapScript);
         var temp = new Vector3(x,0,0);
         mapToInstantiate.transform.position += temp;
         mapToInstantiate.SetActive(false);
@@ -77,7 +80,7 @@ public class HandleMatchMaking
         mapToInstantiate.SetActive(true);
         foreach (var player in holdersList)
         { 
-            Debug.Log(player.Username + " has been added to the new match");
+            Debug.Log(player.username + " has been added to the new match");
             player.SetMatchId(matchId);
             //TODO LOBBY TO SELECT SKIN
             player.CallSpawn(newMapScript);
@@ -94,12 +97,12 @@ public class HandleMatchMaking
         for (var i = 0; i < MatchQueue.Count; i++)
         {
             if(playersToAdd.Contains(MatchQueue[i])) continue;
-            if (MatchQueue[i].InParty)
+            if (MatchQueue[i].inParty)
             {
-                var partyMembers = Parties.GetParty(MatchQueue[i].PartyID);
+                var partyMembers = Parties.GetParty(MatchQueue[i].partyID);
                 int partyCount = partyMembers.Count;
                 if (playersToAdd.Count + partyCount > 6) continue;
-                playersToAdd.AddRange(partyMembers.Select(t => Dictionaries.PlayerDataHolders[Dictionaries.PlayersByName[t.Username]]));
+                playersToAdd.AddRange(partyMembers.Select(t => Dictionaries.PlayerDataHolders[Dictionaries.PlayersByName[t.username]]));
             }
             else
             {

@@ -1001,4 +1001,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/kedalen/Desktop/ClientBuild/GameClient.exe
+  playerPath: C:/Users/oriol/Desktop/GameClientBuild/GameClient.exe

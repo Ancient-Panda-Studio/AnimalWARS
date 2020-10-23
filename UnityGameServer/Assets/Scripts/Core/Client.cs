@@ -227,21 +227,24 @@ public class Client
     {
         //TODO Get Character + Skin player wants to use
         var sendTo = Parser.ParseHolderToInt(_match.GetAllPlayers());
-
-        GameObject newPlayer = null;
+        for (int i = 0; i < sendTo.Count; i++)
+        {
+            Debug.Log(sendTo[i]);
+        }
         //GET SPAWN POINT
         var team = _match.FindPlayerTeam(_caller);
-        var _spawns = new List<SpawnPoint>();
+        var spawns = new List<SpawnPoint>();
         switch (team)
         {
             case 1:
-              _spawns =  _newMapGameObject.GetFreeSpawns(1);
+              spawns =  _newMapGameObject.GetFreeSpawns(1);
                 break;
             case 2:
-                _spawns =  _newMapGameObject.GetFreeSpawns(2);
+              spawns =  _newMapGameObject.GetFreeSpawns(2);
                 break;
         }
-        newPlayer = NetworkManager.Instance.InstantiatePlayer(_spawns[0].transform);
+        Debug.Log(spawns.Count);
+        var newPlayer = NetworkManager.Instance.InstantiatePlayer(spawns[0].myGameObject.transform);
 
         Dictionaries.PlayerDataHolders[id].SetGameObject(newPlayer);
         ServerSend.SpawnPlayer(sendTo,_caller.GetPlayerId(),newPlayer);
@@ -262,10 +265,10 @@ public class Client
         if (www.text[0] == '0')
         {
             //Allow Login
-            Dictionaries.PlayersByName.Add(user,this.id);
-            Dictionaries.PlayersById.Add(this.id,user);
+            Dictionaries.PlayersByName.Add(user,id);
+            Dictionaries.PlayersById.Add(id,user);
             ServerSend.LoginResult(id,true, "pepelaugh",           int.Parse(www.text.Split('\t')[1]));
-            Dictionaries.PlayerDataHolders.Add(this.id,new PlayerDataHolder(this.id,user));
+            Dictionaries.PlayerDataHolders.Add(id,new PlayerDataHolder(id,user));
         }
         else
         {

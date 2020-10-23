@@ -55,23 +55,23 @@ class ServerHandle
         var PartyLeader = Dictionaries.PlayerDataHolders[Dictionaries.PlayersByName[sendTO]];
         var PartyMember = Dictionaries.PlayerDataHolders[Dictionaries.PlayersByName[Dictionaries.PlayersById[_fromClient]]];
         int id = Dictionaries.PlayersByName[Dictionaries.PlayersById[_fromClient]];
-        if (PartyLeader.InParty)
+        if (PartyLeader.inParty)
         {
-            Debug.Log(PartyLeader.Username + " has a new member on his party " + PartyMember.Username);
+            Debug.Log(PartyLeader.username + " has a new member on his party " + PartyMember.username);
             //Player is already in party 
-            Parties.AddToExistingParty(PartyLeader.PartyID, Dictionaries.PlayerDataHolders[id]);
+            Parties.AddToExistingParty(PartyLeader.partyID, Dictionaries.PlayerDataHolders[id]);
             ServerSend.RemoveLfgButton(id);
-            PartyMember.PartyID = PartyLeader.PartyID;
-            PartyMember.InParty = true;
+            PartyMember.partyID = PartyLeader.partyID;
+            PartyMember.inParty = true;
         }
         else
         {
             var partyId = Parties.AddParty(partyMembers);
-            Debug.Log("A new party has been created with " + PartyLeader.Username + " as it's leader and " + PartyMember.Username + " as his first member" + partyId + " is the id for the new party" );
-            PartyMember.InParty = true;
-            PartyLeader.InParty = true;
-            PartyMember.PartyID = partyId;
-            PartyLeader.PartyID = partyId;
+            Debug.Log("A new party has been created with " + PartyLeader.username + " as it's leader and " + PartyMember.username + " as his first member" + partyId + " is the id for the new party" );
+            PartyMember.inParty = true;
+            PartyLeader.inParty = true;
+            PartyMember.partyID = partyId;
+            PartyLeader.partyID = partyId;
             ServerSend.RemoveLfgButton(id);
         }
     }
@@ -91,12 +91,12 @@ class ServerHandle
         bool isClientInParty = _packet.ReadBool();
         if (isClientInParty) //Player In Party
         {
-            var partyID = Dictionaries.PlayerDataHolders[_fromClient].PartyID;
+            var partyID = Dictionaries.PlayerDataHolders[_fromClient].partyID;
             var partyMembers = Parties.GetParty(partyID);
             foreach (var member in partyMembers)
             {
                 HandleMatchMaking.AddToQueue(member);
-                ServerSend.MatchMakingState(Dictionaries.PlayersByName[member.Username]);
+                ServerSend.MatchMakingState(Dictionaries.PlayersByName[member.username]);
             }
         }
         else //Player Is NOT IN PARTY
@@ -110,15 +110,15 @@ class ServerHandle
     public static void RemoveFromMatchMaking(int _fromClient, Packet _packet)
     {  
         var isClientInParty = _packet.ReadBool();
-        Debug.Log(Dictionaries.PlayerDataHolders[_fromClient].Username);
+        Debug.Log(Dictionaries.PlayerDataHolders[_fromClient].username);
         if (isClientInParty) //Player In Party
         {
-            var partyID = Dictionaries.PlayerDataHolders[_fromClient].PartyID;            
+            var partyID = Dictionaries.PlayerDataHolders[_fromClient].partyID;            
             var partyMembers = Parties.GetParty(partyID);
             foreach (var member in partyMembers)
             {
                 HandleMatchMaking.RemoveFromQueue(member);
-                ServerSend.MatchMakingState(Dictionaries.PlayersByName[member.Username]);
+                ServerSend.MatchMakingState(Dictionaries.PlayersByName[member.username]);
             }
         }
         else //Player Is NOT IN PARTY

@@ -22,18 +22,20 @@
             <e p="ThreadManager.cs" t="Include" />
           </e>
           <e p="Dictionaries.cs" t="Include" />
-          <e p="MatchMaking" t="Include">
-            <e p="HandleMatchMaking.cs" t="Include" />
+          <e p="Matches" t="Include">
             <e p="Map.cs" t="Include" />
             <e p="Match.cs" t="Include" />
-            <e p="Parser.cs" t="Include" />
             <e p="Parties.cs" t="Include" />
+            <e p="Player.cs" t="Include" />
             <e p="PlayerDataHolder.cs" t="Include" />
             <e p="Shuffle.cs" t="Include" />
+            <e p="SpawnedMap.cs" t="Include" />
+            <e p="SpawnPoint.cs" t="Include" />
           </e>
-          <e p="Player.cs" t="Include" />
-          <e p="SpawnedMap.cs" t="Include" />
-          <e p="SpawnPoint.cs" t="Include" />
+          <e p="MatchMaking" t="Include">
+            <e p="HandleMatchMaking.cs" t="Include" />
+          </e>
+          <e p="Parser.cs" t="Include" />
         </e>
       </e>
       <e p="obj" t="ExcludeRecursive" />
