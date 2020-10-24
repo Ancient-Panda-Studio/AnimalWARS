@@ -101,10 +101,8 @@ public class Player : MonoBehaviour
                     jumping = false;
                 yVelocity = 0;
             }
-
-            
-            ServerSend.PlayerPosition(MyHolder, Parser.ParseHolderToInt(Dictionaries.CurrentMatches[MyHolder.GetMatchId()].GetAllPlayers()));
-            ServerSend.PlayerRotation(MyHolder, Parser.ParseHolderToInt(Dictionaries.CurrentMatches[MyHolder.GetMatchId()].GetAllPlayers()));
+            // ServerSend.PlayerPosition(MyHolder, Parser.ParseHolderToInt(Dictionaries.CurrentMatches[MyHolder.GetMatchId()].GetAllPlayers()));
+            // ServerSend.PlayerRotation(MyHolder, Parser.ParseHolderToInt(Dictionaries.CurrentMatches[MyHolder.GetMatchId()].GetAllPlayers()));
     }
 
     public void GroundDirection()

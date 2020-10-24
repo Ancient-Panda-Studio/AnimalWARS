@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -19,27 +20,24 @@ public class ServerSend
         private static void SendTcpDataToList(Packet packet, List<int> sendToList)
         {
             packet.WriteLength();
-            for (var i = 0; i <= sendToList.Count; i++)
+            packet.WriteLength();
+            foreach (var x in sendToList.Where(x => Server.Clients.ContainsKey(x)))
             {
-                Server.Clients[sendToList[i]].TcpInstance.SendData(packet);
+                Server.Clients[x].TcpInstance.SendData(packet);
             }
         }
         private static void SendTcpDataToListExcept(Packet packet, List<int> sendToList, int Except)
         {
             packet.WriteLength();
-            for (var i = 0; i <= sendToList.Count; i++)
+            foreach (var x in sendToList.Where(x => Server.Clients.ContainsKey(x) && x != Except))
             {
-                Debug.Log(i);
-                if (i != Except)
-                {
-                    Server.Clients[sendToList[i]].TcpInstance.SendData(packet);
-                }
+                Server.Clients[x].TcpInstance.SendData(packet);
             }
         }
         private static void SendTcpDataToAll(Packet _packet)
         {
             _packet.WriteLength();
-            for (int i = 1; i <= Server.MaxPlayers; i++)
+            for (var i = 1; i <= Server.MaxPlayers; i++)
             {
                 Server.Clients[i].TcpInstance.SendData(_packet);
             }

@@ -12,7 +12,14 @@ public class SpawnedMap : MonoBehaviour
 
     public void SetGameID(int _id) { myGameID = _id;}
     
-    public List<SpawnPoint> GetFreeSpawns(int _team) { return playerSpawnPoints.Where(_point => !SpawnPoint.GetFull() && _point.myTeam == _team).ToList(); }
-
+    public SpawnPoint GetFreeSpawn(int _team) { 
+       var x = playerSpawnPoints.Where(_point => !_point.GetFull() && _point.myTeam == _team).ToList();
+       return x[0];
+    }
+    
+    public List<SpawnPoint> GetFreeSpawns(int _team) { 
+        return playerSpawnPoints.Where(_point => !_point.GetFull() && _point.myTeam == _team).ToList();
+    }
+    
     public int GetGameId() { return myGameID; } 
 }

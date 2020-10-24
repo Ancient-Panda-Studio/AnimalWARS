@@ -39,11 +39,9 @@ public class HandleMatchMaking
     {
         if (holdersList == null) throw new ArgumentNullException(nameof(holdersList));
             Generating = true;
-            Debug.Log("Match generation has started...");
             //Generate TEAMS
             var team1 = new List<PlayerDataHolder>();
             var team2 = new List<PlayerDataHolder>();
-            Debug.Log("Defining teams...");
             for (var i = 0; i < holdersList.Count; i++)
             {
                 if(team1.Contains(holdersList[i]) || team2.Contains(holdersList[i])) continue;
@@ -57,7 +55,6 @@ public class HandleMatchMaking
                     else { team2.Add(holdersList[i]); }
                 }
             }
-        Debug.Log("Randomizing MAP order...");
         var mapOrder = new List<int>();
         mapOrder.AddRange(MapsArray);
         mapOrder.ShuffleList();
@@ -65,7 +62,6 @@ public class HandleMatchMaking
         var newMatch = new Match(team1, team2, mapOrder);
         var matchId = Match.GetMatchId();
         Dictionaries.CurrentMatches.Add(matchId,newMatch);
-        Debug.Log("A new match has been created: " + matchId + " is the match id");
         var x = 500 * matchId;
         var mapToInstantiate = Object.Instantiate(Resources.Load("Prefabs/MapsPrefabs/MapSpawnTest") as GameObject);
         // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
@@ -78,14 +74,15 @@ public class HandleMatchMaking
         mapToInstantiate.SetActive(false);
         //Move Map
         mapToInstantiate.SetActive(true);
+        var count = 0;
         foreach (var player in holdersList)
         { 
-            Debug.Log(player.username + " has been added to the new match");
+            Debug.Log("Calling Spawn on player : " + count);
             player.SetMatchId(matchId);
             //TODO LOBBY TO SELECT SKIN
+            count++;
             player.CallSpawn(newMapScript);
         }
-        Debug.Log("Match generation has ended Spawning Players...");
         Generating = false; //Finished Generating Match
     }
 
