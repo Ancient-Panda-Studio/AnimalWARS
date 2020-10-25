@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Settings>
+  <!--Volumes MAX = 1 MIN = -80-->
+  <MasterVolume>0</MasterVolume>
+  <MusicVolume>0</MusicVolume>
+  <SfxVolume>0</SfxVolume>
+  <AmbientVolume>0</AmbientVolume>
+  <!--Graphics-->
+  <TextureDetail>2</TextureDetail>
+  <ShadowDetail>0</ShadowDetail>
+  <AntiAliasing>0</AntiAliasing>
+  <ScreenMode>2</ScreenMode>
+  <ScreenResolution>1920x1080</ScreenResolution>
+  <!--Binds-->
+  <Forwards>119</Forwards>
+  <Backwards>115</Backwards>
+  <Right>100</Right>
+  <Left>97</Left>
+  <Ability>113</Ability>
+  <Interact>101</Interact>
+  <Jump>32</Jump>
+  <ResDropDownValue>0</ResDropDownValue>
+</Settings>
