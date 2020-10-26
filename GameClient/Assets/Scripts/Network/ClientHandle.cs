@@ -2,7 +2,7 @@
 using Network;
 using UnityEngine;
 
-public class ClientHandle : MonoBehaviour
+public class ClientHandle
 {
     public UIManager uiManager;
 
@@ -25,7 +25,7 @@ public class ClientHandle : MonoBehaviour
         var _id = _packet.ReadInt();
         var _position = _packet.ReadVector3();
         var _rotation = _packet.ReadQuaternion();
-        GameManager.Instance.SpawnPlayer(_id, _username, _position, _rotation);
+        GameManager.Instance.SpawnPlayer(_id, _position, _rotation);
     }
 
     public static void InvitationReceived(Packet _packet)

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 
 public class Register : MonoBehaviour
@@ -23,17 +24,19 @@ public class Register : MonoBehaviour
         form.AddField("user", usernameField.text);
         form.AddField("pass", passwordField.text);
         form.AddField("email", mailField.text);
-        var www = new WWW(Constants.WebServer + "register.php", form);
-        yield return www;
-        if (www.text == "0")
+        using (var www = UnityWebRequest.Post(Constants.WebServer + "register.php", form))
         {
-            Debug.Log("User created successfully");
-        }
-        else
-        {
-            errorText.gameObject.SetActive(true);
-            errorText.text = www.text;
-            Debug.Log(www.text);
+            yield return www.SendWebRequest();
+            if (www.downloadHandler.text == "0")
+            {
+                Debug.Log("User created successfully");
+            }
+            else
+            {
+                errorText.gameObject.SetActive(true);
+                errorText.text = www.downloadHandler.text;
+                Debug.Log(www.downloadHandler.text);
+            }
         }
     }
 

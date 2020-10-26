@@ -40,25 +40,18 @@ namespace Player
   public Text jumpKeyBindText;
   public Text abilityKeyBindText;
   public Text interactKeyBindText;
-
-  public TabButton textureHigh;
-  public TabButton textureMid;
-  public TabButton textureLow;
-
-  
-  public TabButton shadowHigh;
-  public TabButton shadowMid;
-  public TabButton shadowLow;
-
-  
-  public TabButton aaHigh;
-  public TabButton aaMid;
-  public TabButton aaLow;
-  
-  
-  public TabButton scModeHigh;
-  public TabButton scModeMid;
-  public TabButton scModeLow;
+  [HideInInspector]  public TabButton textureHigh;
+[HideInInspector]  public TabButton textureMid;
+[HideInInspector] public TabButton textureLow;
+[HideInInspector]  public TabButton shadowHigh;
+[HideInInspector]  public TabButton shadowMid;
+[HideInInspector]  public TabButton shadowLow;
+[HideInInspector]  public TabButton aaHigh;
+[HideInInspector]  public TabButton aaMid;
+[HideInInspector] public TabButton aaLow;
+[HideInInspector]  public TabButton scModeHigh;
+[HideInInspector]  public TabButton scModeMid;
+[HideInInspector]  public TabButton scModeLow;
 
   public TabGroup[] TabGroups;
 

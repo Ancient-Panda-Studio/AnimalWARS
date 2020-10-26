@@ -113,7 +113,7 @@ public class Client : MonoBehaviour
             }
             catch (Exception e)
             {
-                Debug.Log("pepelaugh2");
+                Debug.Log($"An error occurred during TCP Connection Launch : {e}");
             }
         }
 

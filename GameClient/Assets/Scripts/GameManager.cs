@@ -21,16 +21,16 @@ public class GameManager : MonoBehaviour
             Debug.Log("Instance already exists, destroying object!");
             Destroy(this);
         }
+        Debug.Log($"User is : {Constants.SysetmUser}");
     }
 
-    public void SpawnPlayer(int id, string username, Vector3 position, Quaternion rotation) 
+    public void SpawnPlayer(int id, Vector3 position, Quaternion rotation) 
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         var player = Instantiate(id == Client.instance.myId ? localPlayerPrefab : playerPrefab, position, rotation);
 
         player.GetComponent<PlayerManager>().id = id;
-        player.GetComponent<PlayerManager>().username = username;
 
         Players.Add(id, player.GetComponent<PlayerManager>());
     }

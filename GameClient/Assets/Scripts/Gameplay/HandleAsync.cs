@@ -10,8 +10,8 @@ public class HandleAsync : MonoBehaviour
 {
     public static HandleAsync Instance;
     private bool _imageRetrieved;
-    private bool _isDone;
-    private new string _name;
+    private bool _isDone = false;
+    private string _name;
     private bool _ownsNothing;
     private string _price;
     private List<int> _tempFriendIDList = new List<int>();
@@ -19,6 +19,7 @@ public class HandleAsync : MonoBehaviour
 
     private void Awake()
     {
+        if (_isDone && _imageRetrieved.Equals("Get")){}
         if (Instance == null)
         {
             Instance = this;
@@ -38,24 +39,25 @@ public class HandleAsync : MonoBehaviour
     {
         var form = new WWWForm();
         form.AddField("user", Constants.Username);
-        var www = new WWW(Constants.WebServer + "basicdata.php", form);
-        yield return www;
-        if (www.text[0] == '0')
+        using (var www = UnityWebRequest.Post(Constants.WebServer + "basicdata.php", form))
         {
-            //GetData
-            PlayerVariables.FreeCoins = int.Parse(www.text.Split('\t')[1]);
-            PlayerVariables.PaidCoins = int.Parse(www.text.Split('\t')[2]);
-            PlayerVariables.AccountLevel = int.Parse(www.text.Split('\t')[3]);
-            PlayerVariables.CurrentXp = int.Parse(www.text.Split('\t')[4]);
-            StartCoroutine(GetUserOwnedSkins());
-        }
-        else
-        {
-            Debug.Log(www.text);
+            yield return www.SendWebRequest();
+            if (www.downloadHandler.text[0] == '0')
+            {
+                PlayerVariables.FreeCoins = int.Parse(www.downloadHandler.text.Split('\t')[1]);
+                PlayerVariables.PaidCoins = int.Parse(www.downloadHandler.text.Split('\t')[2]);
+                PlayerVariables.AccountLevel = int.Parse(www.downloadHandler.text.Split('\t')[3]);
+                PlayerVariables.CurrentXp = int.Parse(www.downloadHandler.text.Split('\t')[4]);
+                StartCoroutine(GetUserOwnedSkins());
+            }
+            else
+            {
+               Debug.Log($"There was an error in GET USER BASIC DATA Coroutine: {www.downloadHandler.text}");
+            }
         }
     }
 
-    public IEnumerator CreateSprites(string _skinID)
+    private IEnumerator CreateSprites(string _skinID)
     {
         var form = new WWWForm();
         form.AddField("id", _skinID);
@@ -81,26 +83,26 @@ public class HandleAsync : MonoBehaviour
         }
     }
 
-    public IEnumerator GetUserOwnedSkins()
+    private IEnumerator GetUserOwnedSkins()
     {
         var form = new WWWForm();
         form.AddField("id", PlayerVariables.UserID);
-        var www = new WWW(Constants.WebServer + "populateskins.php", form);
-        yield return www;
-        if (www.text[0] == '0')
+        using (var www = UnityWebRequest.Post(Constants.WebServer + "populateskins.php", form))
         {
-            //GetData
-            Debug.Log(www.text);
-            _ownsNothing = true;
-            StartCoroutine(GenerateSkinsToShow());
-        }
-        else
-        {
-            var temp = www.text;
-            var noSpaces = temp.Replace(" ", "");
-            var clean = Regex.Replace(noSpaces, "\\D+", "");
-            PlayerVariables.OwnedSkinsJson = clean;
-            StartCoroutine(GenerateSkinsToShow());
+            yield return www.SendWebRequest();
+            if (www.downloadHandler.text[0] == '0')
+            {
+                _ownsNothing = true;
+                StartCoroutine(GenerateSkinsToShow());
+            }
+            else
+            {
+                var temp = www.downloadHandler.text;
+                var noSpaces = temp.Replace(" ", "");
+                var clean = Regex.Replace(noSpaces, "\\D+", "");
+                PlayerVariables.OwnedSkinsJson = clean;
+                StartCoroutine(GenerateSkinsToShow());
+            }
         }
     }
 
@@ -146,36 +148,41 @@ public class HandleAsync : MonoBehaviour
     {
         var form = new WWWForm();
         form.AddField("id", _skinID);
-        var www = new WWW(Constants.WebServer + "getitemdata.php", form);
-        yield return www;
-        if (www.text[0] == '0')
+        using (var www = UnityWebRequest.Post(Constants.WebServer + "getitemdata.php", form))
         {
-            //GetData
-            _name = www.text.Split('\t')[1];
-            _price = www.text.Split('\t')[2];
-            _isDone = true;
-        }
-        else
-        {
-            Debug.Log(www.text);
+            yield return www.SendWebRequest();
+            if (www.downloadHandler.text[0] == '0')
+            {
+                _name = www.downloadHandler.text.Split('\t')[1];
+                _price = www.downloadHandler.text.Split('\t')[2];
+                _isDone = true;
+            }
+            else
+            {
+                Debug.Log($"There was an error Populating The Skins : {www.downloadHandler.text}");
+
+            }
         }
     }
 
     public IEnumerator GetAllSkins()
     {
-        var www = new WWW(Constants.WebServer + "getallskins.php");
-        yield return www;
-        if (www.text[0] == '0')
+
+        using (var www = UnityWebRequest.Get(Constants.WebServer + "getallskins.php"))
         {
-            //GetData
-            Debug.Log(www.text);
-        }
-        else
-        {
-            var temp = www.text;
-            var noSpaces = temp.Replace(" ", "");
-            var clean = Regex.Replace(noSpaces, "\\D+", "");
-            PlayerVariables.AllSkinsJson = clean;
+            yield return www.SendWebRequest();
+            if (www.downloadHandler.text[0] == '0')
+            {
+                //GetData
+                Debug.Log($"There was an error during Get All Skins Coroutine : {www.downloadHandler.text}");
+            }
+            else
+            {
+                var temp = www.downloadHandler.text;
+                var noSpaces = temp.Replace(" ", "");
+                var clean = Regex.Replace(noSpaces, "\\D+", "");
+                PlayerVariables.AllSkinsJson = clean;
+            }
         }
     }
 
@@ -239,7 +246,6 @@ public class HandleAsync : MonoBehaviour
                     }
                     for (var i = 0; i < jsonArray.Count; i++)
                     {
-                        var isDone = false;
                         string friendUser = null;
                         var friendID = 0;
                         if (jsonArray[i].AsObject["userone"] != Constants.Username)
@@ -259,7 +265,7 @@ public class HandleAsync : MonoBehaviour
                     }
 
                     UIManager.Instance.CreateFriends(_tempFriendList, _tempFriendIDList);
-                    _tempFriendList = null;
+                    _tempFriendList = null;    
                     _tempFriendIDList = null;
                 }
 
