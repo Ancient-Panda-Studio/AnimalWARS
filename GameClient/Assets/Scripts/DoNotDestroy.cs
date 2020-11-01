@@ -7,7 +7,7 @@ using UnityEngine.Serialization;
 public class DoNotDestroy : MonoBehaviour
 {
      public List<GameObject> dontDestroyThis = new List<GameObject>();
-
+     public Transform uwu;
      private void Awake()
      {
           foreach (var x in dontDestroyThis)

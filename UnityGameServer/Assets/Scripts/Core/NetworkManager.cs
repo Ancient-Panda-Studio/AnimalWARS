@@ -26,6 +26,7 @@ public class NetworkManager : MonoBehaviour
         QualitySettings.vSyncCount = 0;
         Application.targetFrameRate = 30;
         Server.Start(50, 27017);
+        ServerConsoleWriter.WriteLine($"Animal Wars Server Started ON : {DateTime.UtcNow}   PORT : {Server.Port}");
     }
     
     private void OnApplicationQuit()

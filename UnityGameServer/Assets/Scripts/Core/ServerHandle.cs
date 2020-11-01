@@ -9,9 +9,8 @@ class ServerHandle
     public static void WelcomeReceived(int _fromClient, Packet _packet)
     {
         var clientIdCheck = _packet.ReadInt();
-
-        Debug.Log(
-            $"{Server.Clients[_fromClient].TcpInstance.Socket.Client.RemoteEndPoint} connexion successful from : {_fromClient}.");
+        ServerConsoleWriter.WriteLine(
+            $"Connection with {Server.Clients[_fromClient].TcpInstance.Socket.Client.RemoteEndPoint} has been successfully established and is now indexed as : {_fromClient}.");
     }
 
     public static void PlayerMovement(int fromClient, Packet _packet)

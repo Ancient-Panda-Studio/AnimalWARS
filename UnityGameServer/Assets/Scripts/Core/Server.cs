@@ -7,7 +7,7 @@ using System.Net.Sockets;
 public class Server
     {
         public static int MaxPlayers { get; private set; }
-        private static int Port { get; set; }
+        public static int Port { get; set; }
         public static readonly Dictionary<int, Client> Clients = new Dictionary<int, Client>();
         public delegate void PacketHandler(int fromClient, Packet packet);
         public static Dictionary<int, PacketHandler> PacketHandlers;
@@ -23,25 +23,19 @@ public class Server
         {
             MaxPlayers = maxPlayers;
             Port = port;
-            
-            Debug.Log("Starting server...");
             InitializeServerData();
-
             _tcpListener = new TcpListener(IPAddress.Any, Port);
             _tcpListener.Start();
             _tcpListener.BeginAcceptTcpClient(TcpConnectCallback, null);
-
             _udpListener = new UdpClient(Port);
             _udpListener.BeginReceive(UdpReceiveCallback, null);
-
-            Debug.Log($"Server started on port {Port}.");
         }
 
         private static void TcpConnectCallback(IAsyncResult result)
         {
             TcpClient client = _tcpListener.EndAcceptTcpClient(result);
             _tcpListener.BeginAcceptTcpClient(TcpConnectCallback, null);
-            Debug.Log($"Incoming connection from {client.Client.RemoteEndPoint}...");
+            ServerConsoleWriter.WriteLine($"Incoming connection from {client.Client.RemoteEndPoint}...");
             for (int i = 1; i <= MaxPlayers; i++)
             {
                 if (Clients[i].TcpInstance.Socket == null)
@@ -50,7 +44,7 @@ public class Server
                     return;
                 }
             }
-            Debug.Log($"{client.Client.RemoteEndPoint} failed to connect: Server full!");
+            ServerConsoleWriter.WriteLine($"{client.Client.RemoteEndPoint} failed to connect: Server full!");
         }
 
         private static void UdpReceiveCallback(IAsyncResult result)
@@ -124,6 +118,6 @@ public class Server
                 {(int)ClientPackets.startMatchMaking, ServerHandle.AddToMatchMaking},
                 {(int)ClientPackets.stopMatchMaking, ServerHandle.RemoveFromMatchMaking}
             };
-            Debug.Log("Initialized packets.");
+            ServerConsoleWriter.WriteLine("Initialized packets.");
         }
     }

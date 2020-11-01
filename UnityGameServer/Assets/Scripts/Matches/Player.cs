@@ -44,7 +44,6 @@ public class Player : MonoBehaviour
     {
         GetInputs();
         Locomotion();
-        Debug.Log("Jump = " + inputs[1]);
     }
 
     private void GetInputs()

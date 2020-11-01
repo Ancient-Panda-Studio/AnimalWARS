@@ -78,7 +78,7 @@ public class Client
                 var byteLength = stream.EndRead(result);
                 if (byteLength <= 0)
                 {
-                    Server.Clients[id].Disconnect();
+                    if (Server.Clients.ContainsKey(id)) Server.Clients[id].Disconnect();
                     return;
                 }
 
@@ -91,7 +91,7 @@ public class Client
             catch (Exception ex)
             {
                 //
-                Debug.Log($"Error receiving TCP data: {ex}");
+                ServerConsoleWriter.WriteLine($"Error receiving TCP data: {ex}");
                 Server.Clients[id].Disconnect();
             }
         }
@@ -271,17 +271,22 @@ public class Client
     
     private void Disconnect()
     {
-        Debug.Log($"{TcpInstance.Socket.Client.RemoteEndPoint} has disconnected.");
+        ServerConsoleWriter.WriteLine($"{TcpInstance.Socket.Client.RemoteEndPoint} has disconnected.");
         ThreadManager.ExecuteOnMainThread(() =>
         {
-            UnityEngine.Object.Destroy(Dictionaries.PlayerDataHolders[id].GetGameObject());
+            //Disabled For Now
+            //UnityEngine.Object.Destroy(Dictionaries.PlayerDataHolders[id].GetGameObject());
             Dictionaries.PlayerDataHolders[id].SetGameObject(null);
         });
         TcpInstance.Disconnect();
         UdpInstance.Disconnect();
-        var user = Dictionaries.PlayersById[id];
-        Dictionaries.PlayersByName.Remove(Dictionaries.PlayersById[id]);
-        Dictionaries.PlayersById.Remove(Dictionaries.PlayersByName[user]);
+        if (Dictionaries.PlayersById != null)
+        {
+            var user = Dictionaries.PlayersById[id];
+            Dictionaries.PlayersByName.Remove(Dictionaries.PlayersById[id]);
+            Dictionaries.PlayersById.Remove(Dictionaries.PlayersByName[user]);
+        }
+
         ServerSend.PlayerDisconnected(id);
     }
 }
