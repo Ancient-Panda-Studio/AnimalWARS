@@ -3042,10 +3042,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/../GameClient/Assets/Scripts/Network/ClientHandle.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Dictionaries.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@1.1.4/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Core/ServerConsoleWriter.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../GameClient/Assets/Scripts/Network/ClientHandle.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -3091,16 +3091,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/MatchMaking/PlayerDataHolder.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/SpawnedMap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/ServerSend.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Matches/PlayerDataHolder.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/MatchMaking/HandleMatchMaking.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Matches/SpawnPoint.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Matches/SpawnedMap.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Matches/Player.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/ServerConsoleWriter.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/NetworkManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/Server.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Client.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Core/ServerHandle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/ServerConsoleWriter.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/MatchMaking/HandleMatchMaking.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Matches/PlayerDataHolder.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Core/Client.cs" />
       </list>
     </option>
   </component>
@@ -3207,6 +3207,8 @@
       <workItem from="1604203268326" duration="58000" />
       <workItem from="1604203348304" duration="1126000" />
       <workItem from="1604245354418" duration="1990000" />
+      <workItem from="1604283870574" duration="160000" />
+      <workItem from="1604284060132" duration="2601000" />
     </task>
     <servers />
   </component>
@@ -3334,9 +3336,10 @@
       <screen x="-1080" y="-426" width="1080" height="1890" />
     </state>
     <state x="-1234" y="373" width="1096" height="1037" key="dock-window-3/0.0.1920.1050/-1080.-426.1080.1890@0.0.1920.1050" timestamp="1602819992987" />
-    <state x="799" y="239" width="954" height="801" key="find.popup" timestamp="1604246546416">
+    <state x="799" y="239" width="954" height="801" key="find.popup" timestamp="1604286615377">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="799" y="239" width="954" height="801" key="find.popup/0.0.1920.1040/-1080.-387.1080.1880@0.0.1920.1040" timestamp="1604286615377" />
     <state x="799" y="239" width="954" height="801" key="find.popup/0.0.1920.1040/-1080.0.1080.1880@0.0.1920.1040" timestamp="1604246546416" />
     <state x="799" y="239" width="954" height="801" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1603471767585" />
     <state x="-744" y="-65" width="630" height="1456" key="find.popup/0.0.1920.1050/-1080.-310.1080.1890@-1080.-310.1080.1890" timestamp="1601462841058" />

@@ -9,16 +9,6 @@ using Random = System.Random;
 
 public class HandleMatchMaking
 {
-    
-    private static Random random = new Random();
-    public static string RandomString(int length)
-    {
-        const string chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#|+-";
-        return new string(Enumerable.Repeat(chars, length)
-            .Select(s => s[random.Next(s.Length)]).ToArray());
-    }
-    
-    
     private static readonly int[] MapsArray = {1, 2, 3, 4, 5};
     public static bool Generating;
     private static List<PlayerDataHolder> MatchQueue = new List<PlayerDataHolder>(); //This list stores the PlayerDataHolder's of players looking for match

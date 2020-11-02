@@ -23,4 +23,9 @@ public class PlayerDataHolder
     public static void SetInputsToPlayer(bool[] _inputs,Quaternion _rotation) { _myPlayer.SetInput(_inputs,_rotation); }
     public void CallSpawn(SpawnedMap _newMapScripts) { Server.Clients[playerID].SendIntoMatch(Dictionaries.CurrentMatches[currentMatchId],this,_newMapScripts); }
     public GameObject GetGameObject() { return playerGameObject; }
+
+    public void DestroyGameObject()
+    {
+        Object.Destroy(playerGameObject);
+    }
 }

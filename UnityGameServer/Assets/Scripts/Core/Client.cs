@@ -153,10 +153,24 @@ public class Client
 
                 if (item.Key != null)
                 {
-                    Debug.Log("REMOVING USER FROM DICTIONARY");
-                    Dictionaries.PlayerDataHolders.Remove(id);
-                    Dictionaries.PlayersById.Remove(id);
-                    Dictionaries.PlayersByName.Remove(item.Key);
+                    if (Dictionaries.PlayerDataHolders[id].GetGameObject() != null)
+                    {
+                        ThreadManager.ExecuteOnMainThread(() =>
+                        {
+                            ServerConsoleWriter.WriteLine($"Destroying GameObjects related to Player {id}...");
+                            Dictionaries.PlayerDataHolders[id].DestroyGameObject();
+                            Dictionaries.PlayerDataHolders.Remove(id);
+                            Dictionaries.PlayersById.Remove(id);
+                            Dictionaries.PlayersByName.Remove(item.Key);
+                        });
+                    }else
+                    {
+                        ServerConsoleWriter.WriteLine($"Player {id} had not started a game so no gameobject should be destroyed");
+                        Dictionaries.PlayerDataHolders.Remove(id);
+                        Dictionaries.PlayersById.Remove(id);
+                        Dictionaries.PlayersByName.Remove(item.Key);
+                    }
+                    ServerConsoleWriter.WriteLine($"Player {id} has been successfully disconnected");
                 }
 
                 //Dictionaries.Parties.Remove(id);
@@ -225,8 +239,13 @@ public class Client
     /// <param name="_newMapGameObject"></param>
     public void SendIntoMatch(Match _match, PlayerDataHolder _caller, SpawnedMap _newMapGameObject)
     {
-        
-        //TODO Get Character + Skin player wants to use
+        /* LOBBY
+            PLAYER PICKS AN ANIMAL
+            THAT ANIMAL GETS LOCKED FOR OTHER PLAYERS
+            TIMER OF 30 SECONDS TO FINISH PICKS 
+                IF TIMER RUNS OUT AND SOMEONE HAS NOT PICKED THAT PLAYER GETS TEMPORARILY SUSPENDED
+            ELSE IF ALL PLAYERS HAVE PICKED START GAME
+         */
         var sendTo = Parser.ParseHolderToInt(_match.GetAllPlayers());
         //GET SPAWN POINT
         var team = _match.FindPlayerTeam(_caller);
@@ -238,6 +257,7 @@ public class Client
        var newPlayer = NetworkManager.Instance.InstantiatePlayer(spawns.myGameObject.transform);
 
         Dictionaries.PlayerDataHolders[id].SetGameObject(newPlayer);
+        Debug.Log(Dictionaries.PlayerDataHolders[id].GetGameObject().name = $"UWU{id}");
         ServerSend.SpawnPlayer(sendTo,_caller.GetPlayerId(),newPlayer);
         ServerSend.SpawnPlayer(sendTo,newPlayer);
     }
@@ -271,22 +291,12 @@ public class Client
     
     private void Disconnect()
     {
-        ServerConsoleWriter.WriteLine($"{TcpInstance.Socket.Client.RemoteEndPoint} has disconnected.");
-        ThreadManager.ExecuteOnMainThread(() =>
-        {
-            //Disabled For Now
-            //UnityEngine.Object.Destroy(Dictionaries.PlayerDataHolders[id].GetGameObject());
-            Dictionaries.PlayerDataHolders[id].SetGameObject(null);
-        });
+      
         TcpInstance.Disconnect();
         UdpInstance.Disconnect();
-        if (Dictionaries.PlayersById != null)
-        {
-            var user = Dictionaries.PlayersById[id];
-            Dictionaries.PlayersByName.Remove(Dictionaries.PlayersById[id]);
-            Dictionaries.PlayersById.Remove(Dictionaries.PlayersByName[user]);
-        }
 
         ServerSend.PlayerDisconnected(id);
+        ServerConsoleWriter.WriteLine($"Player {id} has successfully disconnected from the server");
+
     }
 }
