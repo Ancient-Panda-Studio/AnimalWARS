@@ -20,7 +20,6 @@ public class ServerSend
         private static void SendTcpDataToList(Packet packet, List<int> sendToList)
         {
             packet.WriteLength();
-            packet.WriteLength();
             foreach (var x in sendToList.Where(x => Server.Clients.ContainsKey(x)))
             {
                 Server.Clients[x].TcpInstance.SendData(packet);
@@ -108,30 +107,39 @@ public class ServerSend
                 // Server.clients[_playerId].SendIntoGame(_username);    
             }
         }
-        public static void SpawnPlayer(List<int> toClient, GameObject player)
+        public static void SpawnPlayer(int toClient, GameObject playerObj, List<int> allPlayersInMatch)
         {
-            Debug.Log(toClient.Count);
-            using (var packet = new Packet((int) ServerPackets.spawnPlayer))
+            foreach (var x in allPlayersInMatch)
             {
-                // packet.Write(Dictionaries.PlayerDataHolders[toClient].InParty);
-                // packet.Write(Dictionaries.PlayerDataHolders[toClient].Username);
-                packet.Write(player.transform.position);
-                packet.Write(player.transform.rotation);
-                SendTcpDataToList(packet,toClient);
+                Debug.Log(x + $" is now being Spawned for {toClient}");
+
+                if (x != toClient)
+                {
+                    using (var packet = new Packet((int) ServerPackets.spawnPlayer))
+                    {
+                        packet.Write(x);
+                        packet.Write(Dictionaries.PlayerDataHolders[x].GetGameObject().transform.position);
+                        packet.Write(Dictionaries.PlayerDataHolders[x].GetGameObject().transform.rotation);
+                        packet.Write(Dictionaries.PlayersById[x]);
+                        SendTcpData(toClient, packet);
+                    }
+                }
+                else
+                {
+                    using (var packet = new Packet((int) ServerPackets.spawnPlayer))
+                    {
+                        packet.Write(toClient);
+                        packet.Write(playerObj.transform.position);
+                        packet.Write(playerObj.transform.rotation);
+                        packet.Write(Dictionaries.PlayersById[toClient]);
+                        SendTcpData(x, packet);
+                    }
+                }
+      
             }
+            
         }
-        public static void SpawnPlayer(List<int> toClient,int except, GameObject player)
-        {
-            Debug.Log(toClient.Count);
-            using (var packet = new Packet((int) ServerPackets.spawnPlayer))
-            {
-                // packet.Write(Dictionaries.PlayerDataHolders[toClient].InParty);
-                // packet.Write(Dictionaries.PlayerDataHolders[toClient].Username);
-                packet.Write(player.transform.position);
-                packet.Write(player.transform.rotation);
-                SendTcpDataToListExcept(packet,toClient,except);
-            }
-        }
+        
         public static void PlayerPosition(PlayerDataHolder player, List<int> sendToList)
         {
             using (var packet = new Packet((int)ServerPackets.playerPosition))

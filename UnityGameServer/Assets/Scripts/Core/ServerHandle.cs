@@ -22,7 +22,7 @@ class ServerHandle
         }
 
         var rotation = _packet.ReadQuaternion();
-        PlayerDataHolder.SetInputsToPlayer(inputs,rotation);
+        //Dictionaries.PlayerDataHolders[fromClient].SetInputsToPlayer(inputs,rotation);
     }
 
     public static void LoginInformation(int _fromClient, Packet _packet)
@@ -39,7 +39,6 @@ class ServerHandle
         var username = _packet.ReadString(); //Who SENT THE INVITATION
         var toUserName = _packet.ReadString(); // Who is THE INVITE FOR
         var sendToID = Dictionaries.PlayersByName[toUserName];
-        Debug.Log("Sending invite from: " + username);
         ServerSend.SendInvite(_fromClient, username, toUserName, sendToID);
     }
 
@@ -56,7 +55,6 @@ class ServerHandle
         int id = Dictionaries.PlayersByName[Dictionaries.PlayersById[_fromClient]];
         if (PartyLeader.inParty)
         {
-            Debug.Log(PartyLeader.username + " has a new member on his party " + PartyMember.username);
             //Player is already in party 
             Parties.AddToExistingParty(PartyLeader.partyID, Dictionaries.PlayerDataHolders[id]);
             ServerSend.RemoveLfgButton(id);
@@ -66,7 +64,6 @@ class ServerHandle
         else
         {
             var partyId = Parties.AddParty(partyMembers);
-            Debug.Log("A new party has been created with " + PartyLeader.username + " as it's leader and " + PartyMember.username + " as his first member" + partyId + " is the id for the new party" );
             PartyMember.inParty = true;
             PartyLeader.inParty = true;
             PartyMember.partyID = partyId;

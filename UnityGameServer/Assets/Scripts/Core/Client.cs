@@ -237,30 +237,7 @@ public class Client
     /// <param name="_match"></param>
     /// <param name="_caller"></param>
     /// <param name="_newMapGameObject"></param>
-    public void SendIntoMatch(Match _match, PlayerDataHolder _caller, SpawnedMap _newMapGameObject)
-    {
-        /* LOBBY
-            PLAYER PICKS AN ANIMAL
-            THAT ANIMAL GETS LOCKED FOR OTHER PLAYERS
-            TIMER OF 30 SECONDS TO FINISH PICKS 
-                IF TIMER RUNS OUT AND SOMEONE HAS NOT PICKED THAT PLAYER GETS TEMPORARILY SUSPENDED
-            ELSE IF ALL PLAYERS HAVE PICKED START GAME
-         */
-        var sendTo = Parser.ParseHolderToInt(_match.GetAllPlayers());
-        //GET SPAWN POINT
-        var team = _match.FindPlayerTeam(_caller);
-        Debug.Log("Team is : " + team);
-        var spawns =  _newMapGameObject.GetFreeSpawn(team);
-        Debug.Log(_newMapGameObject.GetFreeSpawns(team).Count);
-        spawns.SetFull(true);
-        Debug.Log(_newMapGameObject.GetFreeSpawns(team).Count);
-       var newPlayer = NetworkManager.Instance.InstantiatePlayer(spawns.myGameObject.transform);
-
-        Dictionaries.PlayerDataHolders[id].SetGameObject(newPlayer);
-        Debug.Log(Dictionaries.PlayerDataHolders[id].GetGameObject().name = $"UWU{id}");
-        ServerSend.SpawnPlayer(sendTo,_caller.GetPlayerId(),newPlayer);
-        ServerSend.SpawnPlayer(sendTo,newPlayer);
-    }
+    
     public void RequestLogin(string username, string password)
     {
         NetworkManager.Instance.StartCoroutine(LoginStart(username,password));
@@ -273,7 +250,7 @@ public class Client
         form.AddField("pass",pass);
         var www = new WWW(Constants.SQL_NAME_SERVER + "login.php",form);
         yield return www;
-        if (www.text[0] == '0')
+        if (www.text[0] == '0' && !Dictionaries.PlayersByName.ContainsKey(user)) //AVOID THE SAME USER FROM LOGIN IN TWICE
         {
             //Allow Login
             Dictionaries.PlayersByName.Add(user,id);
@@ -281,12 +258,41 @@ public class Client
             ServerSend.LoginResult(id,true, "pepelaugh",           int.Parse(www.text.Split('\t')[1]));
             Dictionaries.PlayerDataHolders.Add(id,new PlayerDataHolder(id,user));
         }
-        else
-        {
+        else {
             ServerSend.LoginResult(id,false, www.text, -9);
         }
         
     }
+    // public void SendIntoGame(List<PlayerDataHolder> toSpawn, PlayerDataHolder caller)
+    // {
+    //     
+    //     ServerSend.SpawnPlayer(toSpawn, caller,Dictionaries.PlayerDataHolders[id].GetGameObject());
+    //     toSpawn.Remove(caller);
+    //     ServerSend.SpawnPlayer(toSpawn, Dictionaries.PlayerDataHolders[id].GetGameObject());
+    //
+    //     
+    //
+    //     foreach (Client _client in Server.Clients.Values)
+    //     {
+    //         if(x.Contains(_client.id)) continue;
+    //             if (Dictionaries.PlayerDataHolders[id] != null)
+    //             {
+    //                 if (_client.id != id)
+    //                 {
+    //                     ServerSend.SpawnPlayer(id, Dictionaries.PlayerDataHolders[id].GetGameObject());
+    //                 }
+    //         }
+    //     }
+    //
+    //     foreach (Client _client in Server.Clients.Values)
+    //     {
+    //         if(x.Contains(_client.id)) continue;
+    //         if (Dictionaries.PlayerDataHolders[_client.id] != null)
+    //         {
+    //             ServerSend.SpawnPlayer(_client.id, Dictionaries.PlayerDataHolders[_client.id].GetGameObject());
+    //         }
+    //     }
+    // }
     /// <summary>Disconnects the client and stops all network traffic.</summary>
     
     private void Disconnect()

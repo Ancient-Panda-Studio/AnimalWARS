@@ -3110,15 +3110,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/FindPlayersSql.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/XMLDataManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Network/ClientHandle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Login/Register.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Login/Login.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Client.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/HandleAsync.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/DoNotDestroy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Network/ClientHandle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
       </list>
     </option>
   </component>
@@ -3141,7 +3141,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="ReSpellerSettingsId" />
+    <property name="settings.editor.selected.configurable" value="SolutionBuilderGeneralOptionsPageId" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -3243,6 +3243,9 @@
       <workItem from="1603685593570" duration="55000" />
       <workItem from="1603685681239" duration="2333000" />
       <workItem from="1604283917683" duration="30000" />
+      <workItem from="1604351630765" duration="42000" />
+      <workItem from="1604351684236" duration="109000" />
+      <workItem from="1604351821504" duration="10790000" />
     </task>
     <servers />
   </component>
@@ -3267,6 +3270,10 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="708" y="345" key="#Notifications" timestamp="1604351669018">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="708" y="345" key="#Notifications/0.0.1920.1040/-1080.-387.1080.1880@0.0.1920.1040" timestamp="1604351669018" />
     <state x="713" y="382" key="ANALYSIS_DLG_com.jetbrains.rider.actions.impl.cleanup.RiderCodeCleanupAction$actionPerformed$dlg$1" timestamp="1601425853525">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -3297,9 +3304,10 @@
     </state>
     <state x="740" y="228" key="RiderGenerateDialog/0.0.1920.1050/-1080.-310.1080.1890@0.0.1920.1050" timestamp="1601844181240" />
     <state x="740" y="235" key="RiderGenerateDialog/0.0.1920.1080/-1080.-408.1080.1920@0.0.1920.1080" timestamp="1603686116262" />
-    <state x="14" y="20" width="916" height="1645" key="SettingsEditor" timestamp="1603686371291">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="14" y="0" width="916" height="1040" key="SettingsEditor" timestamp="1604351792230">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state x="14" y="0" width="916" height="1040" key="SettingsEditor/0.0.1920.1040/-1080.-387.1080.1880@0.0.1920.1040" timestamp="1604351792230" />
     <state x="2427" y="96" key="SettingsEditor/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601396154790" />
     <state x="202" y="135" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1601424942714" />
     <state x="-966" y="-65" width="916" height="1645" key="SettingsEditor/0.0.1920.1050/-1080.-310.1080.1890@-1080.-310.1080.1890" timestamp="1601833862876" />
@@ -3331,10 +3339,11 @@
     </state>
     <state x="-109" y="-8" width="1096" height="1040" maximized="true" key="dock-window-3/0.0.1920.1050/-1080.-310.1080.1890@-1080.-310.1080.1890" timestamp="1601929622746" />
     <state x="546" y="462" width="1096" height="1040" key="dock-window-3/0.0.1920.1050/-1080.-310.1080.1890@0.0.1920.1050" timestamp="1601947939022" />
-    <state x="545" y="160" width="1375" height="835" key="find.popup" timestamp="1603686154546">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="545" y="154" width="1375" height="805" key="find.popup" timestamp="1604364543027">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-630" y="-30" width="630" height="1448" key="find.popup/0.0.1920.1040/-1080.-310.1080.1880@-1080.-310.1080.1880" timestamp="1601460489424" />
+    <state x="545" y="154" width="1375" height="805" key="find.popup/0.0.1920.1040/-1080.-387.1080.1880@0.0.1920.1040" timestamp="1604364543027" />
     <state x="800" y="155" width="1120" height="802" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602085931159" />
     <state x="2814" y="155" width="726" height="801" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601396057546" />
     <state x="800" y="156" width="1120" height="809" key="find.popup/0.0.1920.1050/-1080.-310.1080.1890@0.0.1920.1050" timestamp="1601948837726" />
@@ -3347,10 +3356,11 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="616" y="243" key="run.anything.popup/0.0.1920.1050/-1080.-310.1080.1890@0.0.1920.1050" timestamp="1601942227466" />
-    <state x="622" y="259" width="1195" height="680" key="search.everywhere.popup" timestamp="1603685607247">
-      <screen x="0" y="0" width="1920" height="1080" />
+    <state x="622" y="249" width="1195" height="655" key="search.everywhere.popup" timestamp="1604351764926">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="498" y="207" width="538" height="543" key="search.everywhere.popup/0.0.1536.864@0.0.1536.864" timestamp="1600758892788" />
+    <state x="622" y="249" width="1195" height="655" key="search.everywhere.popup/0.0.1920.1040/-1080.-387.1080.1880@0.0.1920.1040" timestamp="1604351764926" />
     <state x="-730" y="143" width="672" height="1189" key="search.everywhere.popup/0.0.1920.1050/-1080.-310.1080.1890@-1080.-310.1080.1890" timestamp="1601817914168" />
     <state x="622" y="252" width="1195" height="661" key="search.everywhere.popup/0.0.1920.1050/-1080.-310.1080.1890@0.0.1920.1050" timestamp="1601942244465" />
     <state x="622" y="252" width="1195" height="661" key="search.everywhere.popup/0.0.1920.1050/-1080.-426.1080.1890@0.0.1920.1050" timestamp="1602818376736" />

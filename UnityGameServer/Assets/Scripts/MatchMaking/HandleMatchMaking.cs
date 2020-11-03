@@ -57,25 +57,51 @@ public class HandleMatchMaking
         // ReSharper disable once Unity.PerformanceCriticalCodeInvocation
         var newMapScript = mapToInstantiate.GetComponentInChildren<SpawnedMap>();
         newMapScript.SetGameID(matchId);
-        Debug.Log(newMapScript.GetGameId());
         Dictionaries.SpawnedMaps.Add(matchId, newMapScript);
         var temp = new Vector3(x,0,0);
         mapToInstantiate.transform.position += temp;
         mapToInstantiate.SetActive(false);
         //Move Map
         mapToInstantiate.SetActive(true);
-        var count = 0;
-        foreach (var player in holdersList)
-        { 
-            Debug.Log("Calling Spawn on player : " + count);
-            player.SetMatchId(matchId);
-            //TODO LOBBY TO SELECT SKIN
-            count++;
-            player.CallSpawn(newMapScript);
+        foreach (var caller in holdersList)
+        {
+            switch (team1.Contains(caller))
+            {
+                case true:
+                    var spawnsTeam1 =  newMapScript.GetFreeSpawn(1);
+                    Debug.Log(newMapScript.GetFreeSpawns(1).Count);
+                    spawnsTeam1.SetFull(true);
+                    Debug.Log(newMapScript.GetFreeSpawns(1).Count);
+                    var newPlayerTeam1 = NetworkManager.Instance.InstantiatePlayer(spawnsTeam1.myGameObject.transform);
+                    caller.SetGameObject(newPlayerTeam1);
+                    caller.GetGameObject().name =
+                        $"Team {1}  Name {caller.username} Match {newMatch.GetMatchIdNoStatic()}";
+                    caller.SetMatchId(matchId);
+                    break;
+                case false:
+                    var spawnsTeam2 =  newMapScript.GetFreeSpawn(2);
+                    Debug.Log(newMapScript.GetFreeSpawns(2).Count);
+                    spawnsTeam2.SetFull(true);
+                    Debug.Log(newMapScript.GetFreeSpawns(2).Count);
+                    var newPlayerTeam2 = NetworkManager.Instance.InstantiatePlayer(spawnsTeam2.myGameObject.transform);
+                    caller.SetGameObject(newPlayerTeam2);
+                    caller.GetGameObject().name =
+                        $"Team {2}  Name {caller.username} Match {newMatch.GetMatchIdNoStatic()}";
+                    caller.SetMatchId(matchId);
+                    break;
+            }
+        }
+        foreach (var holder in holdersList)
+        {
+            Debug.Log(holder.GetPlayerId() + " is now being Spawned");
+            ServerSend.SpawnPlayer(holder.GetPlayerId(),holder.GetGameObject(), Parser.ParseHolderToInt(holdersList));
         }
         Generating = false; //Finished Generating Match
     }
-
+    public void SendIntoGame(List<PlayerDataHolder> toSpawn)
+    {
+        
+    }
     public static List<PlayerDataHolder> CheckIfMatchMakingIsPossible()
     {
         if (MatchQueue.Count < 6) return null;

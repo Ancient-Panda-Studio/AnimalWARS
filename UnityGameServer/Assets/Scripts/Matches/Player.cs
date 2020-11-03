@@ -61,7 +61,6 @@ public class Player : MonoBehaviour
 
         //Jump
         jump = inputs[1];
-        Debug.Log(jump);
     }
 
     private void Locomotion()

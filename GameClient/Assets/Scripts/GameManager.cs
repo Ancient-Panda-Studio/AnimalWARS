@@ -26,12 +26,21 @@ public class GameManager : MonoBehaviour
 
     public void SpawnPlayer(int id, Vector3 position, Quaternion rotation) 
     {
-        Cursor.lockState = CursorLockMode.Locked;
-        Cursor.visible = false;
-        var player = Instantiate(id == Client.instance.myId ? localPlayerPrefab : playerPrefab, position, rotation);
-
-        player.GetComponent<PlayerManager>().id = id;
-
-        Players.Add(id, player.GetComponent<PlayerManager>());
+        
+        //Cursor.lockState = CursorLockMode.Locked;
+        //Cursor.visible = false;
+        Debug.Log($"A player with ID {id} is being spawned...");
+        if (id == Constants.ServerID)
+        {
+            var localPlayerObj =  Instantiate(localPlayerPrefab, position, rotation);
+            localPlayerObj.GetComponent<PlayerManager>().id = id;
+            Players.Add(id, localPlayerObj.GetComponent<PlayerManager>());
+        }
+        else
+        {
+            var playerObj = Instantiate(playerPrefab, position, rotation);
+            playerObj.GetComponent<PlayerManager>().id = id;
+            Players.Add(id, playerObj.GetComponent<PlayerManager>());
+        }
     }
 }

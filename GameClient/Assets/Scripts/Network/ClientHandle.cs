@@ -15,7 +15,6 @@ public class ClientHandle
         Client.instance.myId = _myId;
         UIManager.Instance.offline.SetActive(false);
         UIManager.Instance.online.SetActive(true);
-        Constants.ServerID = _myId;
         ClientSend.WelcomeReceived();
         Client.instance.udp.Connect(((IPEndPoint) Client.instance.tcp.socket.Client.LocalEndPoint).Port);
     }
@@ -25,6 +24,7 @@ public class ClientHandle
         var _id = _packet.ReadInt();
         var _position = _packet.ReadVector3();
         var _rotation = _packet.ReadQuaternion();
+        var _username = _packet.ReadString();
         GameManager.Instance.SpawnPlayer(_id, _position, _rotation);
     }
 
@@ -49,6 +49,7 @@ public class ClientHandle
         {
             PlayerVariables.UserID = _dbId;
             Constants.ID = _dbId;
+            Constants.ServerID = _id;
             UIManager.Instance.AllowLogin();
             HandleAsync.Instance.Routine(HandleAsync.Instance.GetUserBasicData());
             HandleAsync.Instance.Routine(HandleAsync.Instance.GetAllSkins());
