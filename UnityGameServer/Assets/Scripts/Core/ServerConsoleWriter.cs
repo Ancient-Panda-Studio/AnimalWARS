@@ -3,13 +3,31 @@ using System;
 
 public class ServerConsoleWriter
 {
-    public static readonly string SysetmUser = Environment.UserName;
+    private static readonly string SysetmUser = Environment.UserName;
     public static void WriteLine(string _toWrite)
     {
         using (var file =
-            new System.IO.StreamWriter($@"C:\Users\{SysetmUser}\Desktop\ServerLog.txt", true))
+            new System.IO.StreamWriter($@"C:\Users\{SysetmUser}\Desktop\ServerLog\ServerLog.txt", true))
         {
-            file.WriteLine(_toWrite);
+            file.WriteLine($"{DateTime.UtcNow} : {_toWrite}");
         }
+    }
+
+    public static void WriteUserLog(string user, int id, string _toWrite)
+    {
+        using (var file =
+            new System.IO.StreamWriter($@"C:\Users\{SysetmUser}\Desktop\ServerLog\UserLogs\{id}_{user}_log.txt", true))
+        {
+            file.WriteLine($"{DateTime.UtcNow} : {_toWrite}");
+        }    
+    }
+
+    public static void WriteMatchLog(int getMatchIdNoStatic, string _toWrite)
+    {
+        using (var file =
+            new System.IO.StreamWriter($@"C:\Users\{SysetmUser}\Desktop\ServerLog\MatchLogs\Match_{getMatchIdNoStatic}_log.txt", true))
+        {
+            file.WriteLine($"{DateTime.UtcNow} : {_toWrite}");
+        }    
     }
 }

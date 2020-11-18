@@ -16,11 +16,14 @@ public class HandleMatchMaking
     
     public static void AddToQueue(PlayerDataHolder playerDataHolder)
     {
+        ServerConsoleWriter.WriteLine($"{playerDataHolder.username} has joined the match Queue");
         MatchQueue.Add(playerDataHolder);
+        
     }
 
     public static void RemoveFromQueue(PlayerDataHolder playerDataHolder)
     {
+        ServerConsoleWriter.WriteLine($"{playerDataHolder.username} has left the match Queue");
         MatchQueue.Remove(playerDataHolder);
     }
 
@@ -96,11 +99,15 @@ public class HandleMatchMaking
             Debug.Log(holder.GetPlayerId() + " is now being Spawned");
             ServerSend.SpawnPlayer(holder.GetPlayerId(),holder.GetGameObject(), Parser.ParseHolderToInt(holdersList));
         }
-        Generating = false; //Finished Generating Match
-    }
-    public void SendIntoGame(List<PlayerDataHolder> toSpawn)
-    {
+        ServerConsoleWriter.WriteLine($"A new match has been created id: {newMatch.GetMatchIdNoStatic()} Map order will be the following: 1- {mapOrder[0]} \n 2- {mapOrder[1]} \n 3- {mapOrder[2]} \n 4- {mapOrder[3]} \n 5- {mapOrder[4]}");
+        ServerConsoleWriter.WriteMatchLog(newMatch.GetMatchIdNoStatic(),
+            $"New match log {newMatch.GetMatchIdNoStatic()}");
+        ServerConsoleWriter.WriteMatchLog(newMatch.GetMatchIdNoStatic(),
+            $"Team 1 : \n Player 1: {newMatch.GetTeam1().ToList()[0]} \n Player 2: {newMatch.GetTeam1().ToList()[1]} \n Player 3: {newMatch.GetTeam1().ToList()[2]}");
+        ServerConsoleWriter.WriteMatchLog(newMatch.GetMatchIdNoStatic(),
+            $"Team 2 : \n Player 1: {newMatch.GetTeam2().ToList()[0]} \n Player 2: {newMatch.GetTeam2().ToList()[1]} \n Player 3: {newMatch.GetTeam2().ToList()[2]}");
         
+        Generating = false; //Finished Generating Match
     }
     public static List<PlayerDataHolder> CheckIfMatchMakingIsPossible()
     {
@@ -113,7 +120,7 @@ public class HandleMatchMaking
             if (MatchQueue[i].inParty)
             {
                 var partyMembers = Parties.GetParty(MatchQueue[i].partyID);
-                int partyCount = partyMembers.Count;
+                var partyCount = partyMembers.Count;
                 if (playersToAdd.Count + partyCount > 6) continue;
                 playersToAdd.AddRange(partyMembers.Select(t => Dictionaries.PlayerDataHolders[Dictionaries.PlayersByName[t.username]]));
             }

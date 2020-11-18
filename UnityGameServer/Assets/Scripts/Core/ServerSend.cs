@@ -111,7 +111,7 @@ public class ServerSend
         {
             foreach (var x in allPlayersInMatch)
             {
-                Debug.Log(x + $" is now being Spawned for {toClient}");
+                ServerConsoleWriter.WriteLine("Player :" + Dictionaries.PlayerDataHolders[x].username + $" is now being Spawned on {Dictionaries.PlayerDataHolders[toClient].username} client");
 
                 if (x != toClient)
                 {

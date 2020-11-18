@@ -30,6 +30,7 @@ public class UIManager : MonoBehaviour
     public GameObject resetToDefaultUi;
     public GameObject resetButton;
     public GameObject partyUI;
+    public GameObject matchStartedUi;
     
     [Header("TRANSFORMS")]
     public Transform friendList;
@@ -154,7 +155,6 @@ public class UIManager : MonoBehaviour
     {
         for (var i = 0; i < x.Count; i++)
         {
-            Debug.Log(x.Count);
             var friend = Instantiate(Resources.Load("Prefabs/FriendTemplate") as GameObject, friendList, false);
             var y = friend.GetComponent<FriendController>();
             y.name = x[i];

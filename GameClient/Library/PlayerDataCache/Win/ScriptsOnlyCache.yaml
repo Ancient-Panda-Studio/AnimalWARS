@@ -60,8 +60,6 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.Text
     - UnityEngine.UI.Toggle
     - UnityEngine.UI.VerticalLayoutGroup
-    com.unity.multiplayer-hlapi.Runtime.dll:
-    - UnityEngine.Networking.NetworkCallbacks
   sceneClasses:
     Assets/Scenes/Main.unity:
     - Class: 1
@@ -543,7 +541,7 @@ ScriptsOnlyBuild:
     className: TMP_SpriteAsset
   - hash:
       serializedVersion: 2
-      Hash: 72d040b05d00d9556c1cbbd3c998dec9
+      Hash: 55c7b365a2cfb8774adb2bf7ecd8dd7b
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DoNotDestroy
@@ -651,7 +649,7 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: edc302ba4842b8309ff29cfe133b849a
+      Hash: 08e316e67c14cf8cc2344c2d7d78ea30
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: UIManager
@@ -1000,4 +998,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/Main.unity
-  playerPath: C:/Users/u/Desktop/BUILDS/GameClient.exe
+  playerPath: C:/Users/u/Documents/ClientBuild_Windowed/GameClient.exe

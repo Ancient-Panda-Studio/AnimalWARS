@@ -525,4 +525,4 @@ ScriptsOnlyBuild:
   platform: 5
   scenePathNames:
   - Assets/Scenes/Server.unity
-  playerPath: C:/Users/u/Desktop/SERVER_BUILDS/UnityGameServer.exe
+  playerPath: C:/Users/u/Documents/ServerBuild/UnityGameServer.exe

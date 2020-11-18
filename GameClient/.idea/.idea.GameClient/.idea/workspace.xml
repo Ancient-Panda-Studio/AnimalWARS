@@ -3064,6 +3064,7 @@
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/FindPlayersSql.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../UnityGameServer/Assets/Scripts/Core/Server.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/UIManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/../../../../../../Program Files/Unity/Hub/Editor/2019.4.12f1/Editor/Data/Resources/PackageManager/BuiltInPackages/com.unity.ugui/Runtime/EventSystem/InputModules/PointerInputModule.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -3107,7 +3108,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerVariables.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/ClientSend.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/AddFriend.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/FindPlayersSql.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/XMLDataManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Login/Register.cs" />
@@ -3116,9 +3116,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/HandleAsync.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ConfigurationManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/DoNotDestroy.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Network/ClientHandle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/UIManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/DoNotDestroy.cs" />
       </list>
     </option>
   </component>
@@ -3246,6 +3247,8 @@
       <workItem from="1604351630765" duration="42000" />
       <workItem from="1604351684236" duration="109000" />
       <workItem from="1604351821504" duration="10790000" />
+      <workItem from="1604784017608" duration="205000" />
+      <workItem from="1604784523147" duration="1943000" />
     </task>
     <servers />
   </component>
@@ -3339,11 +3342,11 @@
     </state>
     <state x="-109" y="-8" width="1096" height="1040" maximized="true" key="dock-window-3/0.0.1920.1050/-1080.-310.1080.1890@-1080.-310.1080.1890" timestamp="1601929622746" />
     <state x="546" y="462" width="1096" height="1040" key="dock-window-3/0.0.1920.1050/-1080.-310.1080.1890@0.0.1920.1050" timestamp="1601947939022" />
-    <state x="545" y="154" width="1375" height="805" key="find.popup" timestamp="1604364543027">
+    <state x="545" y="154" width="1375" height="805" key="find.popup" timestamp="1604784535753">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="-630" y="-30" width="630" height="1448" key="find.popup/0.0.1920.1040/-1080.-310.1080.1880@-1080.-310.1080.1880" timestamp="1601460489424" />
-    <state x="545" y="154" width="1375" height="805" key="find.popup/0.0.1920.1040/-1080.-387.1080.1880@0.0.1920.1040" timestamp="1604364543027" />
+    <state x="545" y="154" width="1375" height="805" key="find.popup/0.0.1920.1040/-1080.-387.1080.1880@0.0.1920.1040" timestamp="1604784535753" />
     <state x="800" y="155" width="1120" height="802" key="find.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1602085931159" />
     <state x="2814" y="155" width="726" height="801" key="find.popup/0.0.1920.1040/1920.0.1920.1040@1920.0.1920.1040" timestamp="1601396057546" />
     <state x="800" y="156" width="1120" height="809" key="find.popup/0.0.1920.1050/-1080.-310.1080.1890@0.0.1920.1050" timestamp="1601948837726" />

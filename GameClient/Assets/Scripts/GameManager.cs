@@ -29,6 +29,12 @@ public class GameManager : MonoBehaviour
         
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
+        if (UIManager.Instance.inGameUi.activeSelf)
+        {
+            UIManager.Instance.inGameUi.SetActive(false);
+            UIManager.Instance.matchStartedUi.SetActive(true);
+        }
+
         Debug.Log($"A player with ID {id} is being spawned...");
         if (id == Constants.ServerID)
         {
