@@ -9,8 +9,7 @@ public class DoNotDestroy : MonoBehaviour
      public List<GameObject> dontDestroyThis = new List<GameObject>();
      private void Awake()
      {
-          foreach (var x in dontDestroyThis)
-          {
+          foreach (var x in dontDestroyThis){
                DontDestroyOnLoad(x);
           }
      }
