@@ -20,14 +20,15 @@ namespace Network
 
         public static void SendLoginInfo()
         {
+            Debug.Log("Sending...");
             using (var _packet = new Packet((int) ClientPackets.sendLoginInfo))
             {
                 _packet.Write(Client.instance.myId);
-                _packet.Write(UIManager.Instance.usernameField.text);
-                _packet.Write(UIManager.Instance.passwordField.text);
+                _packet.Write(UIObjects.Instance.Login_usernameInputField.text);
+                _packet.Write(UIObjects.Instance.Login_passwordInputField.text);
                 SendTcpData(_packet);
             }
-            PlayerVariables.UserName = UIManager.Instance.usernameField.text;
+            PlayerVariables.UserName = UIObjects.Instance.Login_usernameInputField.text;
         }
 
         public static void WelcomeReceived()
@@ -80,7 +81,6 @@ namespace Network
                 SendTcpData(_packet);
             }
         }
-        
         public static void RemoveMatchMaking()
         {
              using (var _packet = new Packet((int) ClientPackets.stopMatchMaking))
@@ -90,7 +90,5 @@ namespace Network
              }
         }
         #endregion
-
-       
     }
 }

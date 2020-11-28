@@ -4,17 +4,15 @@ using UnityEngine;
 
 public class ClientHandle
 {
-    public UIManager uiManager;
 
     public static void Welcome(Packet _packet)
     {
         var _msg = _packet.ReadString();
         var _myId = _packet.ReadInt();
-
         Debug.Log($"Message from server: {_msg}");
         Client.instance.myId = _myId;
-        UIManager.Instance.offline.SetActive(false);
-        UIManager.Instance.online.SetActive(true);
+        UIObjects.Instance.offline.SetActive(false);
+        UIObjects.Instance.online.SetActive(true);
         ClientSend.WelcomeReceived();
         Client.instance.udp.Connect(((IPEndPoint) Client.instance.tcp.socket.Client.LocalEndPoint).Port);
     }
@@ -36,7 +34,7 @@ public class ClientHandle
 
         //TODO Pop Invite UI
 
-        UIManager.Instance.GetInvite(_id, _username);
+        UIManager.GetInvite(_id, _username);
     }
 
     public static void HandleLogin(Packet _packet)
@@ -50,14 +48,14 @@ public class ClientHandle
             PlayerVariables.UserID = _dbId;
             Constants.ID = _dbId;
             Constants.ServerID = _id;
-            UIManager.Instance.AllowLogin();
+            UIManager.AllowLogin();
             HandleAsync.Instance.Routine(HandleAsync.Instance.GetUserBasicData());
             HandleAsync.Instance.Routine(HandleAsync.Instance.GetAllSkins());
             HandleAsync.Instance.Routine(HandleAsync.Instance.GetFriends());
         }
         else
         {
-            UIManager.Instance.ForbidLogin(_error);
+            UIManager.ForbidLogin(_error);
             Constants.Username = null;
             PlayerVariables.UserName = null;
         }
@@ -95,7 +93,7 @@ public class ClientHandle
         {
             case true:
                 //Invitation Accepted
-                UIManager.Instance.CreateGroup(from, _name);
+                UIManager.CreateGroup(from, _name);
                 Debug.Log("Invitation you sent to " + from + " has been accepted");
                 break;
             case false:
@@ -107,7 +105,7 @@ public class ClientHandle
     }
     public static void MatchFound(Packet _packet)
     {
-        throw new System.NotImplementedException();
+        UIObjects.Instance.MatchFoundUI.SetActive(true);
     }
 
     public static void MMState(Packet _packet)

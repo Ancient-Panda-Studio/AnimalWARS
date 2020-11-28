@@ -3,7 +3,7 @@
   <TypeDate>
     <guid>842f43ac94b4b4f72ac0898650ddcc44</guid>
     <fileName>Assets/Cleaner/Editor/AssetCollector.cs</fileName>
-    <timeStamp>2015-12-09T19:51:26+01:00</timeStamp>
+    <timeStamp>2020-11-18T21:29:19.0484047+01:00</timeStamp>
     <typeFullName>
       <string>AssetClean.AssetCollector</string>
     </typeFullName>
@@ -12,7 +12,7 @@
   <TypeDate>
     <guid>805140a4856714e288ea84985d3023df</guid>
     <fileName>Assets/Cleaner/Editor/AssetReferenceCollection.cs</fileName>
-    <timeStamp>2015-12-09T19:51:26+01:00</timeStamp>
+    <timeStamp>2020-11-18T21:29:19.0494053+01:00</timeStamp>
     <typeFullName>
       <string>AssetReferenceCollection</string>
     </typeFullName>
@@ -21,7 +21,7 @@
   <TypeDate>
     <guid>202c278a17939b24c8b79c0ee1f94d8f</guid>
     <fileName>Assets/Cleaner/Editor/ClassReferenceCollection.cs</fileName>
-    <timeStamp>2015-12-09T19:51:26+01:00</timeStamp>
+    <timeStamp>2020-11-18T21:29:19.0494053+01:00</timeStamp>
     <typeFullName>
       <string>AssetClean.ClassReferenceCollection</string>
     </typeFullName>
@@ -30,7 +30,7 @@
   <TypeDate>
     <guid>0d05386265df34bac8d0b6df44aa494c</guid>
     <fileName>Assets/Cleaner/Editor/CollectionData.cs</fileName>
-    <timeStamp>2015-12-09T19:51:26+01:00</timeStamp>
+    <timeStamp>2020-11-18T21:29:19.0504063+01:00</timeStamp>
     <typeFullName>
       <string>CollectionData</string>
       <string>TypeDate</string>
@@ -41,7 +41,7 @@
   <TypeDate>
     <guid>74eec3bfba0594259ac2843353c082a3</guid>
     <fileName>Assets/Cleaner/Editor/FindUnusedAssetsWindow.cs</fileName>
-    <timeStamp>2015-12-09T19:51:26+01:00</timeStamp>
+    <timeStamp>2020-11-18T21:29:19.0514072+01:00</timeStamp>
     <typeFullName>
       <string>AssetClean.FindUnusedAssetsWindow</string>
     </typeFullName>
@@ -50,7 +50,7 @@
   <TypeDate>
     <guid>2c4f01a79a77a45a9a84004cc2b78098</guid>
     <fileName>Assets/Cleaner/Editor/ShaderReferenceCollection.cs</fileName>
-    <timeStamp>2015-12-09T19:51:26+01:00</timeStamp>
+    <timeStamp>2020-11-18T21:29:19.0514072+01:00</timeStamp>
     <typeFullName>
       <string>AssetClean.ShaderReferenceCollection</string>
     </typeFullName>
@@ -59,7 +59,7 @@
   <TypeDate>
     <guid>25147fbf3f3e4694b932793ea4dc16e7</guid>
     <fileName>Assets/Scripts/GameManager.cs</fileName>
-    <timeStamp>2020-10-04T15:36:58.364638+02:00</timeStamp>
+    <timeStamp>2020-11-23T05:38:41.8798378+01:00</timeStamp>
     <typeFullName>
       <string>GameManager</string>
     </typeFullName>
@@ -68,7 +68,7 @@
   <TypeDate>
     <guid>dff2fd312dc2a99f5b2173335895b1f1</guid>
     <fileName>Assets/Scripts/Externals/SimpleJSON.cs</fileName>
-    <timeStamp>2020-10-04T00:45:25.4108294+02:00</timeStamp>
+    <timeStamp>2020-11-18T21:29:20.4686941+01:00</timeStamp>
     <typeFullName>
       <string>SimpleJSON.JSONNodeType</string>
       <string>SimpleJSON.JSONTextMode</string>
@@ -105,7 +105,7 @@
   <TypeDate>
     <guid>89299ba06eb7f0464bd03852889295a4</guid>
     <fileName>Assets/Scripts/Gameplay/HandleAsync.cs</fileName>
-    <timeStamp>2020-10-04T22:06:07.5080998+02:00</timeStamp>
+    <timeStamp>2020-11-23T05:42:55.7986134+01:00</timeStamp>
     <typeFullName>
       <string>HandleAsync</string>
     </typeFullName>
@@ -114,7 +114,7 @@
   <TypeDate>
     <guid>07e6cba75ee0e9bb49fce43973c40677</guid>
     <fileName>Assets/Scripts/Gameplay/PlayerVariables.cs</fileName>
-    <timeStamp>2020-10-04T00:45:25.4248422+02:00</timeStamp>
+    <timeStamp>2020-11-18T21:29:20.4767012+01:00</timeStamp>
     <typeFullName>
       <string>PlayerVariables</string>
     </typeFullName>
@@ -123,7 +123,7 @@
   <TypeDate>
     <guid>51e10ef7bec8212c39cfa54a0d25c3b3</guid>
     <fileName>Assets/Scripts/Gameplay/Skins.cs</fileName>
-    <timeStamp>2020-10-04T00:45:25.4258428+02:00</timeStamp>
+    <timeStamp>2020-11-18T21:29:20.4777022+01:00</timeStamp>
     <typeFullName>
       <string>Skins</string>
     </typeFullName>
@@ -132,7 +132,7 @@
   <TypeDate>
     <guid>51eb82bd0ff0fc449ad06359484b36a7</guid>
     <fileName>Assets/Scripts/Gameplay/SkinScript.cs</fileName>
-    <timeStamp>2020-10-04T00:45:25.4248422+02:00</timeStamp>
+    <timeStamp>2020-11-18T21:29:20.4767012+01:00</timeStamp>
     <typeFullName>
       <string>SkinScript</string>
     </typeFullName>
@@ -141,7 +141,7 @@
   <TypeDate>
     <guid>bff09310e74970a449b0e8cfcdd1cb3d</guid>
     <fileName>Assets/Scripts/Network/Client.cs</fileName>
-    <timeStamp>2020-10-04T00:45:25.4308476+02:00</timeStamp>
+    <timeStamp>2020-11-23T14:11:06.2978867+01:00</timeStamp>
     <typeFullName>
       <string>Client</string>
       <string>Client+TCP</string>
@@ -152,7 +152,7 @@
   <TypeDate>
     <guid>229cd0539f7d2394895801eda00e7f14</guid>
     <fileName>Assets/Scripts/Network/ClientHandle.cs</fileName>
-    <timeStamp>2020-10-04T22:06:07.4810759+02:00</timeStamp>
+    <timeStamp>2020-11-23T05:42:39.1583803+01:00</timeStamp>
     <typeFullName>
       <string>ClientHandle</string>
     </typeFullName>
@@ -161,7 +161,7 @@
   <TypeDate>
     <guid>8c6e1f99e9948c34c9023dd633217657</guid>
     <fileName>Assets/Scripts/Network/ClientSend.cs</fileName>
-    <timeStamp>2020-10-04T22:06:07.4590554+02:00</timeStamp>
+    <timeStamp>2020-11-23T06:01:50.6317385+01:00</timeStamp>
     <typeFullName>
       <string>Network.ClientSend</string>
     </typeFullName>
@@ -170,7 +170,7 @@
   <TypeDate>
     <guid>f1a39a72a2cc14bfe8cdc680adbbc7c8</guid>
     <fileName>Assets/Scripts/Network/Constants.cs</fileName>
-    <timeStamp>2020-10-04T19:52:25.2980211+02:00</timeStamp>
+    <timeStamp>2020-11-21T03:45:35.3771826+01:00</timeStamp>
     <typeFullName>
       <string>Constants</string>
     </typeFullName>
@@ -188,7 +188,7 @@
   <TypeDate>
     <guid>bf1c40df46c28304e979fd3732458c70</guid>
     <fileName>Assets/Scripts/Network/Packet.cs</fileName>
-    <timeStamp>2020-10-04T00:45:25.4348508+02:00</timeStamp>
+    <timeStamp>2020-11-23T03:47:27.9415797+01:00</timeStamp>
     <typeFullName>
       <string>Network.ServerPackets</string>
       <string>Network.ClientPackets</string>
@@ -199,7 +199,7 @@
   <TypeDate>
     <guid>ecf5333aac5d2064e8c270f6aa032cca</guid>
     <fileName>Assets/Scripts/Network/ThreadManager.cs</fileName>
-    <timeStamp>2020-10-04T00:45:25.4358522+02:00</timeStamp>
+    <timeStamp>2020-11-18T21:29:20.5037262+01:00</timeStamp>
     <typeFullName>
       <string>Network.ThreadManager</string>
     </typeFullName>
@@ -208,7 +208,7 @@
   <TypeDate>
     <guid>6bc0d538b776270429f28dd4b5815915</guid>
     <fileName>Assets/Scripts/Network/UIManager.cs</fileName>
-    <timeStamp>2020-10-04T22:06:07.1527779+02:00</timeStamp>
+    <timeStamp>2020-11-23T06:03:03.2799278+01:00</timeStamp>
     <typeFullName>
       <string>UIManager</string>
     </typeFullName>
@@ -217,7 +217,7 @@
   <TypeDate>
     <guid>4c2bd7fabb77a55ddab155bd67139fb3</guid>
     <fileName>Assets/Scripts/Network/Login/Login.cs</fileName>
-    <timeStamp>2020-10-04T00:45:25.4338503+02:00</timeStamp>
+    <timeStamp>2020-11-23T05:33:38.7066653+01:00</timeStamp>
     <typeFullName>
       <string>Login</string>
     </typeFullName>
@@ -226,7 +226,7 @@
   <TypeDate>
     <guid>813b05c42983e661faab844494f614eb</guid>
     <fileName>Assets/Scripts/Network/Login/Register.cs</fileName>
-    <timeStamp>2020-10-04T00:45:25.4348508+02:00</timeStamp>
+    <timeStamp>2020-11-23T05:22:12.7057393+01:00</timeStamp>
     <typeFullName>
       <string>Register</string>
     </typeFullName>
@@ -235,7 +235,7 @@
   <TypeDate>
     <guid>ba1157767f82cac4ea732a242fe11355</guid>
     <fileName>Assets/Scripts/Player/Bindings.cs</fileName>
-    <timeStamp>2020-10-04T00:45:25.4368531+02:00</timeStamp>
+    <timeStamp>2020-11-18T21:29:20.5047271+01:00</timeStamp>
     <typeFullName>
       <string>Player.Bindings</string>
     </typeFullName>
@@ -244,7 +244,7 @@
   <TypeDate>
     <guid>61ce2ca59938a462291653c74476da89</guid>
     <fileName>Assets/Scripts/Player/FriendController.cs</fileName>
-    <timeStamp>2020-10-04T01:09:32.5698283+02:00</timeStamp>
+    <timeStamp>2020-11-18T21:29:20.5047271+01:00</timeStamp>
     <typeFullName>
       <string>Player.FriendController</string>
     </typeFullName>
@@ -253,7 +253,7 @@
   <TypeDate>
     <guid>df6548f197915f540bf99d4d6aa1874a</guid>
     <fileName>Assets/Scripts/Player/PlayerController.cs</fileName>
-    <timeStamp>2020-10-04T00:45:25.4388545+02:00</timeStamp>
+    <timeStamp>2020-11-18T21:29:20.5057281+01:00</timeStamp>
     <typeFullName>
       <string>Player.PlayerController</string>
     </typeFullName>
@@ -262,7 +262,7 @@
   <TypeDate>
     <guid>9f05c9786bd8f054ba16a36068b270b1</guid>
     <fileName>Assets/Scripts/Player/PlayerManager.cs</fileName>
-    <timeStamp>2020-10-04T00:45:25.4388545+02:00</timeStamp>
+    <timeStamp>2020-11-18T21:29:20.5067288+01:00</timeStamp>
     <typeFullName>
       <string>Player.PlayerManager</string>
     </typeFullName>
@@ -280,7 +280,7 @@
   <TypeDate>
     <guid>59e8451cb799199459d849b6b86fc8c9</guid>
     <fileName>Assets/Scripts/Gameplay/UI/TabButton.cs</fileName>
-    <timeStamp>2020-10-04T22:58:39.2964311+02:00</timeStamp>
+    <timeStamp>2020-11-18T21:29:20.4807052+01:00</timeStamp>
     <typeFullName>
       <string>TabButton</string>
     </typeFullName>
@@ -289,9 +289,267 @@
   <TypeDate>
     <guid>e96fde7ce01cfec4992de82089285d70</guid>
     <fileName>Assets/Scripts/Gameplay/UI/TabGroup.cs</fileName>
-    <timeStamp>2020-10-04T23:23:44.4501043+02:00</timeStamp>
+    <timeStamp>2020-11-18T21:29:20.4807052+01:00</timeStamp>
     <typeFullName>
       <string>TabGroup</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5d496f720527c984b8acc75a238bbd79</guid>
+    <fileName>Assets/Plugins/Sirenix/Odin Inspector/Scripts/SerializedNetworkBehaviour.cs</fileName>
+    <timeStamp>2020-10-07T17:17:48+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>a2f1c424a60dfbd4fa331449baeac351</guid>
+    <fileName>Assets/Plugins/Sirenix/Odin Inspector/Scripts/VectorIntFormatters.cs</fileName>
+    <timeStamp>2020-10-07T17:17:52+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>d4d815a2bfd253342bfd6542c08315fb</guid>
+    <fileName>Assets/Plugins/Sirenix/Odin Inspector/Scripts/Editor/AssemblyImportSettingsAutomation.cs</fileName>
+    <timeStamp>2020-10-07T17:17:56+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>dd3672808cdf76541aa3d383c87a5616</guid>
+    <fileName>Assets/Plugins/Sirenix/Odin Inspector/Scripts/Editor/BuildAOTAutomation.cs</fileName>
+    <timeStamp>2020-10-07T17:17:57+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>d9763cb398cf6e146b74d6b7bac2fe50</guid>
+    <fileName>Assets/Plugins/Sirenix/Odin Inspector/Scripts/Editor/EnsureOdinInspectorDefine.cs</fileName>
+    <timeStamp>2020-10-07T17:17:56+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>903c11a9cf3ba6f4e8c653443c6893a0</guid>
+    <fileName>Assets/Plugins/Sirenix/Odin Inspector/Scripts/Editor/FixBrokenUnityObjectWrapperDrawer.cs</fileName>
+    <timeStamp>2020-10-07T17:17:51+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>047c7e4af9c032a428c12b7c564a6593</guid>
+    <fileName>Assets/Plugins/Sirenix/Odin Inspector/Scripts/Editor/SyncListDrawer.cs</fileName>
+    <timeStamp>2020-10-07T17:17:41+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>bda5b631304c8cb4485d60ef8bda618b</guid>
+    <fileName>Assets/Plugins/Sirenix/Odin Inspector/Scripts/Editor/SyncVarAttributeDrawer.cs</fileName>
+    <timeStamp>2020-10-07T17:17:54+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>30393ed590c8fb64da0612e8a2fad8a4</guid>
+    <fileName>Assets/Plugins/Sirenix/Odin Inspector/Scripts/Editor/Vector2IntMinMaxAttributeDrawer.cs</fileName>
+    <timeStamp>2020-10-07T17:17:43+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>2fc48d59edff00f49b8ae717c776ff45</guid>
+    <fileName>Assets/Plugins/Sirenix/Odin Inspector/Scripts/Editor/VectorIntDrawers.cs</fileName>
+    <timeStamp>2020-10-07T17:17:43+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>435323e396d85494daeb5278528fe138</guid>
+    <fileName>Assets/Plugins/Sirenix/Odin Inspector/Scripts/Editor/VectorIntPropertyResolvers.cs</fileName>
+    <timeStamp>2020-10-07T17:17:44+02:00</timeStamp>
+    <typeFullName />
+  </TypeDate>
+  <TypeDate>
+    <guid>ccb13ad6154d35e43a1828380901f966</guid>
+    <fileName>Assets/TORCH_EDITOR_SCRIPT.cs</fileName>
+    <timeStamp>2020-11-19T12:56:54+01:00</timeStamp>
+    <typeFullName>
+      <string>Script</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>de782a9c01c0337408eeeaf64851687a</guid>
+    <fileName>Assets/FarlandSkies/Demo/Scripts/Player/FPSWalkerEnhanced.cs</fileName>
+    <timeStamp>2016-04-06T17:40:11+02:00</timeStamp>
+    <typeFullName>
+      <string>FPSWalkerEnhanced</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>7a3dbf3efefc52e479d81cb27cd0b94a</guid>
+    <fileName>Assets/FarlandSkies/Demo/Scripts/Player/SmoothMouseLook.cs</fileName>
+    <timeStamp>2016-04-06T17:40:03+02:00</timeStamp>
+    <typeFullName>
+      <string>SmoothMouseLook</string>
+      <string>SmoothMouseLook+RotationAxes</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>dca6002b33ac5bc48b39588e222296fb</guid>
+    <fileName>Assets/FarlandSkies/Demo/Scripts/Skybox/SkyboxChanger.cs</fileName>
+    <timeStamp>2016-04-06T17:40:10+02:00</timeStamp>
+    <typeFullName>
+      <string>SkyboxChanger</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>ad65a03e2ba19b346ad04e5fcb9723f5</guid>
+    <fileName>Assets/FarlandSkies/Demo/Scripts/Skybox/SkyboxRotator.cs</fileName>
+    <timeStamp>2016-04-06T17:40:07+02:00</timeStamp>
+    <typeFullName>
+      <string>SkyboxRotator</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>4268602a0c5ee3547b598b4a05dc762d</guid>
+    <fileName>Assets/Scenes/UI.cs</fileName>
+    <timeStamp>2020-11-20T18:27:22+01:00</timeStamp>
+    <typeFullName>
+      <string>UI</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>592b6045046b70d448ebd9532ee0ee16</guid>
+    <fileName>Assets/Scripts/DoNotDestroy.cs</fileName>
+    <timeStamp>2020-11-18T23:16:39.6531082+01:00</timeStamp>
+    <typeFullName>
+      <string>DoNotDestroy</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>026fbc3327f8a07459e6483f62e51c84</guid>
+    <fileName>Assets/Scripts/InGameUiManager.cs</fileName>
+    <timeStamp>2020-11-20T17:51:00+01:00</timeStamp>
+    <typeFullName>
+      <string>InGameUiManager</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>9355c5b4ead66084db946211553d39c2</guid>
+    <fileName>Assets/Scripts/MainMenuHandler.cs</fileName>
+    <timeStamp>2020-11-20T18:30:17+01:00</timeStamp>
+    <typeFullName>
+      <string>MainMenuHandler</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>49245b14db91b194589a7e7ca666e365</guid>
+    <fileName>Assets/Scripts/Externals/XMLDataManager.cs</fileName>
+    <timeStamp>2020-11-26T23:59:15.4985418+01:00</timeStamp>
+    <typeFullName>
+      <string>XMLDataManager</string>
+      <string>DataEntry</string>
+      <string>SettingsDataBase</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>8442cc44e5f3c4249ad6fa8a88dfd902</guid>
+    <fileName>Assets/Scripts/Gameplay/PartyMemberInfoHolder.cs</fileName>
+    <timeStamp>2020-11-23T05:42:46.8099302+01:00</timeStamp>
+    <typeFullName>
+      <string>PartyMemberInfoHolder</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>cc6112443a59f2a4ea3cbddd381eb8e9</guid>
+    <fileName>Assets/Scripts/Gameplay/UI/ConfigurationManager.cs</fileName>
+    <timeStamp>2020-11-18T21:29:20.4787034+01:00</timeStamp>
+    <typeFullName>
+      <string>Player.ConfigurationManager</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>a62f3221961c41349b8446e40af6ed72</guid>
+    <fileName>Assets/Scripts/Gameplay/UI/ExternalUIFunctions.cs</fileName>
+    <timeStamp>2020-11-23T05:57:30.5496683+01:00</timeStamp>
+    <typeFullName>
+      <string>ExternalUIFunctions</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>866ef2181a8781042a6438a3daf2f2d8</guid>
+    <fileName>Assets/Scripts/Gameplay/UI/LogoManager.cs</fileName>
+    <timeStamp>2020-11-26T22:34:29.760244+01:00</timeStamp>
+    <typeFullName>
+      <string>LogoManager</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>0c616c50856efb7448ef12e696ce9aab</guid>
+    <fileName>Assets/Scripts/Gameplay/UI/UIObjects.cs</fileName>
+    <timeStamp>2020-11-23T05:44:49.8579999+01:00</timeStamp>
+    <typeFullName>
+      <string>UIObjects</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>9c9a44f911d6046449dfd78c2e30511f</guid>
+    <fileName>Assets/Scripts/Gameplay/UI/UISoundManager.cs</fileName>
+    <timeStamp>2020-11-27T01:30:42.392563+01:00</timeStamp>
+    <typeFullName>
+      <string>UISoundManager</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>5c3028682080bae43917d005db8a9e84</guid>
+    <fileName>Assets/Scripts/InGame/GameLoop.cs</fileName>
+    <timeStamp>2020-11-19T13:22:12+01:00</timeStamp>
+    <typeFullName>
+      <string>InGame.GameLoop</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>c8d369704cc77264a841a482b23a711f</guid>
+    <fileName>Assets/Scripts/InGame/Movement.cs</fileName>
+    <timeStamp>2020-11-19T14:11:43+01:00</timeStamp>
+    <typeFullName>
+      <string>InGame.Movement</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>0276f2d33d0f4cd4eae6ceb04c6f3b40</guid>
+    <fileName>Assets/Scripts/Player/Server/AddFriend.cs</fileName>
+    <timeStamp>2020-11-18T21:29:20.4887125+01:00</timeStamp>
+    <typeFullName>
+      <string>AddFriend</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>d5cecccfb26f84b43b86e5d3fda63507</guid>
+    <fileName>Assets/Scripts/Player/Server/FindPlayersSql.cs</fileName>
+    <timeStamp>2020-11-18T21:29:20.5007235+01:00</timeStamp>
+    <typeFullName>
+      <string>FindPlayersSql</string>
+    </typeFullName>
+    <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
+  </TypeDate>
+  <TypeDate>
+    <guid>aea926a6713110f41aa0d6e5a5f9f011</guid>
+    <fileName>Assets/Scripts/Player/Server/LookForGame.cs</fileName>
+    <timeStamp>2020-11-18T21:29:20.4797041+01:00</timeStamp>
+    <typeFullName>
+      <string>LookForGame</string>
     </typeFullName>
     <assemblly>Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null</assemblly>
   </TypeDate>

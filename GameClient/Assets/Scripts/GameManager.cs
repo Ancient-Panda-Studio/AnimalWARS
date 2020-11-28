@@ -9,7 +9,8 @@ public class GameManager : MonoBehaviour
     public GameObject localPlayerPrefab; //Model the client player will use
     public GameObject playerPrefab; //Model the client player will see other clients using
     public Dictionary<int,string> FriendsList = new Dictionary<int, string>();
-
+    public bool isLogedIn = false;
+    private float Counter = 0;
     private void Awake()
     {
         if (Instance == null)
@@ -18,21 +19,42 @@ public class GameManager : MonoBehaviour
         }
         else if (Instance != this)
         {
-            Debug.Log("Instance already exists, destroying object!");
             Destroy(this);
+            Destroy(this.gameObject);
+        }
+        Debug.Log("-> Logged in -> " + isLogedIn);
+        if(isLogedIn){
+           UIManager.AllowLogin();
         }
         Debug.Log($"User is : {Constants.SysetmUser}");
     }
 
+
+    private void Start() {
+        if(!isLogedIn){
+                Client.instance.ConnectToServer();
+        }
+         if(isLogedIn){
+           UIManager.AllowLogin();
+           Cursor.lockState = CursorLockMode.None;
+           Cursor.visible = true;
+        }
+    }
+
+    private void Update() {
+      if(isLogedIn && UIObjects.Instance.mainMenuBig.activeSelf) {
+          UIManager.AllowLogin();
+          Debug.Log("ALLOW LOGIN");
+      }
+    }
     public void SpawnPlayer(int id, Vector3 position, Quaternion rotation) 
     {
-        
         //Cursor.lockState = CursorLockMode.Locked;
         //Cursor.visible = false;
-        if (UIManager.Instance.inGameUi.activeSelf)
+        if (UIObjects.Instance.inGameUi.activeSelf)
         {
-            UIManager.Instance.inGameUi.SetActive(false);
-            UIManager.Instance.matchStartedUi.SetActive(true);
+            UIObjects.Instance.inGameUi.SetActive(false);
+            UIObjects.Instance.matchStartedUi.SetActive(true);
         }
 
         Debug.Log($"A player with ID {id} is being spawned...");

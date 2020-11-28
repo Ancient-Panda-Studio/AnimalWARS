@@ -256,7 +256,7 @@ public class Client
             Dictionaries.PlayersByName.Add(user,id);
             Dictionaries.PlayersById.Add(id,user);
             ServerSend.LoginResult(id,true, "noError",           int.Parse(www.text.Split('\t')[1]));
-            ServerConsoleWriter.WriteUserLog(user, id, $"New log started {user}");
+            ServerConsoleWriter.WriteUserLog(user, $"New log started {user}");
             
             Dictionaries.PlayerDataHolders.Add(id,new PlayerDataHolder(id,user));
         }

@@ -9,15 +9,21 @@ public class Match
     private static List<Map> _mapOrder = new List<Map>();
     private static int _matchID;
     private static int _currentBindMapId;
-    public Match(List<PlayerDataHolder> team1, List<PlayerDataHolder> team2, IEnumerable<int> mapOrder)
+    public float _creationTime;
+    private static List<PlayerDataHolder> _acceptedPlayer = new List<PlayerDataHolder>();
+    public Match(IEnumerable<PlayerDataHolder> team1, IEnumerable<PlayerDataHolder> team2)
     {
-        _team1 = team1;
-        _team2 = team2;
+        try{
+        _team1 = team1.ToList();
+        _team2 = team2.ToList();
         _mapOrder.Add(Dictionaries.Maps[1]); //Maps.ParseIntToMap(mapOrder);
-        if (Dictionaries.CurrentMatches.Count == 0)
-            _matchID = 1;
-        else
-            _matchID = Dictionaries.CurrentMatches.Count + 1;
+        _matchID = Dictionaries.matches.Count + 1;
+        Dictionaries.matches.Add(this);
+        _creationTime = Time.time + 20;
+        Debug.Log($"Creation Time for {_matchID} -> {_creationTime} <-");
+        } catch{
+        Debug.Log("Error during match creation");
+        }
     }
     public static int GetMatchId() { return _matchID; }
     public int GetMatchIdNoStatic() { return _matchID; }
@@ -27,6 +33,35 @@ public class Match
 
     public  int GetCurrentMap() { return _currentBindMapId; }
 
+    public void Begin(){
+        //This method will Initiate the looby;
+        //ServerSend.StartLobby();
+    }
+    public void SendPopUp(){
+        foreach (var sendTo in GetAllPlayers().ToList()){
+           ServerSend.MatchFound(sendTo.GetPlayerId(), _matchID);
+        }
+    }
+    public bool HasStarted(){
+        return false;
+    }
+    public bool IsTime(){
+        return Time.time >= _creationTime;
+    }
+    public bool Verify() {
+
+        /*THIS METHOD WILL RETURN TRUE IF EVERYONE IN THIS MATCH HAS ACCEPTED THE POP UP*/
+        foreach (var x in GetAllPlayers()) {
+            Debug.Log(x.HasAccepted());
+            if(x.HasAccepted()) {
+                _acceptedPlayer.Add(x);
+            }
+        }
+        if(_acceptedPlayer.Count == 6)
+        return true;
+        else
+        return false;
+    }
     public  IEnumerable<PlayerDataHolder> GetTeam1() { return _team1; }
 
     public  IEnumerable<PlayerDataHolder> GetTeam2() { return _team2; }

@@ -35,11 +35,17 @@ class ServerHandle
 
     public static void SendInvitationServer(int _fromClient, Packet _packet)
     {
+
         var id = _packet.ReadInt();
         var username = _packet.ReadString(); //Who SENT THE INVITATION
         var toUserName = _packet.ReadString(); // Who is THE INVITE FOR
+        if(Dictionaries.PlayersByName.ContainsKey(toUserName)){
         var sendToID = Dictionaries.PlayersByName[toUserName];
         ServerSend.SendInvite(_fromClient, username, toUserName, sendToID);
+        } else {
+            //The given user was not online
+            ServerConsoleWriter.WriteUserLog(Dictionaries.PlayersById[_fromClient],$"Tried to invite {toUserName} but this user was not online");
+        }
     }
 
     public static void SendInviteAnswer(int _fromClient, Packet _packet)
@@ -55,7 +61,7 @@ class ServerHandle
         int id = Dictionaries.PlayersByName[Dictionaries.PlayersById[_fromClient]];
         if (PartyLeader.inParty)
         {
-            //Player is already in party 
+            //Player is already in party
             Parties.AddToExistingParty(PartyLeader.partyID, Dictionaries.PlayerDataHolders[id]);
             ServerSend.RemoveLfgButton(id);
             PartyMember.partyID = PartyLeader.partyID;
@@ -103,13 +109,23 @@ class ServerHandle
         }
     }
 
+    public static void MatchAnswer(int _fromClient, Packet _packet) {
+        if(Dictionaries.PlayerDataHolders.ContainsKey(_fromClient)){
+            /*THIS VERIFIES THAT THE PACKET WAS SENT FROM AN ACTUAL CLIENT*/
+            var answer = _packet.ReadBool();
+            if(answer) {
+                Dictionaries.PlayerDataHolders[_fromClient].SetAccept(true);
+            } else {
+                Dictionaries.PlayerDataHolders[_fromClient].SetAccept(false);
+            }
+        }
+    }
     public static void RemoveFromMatchMaking(int _fromClient, Packet _packet)
-    {  
+    {
         var isClientInParty = _packet.ReadBool();
-        Debug.Log(Dictionaries.PlayerDataHolders[_fromClient].username);
         if (isClientInParty) //Player In Party
         {
-            var partyID = Dictionaries.PlayerDataHolders[_fromClient].partyID;            
+            var partyID = Dictionaries.PlayerDataHolders[_fromClient].partyID;
             var partyMembers = Parties.GetParty(partyID);
             foreach (var member in partyMembers)
             {
@@ -120,6 +136,7 @@ class ServerHandle
         else //Player Is NOT IN PARTY
         {
             HandleMatchMaking.RemoveFromQueue(Dictionaries.PlayerDataHolders[_fromClient]);
+            ServerSend.MatchMakingState(_fromClient);
         }
     }
 }

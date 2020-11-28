@@ -13,10 +13,10 @@ public class ServerConsoleWriter
         }
     }
 
-    public static void WriteUserLog(string user, int id, string _toWrite)
+    public static void WriteUserLog(string user, string _toWrite)
     {
         using (var file =
-            new System.IO.StreamWriter($@"C:\Users\{SysetmUser}\Desktop\ServerLog\UserLogs\{id}_{user}_log.txt", true))
+            new System.IO.StreamWriter($@"C:\Users\{SysetmUser}\Desktop\ServerLog\UserLogs\{user}_log.txt", true))
         {
             file.WriteLine($"{DateTime.UtcNow} : {_toWrite}");
         }    

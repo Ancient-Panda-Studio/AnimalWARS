@@ -5,7 +5,6 @@ using UnityEngine;
 public class Parties
 {
     private static readonly SortedDictionary<int, List<PlayerDataHolder>> CurrentParties = new SortedDictionary<int, List<PlayerDataHolder>>();
-    
     public static int AddParty(List<PlayerDataHolder> _members)
     {
         if (CurrentParties.Count == 0)

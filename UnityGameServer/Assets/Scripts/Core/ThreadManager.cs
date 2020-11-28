@@ -11,7 +11,7 @@ class ThreadManager : MonoBehaviour
     private static bool actionToExecuteOnMainThread = false;
     private void Awake()
     {
-        DontDestroyOnLoad(this);    
+        DontDestroyOnLoad(this);
     }
 
     private void Start()
@@ -23,13 +23,25 @@ class ThreadManager : MonoBehaviour
     /// <param name="_action">The action to be executed on the main thread.</param>
     private void FixedUpdate()
     {
-      
         UpdateMain();
+        /*WE CHECK IF THE MM IS POSSIBLE AND GENEREATE A MATCH*/
         var mm = HandleMatchMaking.CheckIfMatchMakingIsPossible();
-      
         if (!HandleMatchMaking.Generating && mm != null)
         {
             HandleMatchMaking.GenerateMatch(mm);
+        }
+        /*PROCESS THIS IF THERE IS ATLEAST 1 MATCH TO CHECK*/
+        if(Dictionaries.matches.Count != 0){
+            for (int i = 0; i < Dictionaries.matches.Count; i++){
+                if(Dictionaries.matches[i].IsTime() && !Dictionaries.matches[i].HasStarted()){
+                    if(!Dictionaries.matches[i].Verify()){
+                        Debug.Log(false);
+                        Dictionaries.matches.RemoveAt(i);
+                    } else {
+                        Dictionaries.matches[i].Begin();
+                    }
+                }
+            }
         }
 
     }
@@ -60,7 +72,6 @@ class ThreadManager : MonoBehaviour
                 executeOnMainThread.Clear();
                 actionToExecuteOnMainThread = false;
             }
-
             for (int i = 0; i < executeCopiedOnMainThread.Count; i++)
             {
                 executeCopiedOnMainThread[i]();

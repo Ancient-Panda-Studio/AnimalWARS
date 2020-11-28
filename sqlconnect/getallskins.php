@@ -1,5 +1,6 @@
 <?php
-	$connection = mysqli_connect('localhost', 'root', '', 'unityacces');
+	require "constants.php";
+	$connection = $CON;
 
 	if(mysqli_connect_errno()){
 		echo "Error code #1 CONNECTION TO DATABASE FAILED"; //Error code #1 = connection failed

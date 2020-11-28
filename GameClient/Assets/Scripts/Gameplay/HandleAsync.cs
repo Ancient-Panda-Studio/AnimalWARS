@@ -235,11 +235,7 @@ public class HandleAsync : MonoBehaviour
                 }
                 else
                 {
-                    
-                    //TODO WE NEED SERVER ID AND DB ID 
-                    
                     //GET SERVER ID WITH USER NAME
-                    
                     if (jsonArray.IsNull)
                     {
                         yield return null;
@@ -264,12 +260,10 @@ public class HandleAsync : MonoBehaviour
                         _tempFriendIDList.Add(friendID);
                     }
 
-                    UIManager.Instance.CreateFriends(_tempFriendList, _tempFriendIDList);
-                    _tempFriendList = null;    
+                    UIManager.CreateFriends(_tempFriendList, _tempFriendIDList);
+                    _tempFriendList = null;
                     _tempFriendIDList = null;
                 }
-
-               
             }
         }
     }

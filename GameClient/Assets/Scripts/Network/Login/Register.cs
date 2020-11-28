@@ -6,13 +6,6 @@ using UnityEngine.UI;
 
 public class Register : MonoBehaviour
 {
-    public InputField usernameField;
-    public InputField passwordField;
-    public InputField mailField;
-    public Button submitButton;
-    public Text errorText;
-
-
     public void CallRegister()
     {
         StartCoroutine(RegisterStart());
@@ -21,9 +14,9 @@ public class Register : MonoBehaviour
     private IEnumerator RegisterStart()
     {
         var form = new WWWForm();
-        form.AddField("user", usernameField.text);
-        form.AddField("pass", passwordField.text);
-        form.AddField("email", mailField.text);
+        form.AddField("user", UIObjects.Instance.Register_usernameInputField.text);
+        form.AddField("pass", UIObjects.Instance.Register_passwordInputField.text);
+        form.AddField("email", UIObjects.Instance.Register_mailField.text);
         using (var www = UnityWebRequest.Post(Constants.WebServer + "register.php", form))
         {
             yield return www.SendWebRequest();
@@ -33,8 +26,8 @@ public class Register : MonoBehaviour
             }
             else
             {
-                errorText.gameObject.SetActive(true);
-                errorText.text = www.downloadHandler.text;
+                UIObjects.Instance.errorText.gameObject.SetActive(true);
+                UIObjects.Instance.errorText.text = www.downloadHandler.text;
                 Debug.Log(www.downloadHandler.text);
             }
         }
@@ -42,23 +35,23 @@ public class Register : MonoBehaviour
 
     public void VerifyInput()
     {
-        errorText.gameObject.SetActive(false);
-        if (usernameField.text.Contains(" ") || passwordField.text.Contains(" "))
+        UIObjects.Instance.errorText.gameObject.SetActive(false);
+        if (UIObjects.Instance.Register_usernameInputField.text.Contains(" ") || UIObjects.Instance.Register_passwordInputField.text.Contains(" "))
         {
             //Not allow because of spaces
-            errorText.gameObject.SetActive(true);
-            errorText.text = "Please do not use SPACES";
-            submitButton.interactable = false;
+            UIObjects.Instance.errorText.gameObject.SetActive(true);
+            UIObjects.Instance.errorText.text = "Please do not use SPACES";
+            UIObjects.Instance.submitButton.interactable = false;
         }
-        else if (string.Equals(usernameField.text, passwordField.ToString(), StringComparison.CurrentCultureIgnoreCase))
+        else if (string.Equals(UIObjects.Instance.Register_usernameInputField.text, UIObjects.Instance.Register_passwordInputField.ToString(), StringComparison.CurrentCultureIgnoreCase))
         {
-            errorText.gameObject.SetActive(true);
-            errorText.text = "User and Password cannot be equal";
-            submitButton.interactable = false;
+            UIObjects.Instance.errorText.gameObject.SetActive(true);
+            UIObjects.Instance.errorText.text = "User and Password cannot be equal";
+            UIObjects.Instance.submitButton.interactable = false;
         }
         else
         {
-            submitButton.interactable = usernameField.text.Length >= 8 && passwordField.text.Length >= 8 && IsValidEmail(mailField.text);
+            UIObjects.Instance.submitButton.interactable = UIObjects.Instance.Register_usernameInputField.text.Length >= 8 && UIObjects.Instance.Register_passwordInputField.text.Length >= 8 && IsValidEmail(UIObjects.Instance.Register_mailField.text);
         }
     }
 

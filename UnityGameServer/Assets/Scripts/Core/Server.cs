@@ -116,7 +116,8 @@ public class Server
                 {(int)ClientPackets.sendInviteClient, ServerHandle.SendInvitationServer},
                 {(int)ClientPackets.inviteAnswer, ServerHandle.SendInviteAnswer},
                 {(int)ClientPackets.startMatchMaking, ServerHandle.AddToMatchMaking},
-                {(int)ClientPackets.stopMatchMaking, ServerHandle.RemoveFromMatchMaking}
+                {(int)ClientPackets.stopMatchMaking, ServerHandle.RemoveFromMatchMaking},
+                {(int)ClientPackets.mmPopUpAnswer, ServerHandle.MatchAnswer}
             };
             ServerConsoleWriter.WriteLine("Initialized packets.");
         }

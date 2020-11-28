@@ -8,15 +8,13 @@ public class PartyMemberInfoHolder : MonoBehaviour
 {
    public TMP_Text nameText;
    public int id;
-   
-   
    public void Remove()
    {
-      UIManager.Instance.PartyMembers.Remove(id);
+      UIManager.PartyMembers.Remove(id);
       Destroy(this);
-      if (UIManager.Instance.PartyMembers.Count == 1)
+      if (UIManager.PartyMembers.Count == 1)
       {
-         UIManager.Instance.DisbandParty();
+         UIManager.DisbandParty();
       }
    }
 }

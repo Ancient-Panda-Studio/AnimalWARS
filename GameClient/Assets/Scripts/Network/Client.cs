@@ -28,8 +28,8 @@ public class Client : MonoBehaviour
         }
         else if (instance != this)
         {
-            Debug.Log("Instance already exists, destroying object!");
-            Destroy(this);
+                       Destroy(this);
+            Destroy(this.gameObject);
         }
     }
 
@@ -70,20 +70,22 @@ public class Client : MonoBehaviour
             {(int) ServerPackets.handleLoginInfo, ClientHandle.HandleLogin},
             {(int) ServerPackets.sendInviteServer, ClientHandle.InvitationReceived},
             {(int) ServerPackets.sendInviteAnswer, ClientHandle.InvitationResponse},
-            {(int) ServerPackets.matchFound, ClientHandle.MatchFound},
             {(int) ServerPackets.mmOk, ClientHandle.MMState},
-            {(int) ServerPackets.removeLFButtons, ClientHandle.InteractableButtons}
+            {(int) ServerPackets.removeLFButtons, ClientHandle.InteractableButtons},
+            {(int) ServerPackets.matchFound, ClientHandle.MatchFound}
         };
         Debug.Log("Initialized packets.");
     }
 
     private void Disconnect()
     {
+        return;
         if (!isConnected) return;
         isConnected = false;
         tcp.socket.Close();
+        if(udp.socket.ToString() != null){
         udp.socket.Close();
-
+        }
         Debug.Log("Disconnected");
     }
 

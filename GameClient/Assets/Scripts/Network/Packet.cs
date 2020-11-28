@@ -6,32 +6,33 @@ using UnityEngine;
 namespace Network
 {
     /// <summary>Sent from server to client.</summary>
-    public enum ServerPackets
-    {
-        welcome = 1,
-        spawnPlayer,
-        playerPosition,
-        playerRotation,
-        playerDisconnected,
-        handleLoginInfo,
-        sendInviteServer,
-        sendInviteAnswer,
-        matchFound,
-        mmOk,
-        removeLFButtons
-    }
+public enum ServerPackets
+{
+    welcome = 1,
+    spawnPlayer,
+    playerPosition,
+    playerRotation,
+    playerDisconnected,
+    handleLoginInfo,
+    sendInviteServer,
+    sendInviteAnswer,
+    matchFound,
+    mmOk,
+    removeLFButtons
+}
 
-    /// <summary>Sent from client to server.</summary>
-    public enum ClientPackets
-    {
-        welcomeReceived = 1,
-        playerMovement,
-        sendLoginInfo,
-        sendInviteClient,
-        inviteAnswer,
-        startMatchMaking,
-        stopMatchMaking
-    }
+/// <summary>Sent from client to server.</summary>
+public enum ClientPackets
+{
+    welcomeReceived = 1,
+    playerMovement,
+    sendLoginInfo,
+    sendInviteClient,
+    inviteAnswer,
+    startMatchMaking,
+    stopMatchMaking,
+    mmPopUpAnswer
+}
 
     public sealed class Packet : IDisposable
     {

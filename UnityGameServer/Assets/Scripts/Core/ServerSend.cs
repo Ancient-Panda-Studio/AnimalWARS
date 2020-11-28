@@ -94,6 +94,18 @@ public class ServerSend
                 SendTcpData(_toClient, _packet);
             }
         }
+
+        public static void MatchFound(int _playerId, int _matchId) {
+            using (Packet _packet = new Packet((int) ServerPackets.matchFound))
+            {
+                _packet.Write(_matchId);
+                try {
+                SendTcpData(_playerId, _packet);
+                } catch {
+                    ServerConsoleWriter.WriteLine($"Error sending {_packet} to {_playerId}");
+                }
+            }
+        }
         public static void LoginResult(int _playerId, bool _result, string _error,int _dbID)
         {
             using (Packet _packet = new Packet((int)ServerPackets.handleLoginInfo))
@@ -104,7 +116,7 @@ public class ServerSend
                 _packet.Write(_dbID);
                 SendTcpData(_playerId,_packet);
                 // if(_result)
-                // Server.clients[_playerId].SendIntoGame(_username);    
+                // Server.clients[_playerId].SendIntoGame(_username);
             }
         }
         public static void SpawnPlayer(int toClient, GameObject playerObj, List<int> allPlayersInMatch)
@@ -135,11 +147,8 @@ public class ServerSend
                         SendTcpData(x, packet);
                     }
                 }
-      
             }
-            
         }
-        
         public static void PlayerPosition(PlayerDataHolder player, List<int> sendToList)
         {
             using (var packet = new Packet((int)ServerPackets.playerPosition))
@@ -177,7 +186,6 @@ public class ServerSend
                 packet.Write(name);
                 SendTcpData(sendTo,packet);
             }
-            
         }
         public static void MatchMakingState(int sendTo)
         {
@@ -194,7 +202,4 @@ public class ServerSend
             }
         }
         #endregion
-
-
-       
 }

@@ -2,56 +2,30 @@
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
+using Network;
 
 public class Login : MonoBehaviour
 {
-    public InputField usernameField;
-    public InputField passwordField;
-    public Button submitButton;
-    public Text errorText;
 
     public void CallLogin()
     {
-        StartCoroutine(LoginStart());
-    }
-
-    private IEnumerator LoginStart()
-    {
-        var form = new WWWForm();
-        form.AddField("user", usernameField.text);
-        form.AddField("pass", passwordField.text);
-        using (var www = UnityWebRequest.Post(Constants.WebServer + "login.php", form))
-        {
-            yield return www.SendWebRequest();
-            if (www.downloadHandler.text[0] == '0')
-            {
-                //Login
-                Constants.Username = usernameField.text;
-                Constants.Score = int.Parse(www.downloadHandler.text.Split('\t')[1]);
-                //Client.instance.ConnectToServer();
-            }
-            else
-            {
-                errorText.gameObject.SetActive(true);
-                errorText.text = www.downloadHandler.text;
-                Debug.Log(www.downloadHandler.text);
-            }
-        }
+        Constants.Username = UIObjects.Instance.Login_usernameInputField.text;
+        ClientSend.SendLoginInfo();
     }
 
     public void VerifyInput()
     {
-        errorText.gameObject.SetActive(false);
-        if (usernameField.text.Contains(" ") || passwordField.text.Contains(" ") || passwordField.text.Contains("    ") || usernameField.text.Contains("    "))
+        UIObjects.Instance.errorText.gameObject.SetActive(false);
+        if (UIObjects.Instance.Login_usernameInputField.text.Contains(" ") || UIObjects.Instance.Login_passwordInputField.text.Contains(" ") || UIObjects.Instance.Login_passwordInputField.text.Contains("    ") || UIObjects.Instance.Login_usernameInputField.text.Contains("    "))
         {
             //Not allow because of spaces
-            errorText.gameObject.SetActive(true);
-            errorText.text = "Please do not use SPACES";
-            submitButton.interactable = false;
+            UIObjects.Instance.errorText.gameObject.SetActive(true);
+            UIObjects.Instance.errorText.text = "Please do not use SPACES";
+            UIObjects.Instance.loginButton.interactable = false;
         }
         else
         {
-            submitButton.interactable = usernameField.text.Length >= 8 && passwordField.text.Length >= 8;
+            UIObjects.Instance.loginButton.interactable = UIObjects.Instance.Login_usernameInputField.text.Length >= 8 && UIObjects.Instance.Login_passwordInputField.text.Length >= 8;
         }
     }
 }
