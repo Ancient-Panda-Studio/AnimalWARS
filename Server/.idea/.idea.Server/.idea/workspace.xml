@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="33ff0d68-c848-45a4-b97c-b8178d82290f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/DummyLoop.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/DummyLoop.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/.idea/.idea.AnimalWar_UnityDevProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/.idea/.idea.AnimalWar_UnityDevProject/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/.idea/.idea.AnimalWar_UnityDevProject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/.idea/.idea.AnimalWar_UnityDevProject/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/.idea/.idea.AnimalWar_UnityDevProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/.idea/.idea.AnimalWar_UnityDevProject/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/.vscode/settings.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/EmaceArt_Stylized Foliage Pack/Demo/FoliageAssetsDemo_2019_URP.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/EmaceArt_Stylized Foliage Pack/Demo/FoliageAssetsDemo_2019_URP.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/EmaceArt_Stylized Foliage Pack/Pack support unity 2017_2019_HDLWRP/2017_2.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/EmaceArt_Stylized Foliage Pack/Pack support unity 2017_2019_HDLWRP/2018_3.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/EmaceArt_Stylized Foliage Pack/Pack support unity 2017_2019_HDLWRP/2018_3_LWRP.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/EmaceArt_Stylized Foliage Pack/Pack support unity 2017_2019_HDLWRP/2019_1_HDRP.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/EmaceArt_Stylized Foliage Pack/Pack support unity 2017_2019_HDLWRP/2019_5_URP.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/Shaders/URP/_UniversalRenderPipeline.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/Source/Effects/Materials/FAE_Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/Source/Effects/Materials/FAE_Water.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_A/Cliff_A_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_A/Cliff_A_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_B/Cliff_B_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_B/Cliff_B_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_C/Cliff_C_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_C/Cliff_C_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_D/Cliff_D_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_D/Cliff_D_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_E/Cliff_E_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_E/Cliff_E_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_F/Cliff_F_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_F/Cliff_F_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/RockClusters/RockCluster_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/RockClusters/RockCluster_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/_DemoScenes/FAE_Demo1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/_DemoScenes/FAE_Demo1.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/_DemoScenes/FAE_Waterfall (1) Variant.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/_DemoScenes/FAE_Waterfall (1) Variant.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/_DemoScenes/Source/FAE_DemoTerrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/_DemoScenes/Source/FAE_DemoTerrain.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/_DemoScenes/Source/Materials/FAE_Waterfall.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/_DemoScenes/Source/Materials/FAE_Waterfall.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/_DemoScenes/Source/Materials/StandardTerrain.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Fantasy Adventure Environment/_DemoScenes/Source/Materials/StandardTerrain.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/GPUInstancer/Demos/HDRP_Demos_Package.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/GPUInstancer/Demos/URP_Demos_Package.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/GPUInstancer/Extras/GPUI_Foliage_HDRP_Support.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/GPUInstancer/Extras/GPUI_Foliage_LWRP_Support.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/GPUInstancer/Extras/GPUI_Foliage_URP_Support.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/GPUInstancer/Extras/GPUI_MapMagic2_Integration.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/GPUInstancer/Extras/GPUI_MapMagic_Integration.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/GPUInstancer/Extras/GPUI_ShaderGraph_v4.x_Node.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/GPUInstancer/Extras/GPUI_ShaderGraph_v5.x_or_Later_Node.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/GPUInstancer/Extras/GPUI_SpeedTree8_Support.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/GPUInstancer/Resources/Settings/GPUIShaderVariantCollection.shadervariants" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/GPUInstancer/Resources/Settings/GPUIShaderVariantCollection.shadervariants" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/MTT_Results/2021-01-15 20-07/Terrain 0x0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/MTT_Results/2021-01-15 20-07/Terrain 0x0.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Materials/Puente_Piedra/Puente_Piedra_M.mat" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Materials/Puente_Piedra/Puente_Piedra_M.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/NewLayer 2.terrainlayer" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/NewLayer 2.terrainlayer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/LOCAL/LOCAL_PANDA.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/LOCAL/LOCAL_PANDA.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/LOCAL/LOCAL_TIGER.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/LOCAL/LOCAL_TIGER.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/LOCAL/LOCAL_WOLF.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Prefabs/Players/LOCAL/LOCAL_WOLF.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Resources/URP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Resources/URP.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Resources/URP_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Resources/URP_Renderer.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Resources/c35a0bee5dc355732241e05f99e90cd9.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Resources/c35a0bee5dc355732241e05f99e90cd9.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scenes/MayaMapDeprectaded.unity" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scenes/MayaMapDeprectaded.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Gameplay/UI/ExternalUIFunctions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Gameplay/UI/ExternalUIFunctions.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Gameplay/UI/LogoManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Gameplay/UI/LogoManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Gameplay/UI/UIObjects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Gameplay/UI/UIObjects.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/HandlePlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/HandlePlayerStats.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Network/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Network/Client.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Network/ClientHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Network/ClientHandle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Network/ClientSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Network/ClientSend.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Network/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Network/Constants.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Network/Packet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Network/Packet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Player/Server/LookForGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/Player/Server/LookForGame.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Settings/ForwardRenderer.asset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Settings/ForwardRenderer.asset.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/Shader_Old/Toon/Includes/Toonsie.unitypackage.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/SkyMaster/HDRP Settings/NewLayer.terrainlayer" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Assets/SkyMaster/HDRP Settings/NewLayer.terrainlayer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/ProjectSettings/TagManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/../AnimalWar_UnityDevProject/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Server/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Server/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/MatchManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/MatchManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/Packet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/Packet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/ServerHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/ServerHandle.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Core/ServerSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Core/ServerSend.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchMaking/HandleMatchMaking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MatchMaking/HandleMatchMaking.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Matches/GamePLay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Matches/GamePLay.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Matches/Match.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Matches/Match.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ArtifactDB-lock" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB-lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/Assets/Scripts/Dictionaries.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Core/NetworkManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Debug/MonoDebug.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Core/Client.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Core/ServerConsoleWriter.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Parser.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/MatchMaking/HandleMatchMaking.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Core/Server.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Matches/GamePLay.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Core/ServerSend.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Core/Packet.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Matches/Match.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Core/MatchManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Core/ServerHandle.cs" />
+    </changedPaths>
+  </component>
+  <component name="ProjectId" id="1oAZawBuhaWYsMOnQxt85c7yHeQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/ServerLinuxBuild/Server.x86_64" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\keda\Desktop\ServerLinuxBuild" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="33ff0d68-c848-45a4-b97c-b8178d82290f" name="Default Changelist" comment="" />
+      <created>1612731424656</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1612731424656</updated>
+      <workItem from="1612731433909" duration="8227000" />
+      <workItem from="1612902553143" duration="2714000" />
+      <workItem from="1613080578966" duration="18523000" />
+      <workItem from="1613234578858" duration="7366000" />
+      <workItem from="1613314932685" duration="2041000" />
+      <workItem from="1613342358791" duration="1818000" />
+      <workItem from="1613401856053" duration="1102000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>

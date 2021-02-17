@@ -1,0 +1,15 @@
+Open the project in common Unity 2018.03 or Unity 2019 + HDRP/LWRP/URP
+
+Instruction for Unity 2019 + HDRP/LWRP/URP
+
+Run Unity with ready profile HDRP/LWRP/URP(the best with the use of Unity HUB). Download Stylized Foliage Pack from the Asset Store. Look for the folder Emaceart>Assets>Stylized Foliage Pack>Pack support unity 2017_2019_HDLWRP and click Package file. After longer time, when imstallation is finished, you should see correctly the scene with ready to use project in the HDRP/LWRP/URP standard.
+
+--------------------------------------
+
+Otwórz projekt w zwykłej wersji Unity 2018.03 lub Unity 2019 + HDRP/LWRP/URP.
+
+Instrukcja dla Unity 2019 + HDRP/LWRP/URP.
+
+Uruchom Unity z gotowym profilem HDRP/LWRP/URP (najlepiej z użycie Unity HUB)
+Ściągnij necropoly z Asset Store. Zajrzyj do folderu Emaceart>Assets>Pack support unity 2017_2019_HDLWRP i kliknij w plik package tam zawartym. Po dłuższym czasie po tym jak zakończy się instalacja, powinieneś zobaczyć poprawnie wyświetlaną scenę i gotowym do użycia projektem w standardzie HDRP/LWRP/URP.
+

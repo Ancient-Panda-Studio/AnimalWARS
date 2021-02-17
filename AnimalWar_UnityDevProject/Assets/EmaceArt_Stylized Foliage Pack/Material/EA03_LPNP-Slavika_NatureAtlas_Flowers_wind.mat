@@ -1,0 +1,317 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: EA03_LPNP-Slavika_NatureAtlas_Flowers_wind
+  m_Shader: {fileID: 4800000, guid: 7ca03072a4ba7734692216797c38f4e3, type: 3}
+  m_ShaderKeywords: _ALPHATEST_ON _RECONSTRUCTNORMAL_ON _WINDENABLED_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 1
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AlphaTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _AmbientOcclusionG:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseColor:
+        m_Texture: {fileID: 2800000, guid: 6e97ad556aa60e342933538593b1c412, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BaseMap:
+        m_Texture: {fileID: 2800000, guid: 6e97ad556aa60e342933538593b1c412, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumbTransMap:
+        m_Texture: {fileID: 2800000, guid: b2645e9a47cd7ed4c976eb8610f7ebd4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 2800000, guid: 9631975ec35df574994e3a44f9926e7a, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Emission:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FourthTex:
+        m_Texture: {fileID: 2800000, guid: e0f922c44762291498cc62e0917609be, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Leaves_NoiseTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 6e97ad556aa60e342933538593b1c412, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTexture:
+        m_Texture: {fileID: 2800000, guid: 6e97ad556aa60e342933538593b1c412, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicSmooth:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Normal:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Occlusion:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SSSMap:
+        m_Texture: {fileID: 2800000, guid: e2d855dbc61000f4281003567ba655e3, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SSSRamp:
+        m_Texture: {fileID: 2800000, guid: 010a88589c0002445bd92988ab8fc64d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SecondTex:
+        m_Texture: {fileID: 2800000, guid: 03a7d169469c1af41bb03241a7b7e23d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SketchTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _StylizedThreshold:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TansMap:
+        m_Texture: {fileID: 2800000, guid: 36c3e4606feb1d44fa9655bb6c3cc6b7, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ThirdTex:
+        m_Texture: {fileID: 2800000, guid: c3512c25766a40245ac94c6b1722d76e, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ToonRamp:
+        m_Texture: {fileID: 2800000, guid: 9c653bf2bf996f345b16b00b9dc52f5b, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ToonShade:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TransMap:
+        m_Texture: {fileID: 2800000, guid: 3587cdaf0f1db564987e160e5a638484, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Tree_NoiseTexture:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _WindNoise:
+        m_Texture: {fileID: 2800000, guid: 4515072f4cd4005429ced623f2abc6be, type: 3}
+        m_Scale: {x: 0.1, y: 0.1}
+        m_Offset: {x: 0, y: 0}
+    - _texcoord:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _windNoiseTex:
+        m_Texture: {fileID: 2800000, guid: 8df763d702bf3e642a8f562e8ba6b185, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - windNoiseTex:
+        m_Texture: {fileID: 2800000, guid: b375956944e25794aaaeb866291f2d42, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - PixelSnap: 0
+    - _AlphaClip: 1
+    - _AmbientOcclusionPower: 0
+    - _Big_Wave: 0
+    - _Big_WindAmount: 1
+    - _Big_Windspeed: 0
+    - _Blend: 0
+    - _BumpScale: 0.72
+    - _Clip: 0.63
+    - _Cull: 0
+    - _CullFarDistance: 2141
+    - _CullFarStart: 1729
+    - _Cutoff: 0.094
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _EmissionScaleUI: 0
+    - _EnableExternalAlpha: 0
+    - _EnvironmentReflections: 1
+    - _Float0: 2
+    - _GlossMapScale: 1
+    - _Glossiness: 0
+    - _GlossyReflections: 1
+    - _MaxWindbending: 0.1
+    - _Metallic: 0
+    - _Mode: 2
+    - _NoiseScale: 1
+    - _NoiseWindSpeed: 0
+    - _NormalScale: 1
+    - _NormalShadowBiasOffset: 0
+    - _OcclusionScale: 0
+    - _OcclusionStrength: 1
+    - _OutlineWidth: 1
+    - _Parallax: 0.02
+    - _QueueOffset: 0
+    - _RampSmoothing: 1
+    - _RampSmoothingOtherLights: 0.5
+    - _RampThreshold: 0.5
+    - _RampThresholdOtherLights: 0.5
+    - _ReceiveShadows: 1
+    - _ReceiveShadowsOff: 1
+    - _ReconstructNormal: 1
+    - _RimMax: 1
+    - _RimMin: 0.5
+    - _Shadow_HSV_H: 0
+    - _Shadow_HSV_S: 0
+    - _Shadow_HSV_V: 0
+    - _Shininess: 0.256
+    - _SketchMax: 1
+    - _SketchMin: 0
+    - _SketchTexture_OffsetSpeed: 120
+    - _Small_Wave: 0
+    - _Small_WindAmount: 1
+    - _Small_WindSpeed: 0
+    - _Smoothness: 0
+    - _SmoothnessPower: 0
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SpecularSmoothness: 0.074
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _TessMax: 25
+    - _TessMin: 10
+    - _TessPhongStrength: 0.5
+    - _TessValue: 4
+    - _TranslucentRange: -0.162
+    - _TranslucentScale: 0.94
+    - _UVSec: 0
+    - _WindEnabled: 1
+    - _WindInfluence: 0.594
+    - _WindNoisePower: 0.62
+    - _WindPowerDirectionX: -0.49
+    - _WindPowerDirectionZ: -0.404
+    - _WindQuality: 0
+    - _Wind_VertexColorR: 1
+    - _WorkflowMode: 1
+    - _ZWrite: 1
+    - __BeginGroup_HSV_albedo: 0
+    - __BeginGroup_ShadowHSV: 0
+    - __EndGroup: 0
+    - __dirty: 1
+    - __dummy__: 0
+    - __outline_gui_dummy__: 0
+    - _albedo_hue: 0
+    - _albedo_sat: 1
+    - _albedo_val: 0
+    - _angle: 0.305
+    - _bending: 1
+    - _mainTailing: 0.47
+    - _phaseSpeed: 0.03
+    - _phases: 0.6
+    - _phasesAmplitude: 0.87
+    - _testMap: -1.44
+    - _wiggleWaveSize: -0.59
+    - _wigglesDensity: 0.00001
+    - _wigglesSpeed: -0
+    - _wigglesStrength: 35.47
+    - _windAmplitude: 0.34
+    - _windAngleDistortion: 0.84
+    - _windSpeed: 0
+    - _windStrenght: 0
+    - _windWave: 0.3
+    - _windWaveSpeed: 12.4
+    - _windWaving: 2.02
+    - _worldNoisTiling: 4
+    m_Colors:
+    - _BaseColor: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 3}
+    - _Color: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 3}
+    - _ColorTint: {r: 1, g: 1, b: 1, a: 0}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _EmissionColorUI: {r: 1, g: 1, b: 1, a: 1}
+    - _Flip: {r: 1, g: 1, b: 1, a: 1}
+    - _HColor: {r: 0.75, g: 0.75, b: 0.75, a: 1}
+    - _HueVariation: {r: 1, g: 0.5, b: 0, a: 0.1}
+    - _NoiseAmount: {r: 0.03, g: 0, b: 0.01, a: 0}
+    - _OutlineColorVertex: {r: 0, g: 0, b: 0, a: 1}
+    - _RendererColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RimColor: {r: 0.8, g: 0.8, b: 0.8, a: 0.5}
+    - _SColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _SketchColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
+    - _SpecularColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+    - _TranslucentColor: {r: 1, g: 1, b: 1, a: 1}
+    - _WindColorMultiply: {r: 1, g: 1, b: 1, a: 1}
+    - _WindNoisetilling: {r: 0, g: 0, b: 0, a: 0}
+    - _WindVec: {r: 1, g: 0, b: 0, a: 0}
+    - _rorationvec: {r: 1, g: 0, b: 0, a: 0}
+--- !u!114 &9165238440867445030
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 1

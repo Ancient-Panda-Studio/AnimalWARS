@@ -1,0 +1,124 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4986536330056478729
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4986536330056478724}
+  - component: {fileID: 4986536330056478727}
+  - component: {fileID: 4986536330056478726}
+  - component: {fileID: 4986536330056478725}
+  m_Layer: 0
+  m_Name: Terrain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &4986536330056478724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4986536330056478729}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -250, y: -100, z: -250}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!218 &4986536330056478727
+Terrain:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4986536330056478729}
+  m_Enabled: 1
+  serializedVersion: 6
+  m_TerrainData: {fileID: 15600000, guid: 4f74269ba463c16428f45c9c1deca27d, type: 2}
+  m_TreeDistance: 2000
+  m_TreeBillboardDistance: 50
+  m_TreeCrossFadeLength: 5
+  m_TreeMaximumFullLODCount: 50
+  m_DetailObjectDistance: 80
+  m_DetailObjectDensity: 1
+  m_HeightmapPixelError: 20
+  m_SplatMapDistance: 150
+  m_HeightmapMaximumLOD: 0
+  m_ShadowCastingMode: 0
+  m_DrawHeightmap: 1
+  m_DrawInstanced: 0
+  m_DrawTreesAndFoliage: 1
+  m_ReflectionProbeUsage: 0
+  m_MaterialTemplate: {fileID: 2100000, guid: 7d857d9d2cb6bb043870f6779f84ef15, type: 2}
+  m_BakeLightProbesForTrees: 0
+  m_PreserveTreePrototypeLayers: 0
+  m_DeringLightProbesForTrees: 1
+  m_ScaleInLightmap: 0.0512
+  m_LightmapParameters: {fileID: 15203, guid: 0000000000000000f000000000000000, type: 0}
+  m_GroupingID: 0
+  m_RenderingLayerMask: 1
+  m_AllowAutoConnect: 0
+--- !u!154 &4986536330056478726
+TerrainCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4986536330056478729}
+  m_Material: {fileID: 0}
+  m_Enabled: 1
+  m_TerrainData: {fileID: 15600000, guid: 4f74269ba463c16428f45c9c1deca27d, type: 2}
+  m_EnableTreeColliders: 1
+--- !u!114 &4986536330056478725
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4986536330056478729}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9599e306adaa6c4fbbc62724eff2685, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  performCleanup: 1
+  manualInput: 0
+  terrainObjects:
+  - {fileID: 4986536330056478729}
+  util: {fileID: 0}
+  workflow: 1
+  resIdx: 4
+  targetSize: {x: 500, y: 600, z: 500}
+  targetOriginPosition: {x: -250, y: -100, z: -250}
+  targetCenterPosition: {x: 0, y: 150, z: 0}
+  terrainScaleOffset: {x: 500, y: 500, z: 250, w: 250}
+  terrains:
+  - {fileID: 4986536330056478727}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  renderLightBrightness: 0
+  useAlternativeRenderer: 0
+  inputHeightmap: {fileID: 0}
+  customPigmentMap: {fileID: 0}
+  useCustomPigmentMap: 0
+  flipVertically: 0
+  flipHortizontally: 0
+  textureRotation: 0
+  pigmentMap: {fileID: 2800000, guid: a728bf1dc39cb0e4dad5aba35411306d, type: 3}
+  isMultiTerrain: 0
+  savePath: Assets/Fantasy Adventure Environment/_DemoScenes/Source/FAE_DemoTerrain_pigmentmap.png
+  hasTerrainData: 1
+  isMegaSplat: 0
+  heightmapChannel: 1
+  HeightmapChannelName: 
+  terrainTextureNames: []

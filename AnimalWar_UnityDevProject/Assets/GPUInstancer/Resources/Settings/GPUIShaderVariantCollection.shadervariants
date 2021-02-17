@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!200 &20000000
+ShaderVariantCollection:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: GPUIShaderVariantCollection
+  m_Shaders:
+  - first: {fileID: 4800000, guid: 2a1fda71c9e820e42b9cd64424f8452e, type: 3}
+    second:
+      variants: []
+  - first: {fileID: 4800000, guid: beff35d308ec9764ba93f35cf2be19cf, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: d52a38c4e70daf4449eaab298ba27ce6, type: 3}
+    second:
+      variants: []
+  - first: {fileID: 4800000, guid: 82de82b577147a642af099f486b450b2, type: 3}
+    second:
+      variants: []
+  - first: {fileID: 4800000, guid: 0c581a976e201514cba9536ed85ecfd7, type: 3}
+    second:
+      variants:
+      - keywords: _ALPHATEST_ON _WINDENABLED_ON
+        passType: 0
+  - first: {fileID: 4800000, guid: 1a6ceac7f4c639b4096c21f11e4e7a56, type: 3}
+    second:
+      variants: []
+  - first: {fileID: 4800000, guid: ea4018e98671dbf40b0d47588bb71400, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 21f3f6ba8b9ed5c428458b357b2b8903, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0
+  - first: {fileID: 4800000, guid: 0342a53e76f566e44b9059a298eea8f3, type: 3}
+    second:
+      variants:
+      - keywords: 
+        passType: 0

@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/contentModel.xml
+/modules.xml
+/projectSettingsUpdater.xml
+/.idea.Broken.iml
+# Datasource local storage ignored files
+/../../../../../../../../../:\Users\kedalen\Documents\AnimalWars\Broken\.idea\.idea.Broken\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
