@@ -5,92 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="18935dd1-3b4f-4919-871c-b8f8788f7239" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/DummyLoop.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/DummyLoop.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AnimalWar_UnityDevProject/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AnimalWar_UnityDevProject/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.AnimalWar_UnityDevProject/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AnimalWar_UnityDevProject/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.AnimalWar_UnityDevProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.AnimalWar_UnityDevProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.vscode/settings.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EmaceArt_Stylized Foliage Pack/Demo/FoliageAssetsDemo_2019_URP.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/EmaceArt_Stylized Foliage Pack/Demo/FoliageAssetsDemo_2019_URP.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EmaceArt_Stylized Foliage Pack/Pack support unity 2017_2019_HDLWRP/2017_2.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EmaceArt_Stylized Foliage Pack/Pack support unity 2017_2019_HDLWRP/2018_3.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EmaceArt_Stylized Foliage Pack/Pack support unity 2017_2019_HDLWRP/2018_3_LWRP.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EmaceArt_Stylized Foliage Pack/Pack support unity 2017_2019_HDLWRP/2019_1_HDRP.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/EmaceArt_Stylized Foliage Pack/Pack support unity 2017_2019_HDLWRP/2019_5_URP.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/Shaders/URP/_UniversalRenderPipeline.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/Source/Effects/Materials/FAE_Water.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/Source/Effects/Materials/FAE_Water.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_A/Cliff_A_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_A/Cliff_A_Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_B/Cliff_B_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_B/Cliff_B_Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_C/Cliff_C_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_C/Cliff_C_Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_D/Cliff_D_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_D/Cliff_D_Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_E/Cliff_E_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_E/Cliff_E_Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_F/Cliff_F_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/Cliff_F/Cliff_F_Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/RockClusters/RockCluster_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/Source/Rocks/Materials/RockClusters/RockCluster_Mat.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/_DemoScenes/FAE_Demo1.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/_DemoScenes/FAE_Demo1.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/_DemoScenes/FAE_Waterfall (1) Variant.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/_DemoScenes/FAE_Waterfall (1) Variant.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/_DemoScenes/Source/FAE_DemoTerrain.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/_DemoScenes/Source/FAE_DemoTerrain.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/_DemoScenes/Source/Materials/FAE_Waterfall.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/_DemoScenes/Source/Materials/FAE_Waterfall.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/_DemoScenes/Source/Materials/StandardTerrain.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Fantasy Adventure Environment/_DemoScenes/Source/Materials/StandardTerrain.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPUInstancer/Demos/HDRP_Demos_Package.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPUInstancer/Demos/URP_Demos_Package.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPUInstancer/Extras/GPUI_Foliage_HDRP_Support.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPUInstancer/Extras/GPUI_Foliage_LWRP_Support.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPUInstancer/Extras/GPUI_Foliage_URP_Support.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPUInstancer/Extras/GPUI_MapMagic2_Integration.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPUInstancer/Extras/GPUI_MapMagic_Integration.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPUInstancer/Extras/GPUI_ShaderGraph_v4.x_Node.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPUInstancer/Extras/GPUI_ShaderGraph_v5.x_or_Later_Node.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPUInstancer/Extras/GPUI_SpeedTree8_Support.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GPUInstancer/Resources/Settings/GPUIShaderVariantCollection.shadervariants" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GPUInstancer/Resources/Settings/GPUIShaderVariantCollection.shadervariants" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MTT_Results/2021-01-15 20-07/Terrain 0x0.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MTT_Results/2021-01-15 20-07/Terrain 0x0.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/Puente_Piedra/Puente_Piedra_M.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Materials/Puente_Piedra/Puente_Piedra_M.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/NewLayer 2.terrainlayer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/NewLayer 2.terrainlayer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/LOCAL_PANDA.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/LOCAL_PANDA.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/LOCAL_TIGER.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/LOCAL_TIGER.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/LOCAL_WOLF.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Players/LOCAL/LOCAL_WOLF.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/URP.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/URP.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/URP_Renderer.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/URP_Renderer.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/c35a0bee5dc355732241e05f99e90cd9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/c35a0bee5dc355732241e05f99e90cd9.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MayaMapDeprectaded.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MayaMapDeprectaded.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ExternalUIFunctions.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/ExternalUIFunctions.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/LogoManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/LogoManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/UIObjects.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/UI/UIObjects.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/HandlePlayerStats.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/HandlePlayerStats.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/Client.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/ClientHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/ClientHandle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/ClientSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/ClientSend.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/Constants.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Network/Packet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Network/Packet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Player/Server/LookForGame.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Player/Server/LookForGame.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/ForwardRenderer.asset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Settings/ForwardRenderer.asset.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Shader_Old/Toon/Includes/Toonsie.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/SkyMaster/HDRP Settings/NewLayer.terrainlayer" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/SkyMaster/HDRP Settings/NewLayer.terrainlayer" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/GraphicsSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/URPProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/.idea/.idea.Server/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/.idea.Server/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/.idea/.idea.Server/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/.idea/.idea.Server/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/MatchManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/MatchManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/Packet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/Packet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/ServerHandle.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/ServerHandle.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/ServerSend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Assets/Scripts/Core/ServerSend.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Assets/Scripts/MatchMaking/HandleMatchMaking.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Assets/Scripts/MatchMaking/HandleMatchMaking.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Assets/Scripts/Matches/GamePLay.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Assets/Scripts/Matches/GamePLay.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Assets/Scripts/Matches/Match.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Assets/Scripts/Matches/Match.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Library/ArtifactDB-lock" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Library/ArtifactDB-lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,12 +30,12 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Assets/TargetCall.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/testtimer.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/PunchCollider.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/TutorialManager.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/portaltrigger.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@1.1.4/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TargetCall.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/portaltrigger.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/TutorialManager.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
@@ -264,6 +180,7 @@
       <workItem from="1613343160121" duration="1552000" />
       <workItem from="1613348771195" duration="2692000" />
       <workItem from="1613401908864" duration="922000" />
+      <workItem from="1613530449559" duration="678000" />
     </task>
     <servers />
   </component>
